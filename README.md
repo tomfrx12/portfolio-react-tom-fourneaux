@@ -1,16 +1,35 @@
-# React + Vite
+# Mon Portfolio
 
-Ceci est un template React executé avec Vite.
+J'ai créé mon portfolio en HTML, CSS et JavaScript.
 
-Pour cloner le repository and changer directement son nom:
+Il est disponible ici : https://tomfrx12.github.io/tom-fourneaux-portfolio/
 
-- git clone https://github.com/tomfrx12/template_react.git nomfichier
+## Sur mon portfolio, vous trouverez :
 
-Installer les dependencies node_modules:
+- Une présentation de moi
+- Mes compétences, avec des barres de progression
+- Les projets que j'ai réalisés
+- Une présentation de ma charte graphique et ma maquette
+- Mon CV en HTML/CSS et en PDF
+- Mes moyens de contact
 
-- npm install
+## Sommaire
 
-Currently, two official plugins are available:
+- [Fonctionnalités](#fonctionnalités)
+- [Technologies Utilisées](#technologies-utilisées)
+- [Licence](#licence)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Fonctionnalités
+
+- **Responsive** : Mon portfolio est entièrement responsive.
+- **Mode sombre** : Un mode sombre est unique. J'ai choisis de ne pas mettre de mode clair pour garder mon style
+
+## Technologies Utilisées
+
+- HTML
+- CSS
+- JavaScript
+
+## Licence
+
+Ce projet a été réalisé dans le cadre d'un projet scolaire à partir de novembre 2024.
