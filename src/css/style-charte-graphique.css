@@ -1,0 +1,245 @@
+h1 {
+    text-align: center;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-black);
+}
+
+.logotypes {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-left: 10px;
+    font-size: var(--font-size-16);
+}
+
+.logotypes p {
+    font-size: var(--font-size-12);
+    margin: 5px 0px 5px 20px;
+}
+
+.logo-vertical {
+    align-self: center;
+    max-width: 10rem;
+    margin: 10px;
+    background-color: var(--color-white-hover);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.horizontal {
+    display: flex;
+    justify-content: space-around;
+}
+
+.horizontal img {
+    max-width: 145px;
+    margin: 5px;
+    padding: 2px;
+    background-color: var(--color-white-hover);
+    border-radius: 5px;
+}
+
+.rules ul {
+    list-style-type: none;
+    margin: 0px;
+    font-size: var(--font-size-12);
+    padding: 0px;
+    margin-left: 20px;
+}
+
+.rules ul li::before{
+    content: "- ";
+}
+
+h3 {
+    font-size: var(--font-size-12);
+    margin: 0px 0px 0px 20px;
+}
+
+.verticale {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.verticale div {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--color-white-hover);
+    margin: 0px 20px 20px 20px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px var(--color-white);
+    transition: transform 0.3s;
+}
+
+.verticale div:hover {
+    transform: translateY(-0.5rem);
+}
+
+.verticale img {
+    max-width: 100px;
+}
+
+.verticale p {
+    align-self: center;
+    font-size: var(--font-size-12);
+    color: var(--color-black);
+    text-align: center;
+    margin: 0;
+}
+
+.supp-logo img {
+    max-height: 100px;
+}
+
+.horizontale div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-white-hover);
+    margin: 0px 20px 20px 20px;
+    border-radius: 20px;    
+    box-shadow: 5px 5px 10px var(--color-white);
+    transition: transform 0.3s;
+}
+
+.horizontale div:hover {
+    transform: translateY(-0.5rem);
+}
+
+.horizontale img {
+    max-width: 250px;
+    padding: 10px;
+}
+
+.horizontale p {
+    color: var(--color-black);
+    margin: 10px;
+}
+
+.colors {
+    display: flex;
+    justify-content: space-around;
+}
+
+.color {
+    justify-items: center;
+    text-align: center;
+    width: 5rem;
+    height: 5rem;
+}
+
+.color span {
+    align-self: center;
+}
+
+.color:nth-child(1) {
+    background-color: #e21823;
+}
+
+.color:nth-child(2) {
+    background-color: #000000;
+}
+
+.color:nth-child(3) {
+    background-color: #ffffff;
+    color: var(--color-black);
+}
+
+/* .download-button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 40px 50px 0px 50px;
+    padding: 10px 20px;
+    background-color: var(--color-black);
+    color: var(--color-white-hover);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.2s linear;
+} */
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 40px 50px 0px 50px;
+    padding: 10px 20px;
+}
+
+.a_button {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+@media screen and (min-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        align-self: center;
+    }
+
+    .logotypes p {
+        margin: 5px 40px;
+    }
+
+    .rules ul, h3 {
+        margin-left: 40px;
+    }
+
+    .horizontal img {
+        max-width: 20rem;
+    }
+
+    .verticale img {
+        max-width: 200px;
+    }
+
+    .verticale div {
+        gap: 20px;
+    }
+
+    .supp-logo img {
+        max-height: 200px;
+    }
+
+    .verticale {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+        margin: 20px;
+    }
+
+    .horizontale img {
+        max-width: 75%;
+    }
+
+    .horizontale {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .color {
+        display: flex;
+        justify-content: center;
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
