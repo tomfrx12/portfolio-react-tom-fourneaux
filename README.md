@@ -1,8 +1,8 @@
 # Mon Portfolio
 
-J'ai créé mon portfolio en HTML, CSS et JavaScript.
+J'ai créé mon portfolio en HTML, CSS et JavaScript, React avec Vite.
 
-Il est disponible ici : https://tomfrx12.github.io/tom-fourneaux-portfolio/
+Il est disponible ici :
 
 ## Sur mon portfolio, vous trouverez :
 
@@ -29,6 +29,8 @@ Il est disponible ici : https://tomfrx12.github.io/tom-fourneaux-portfolio/
 - HTML
 - CSS
 - JavaScript
+- React
+- Vite
 
 ## Licence
 
