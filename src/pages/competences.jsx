@@ -1,10 +1,9 @@
-import Footer from "../components/footer";
-import Header from "../components/header";
+import "/src/css/style-competences.css";
 
 function Competences() {
     return (
     <>
-        <Header/>
+    <main>
         <h1>Mes compétences</h1>
         <div className="box">
             <div className="header_box">
@@ -105,7 +104,7 @@ function Competences() {
                 </ul>
             </div>
         </div>
-        <Footer/>
+    </main>
     </>
     );
 }

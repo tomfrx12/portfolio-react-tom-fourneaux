@@ -22,6 +22,7 @@ h1 {
 .carte img {
     margin: 30px;
     max-width: 100%;
+    max-height: max-content !important;
     text-align: center;
 }
 
