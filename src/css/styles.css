@@ -47,21 +47,6 @@ main {
     color: var(--color-white-hover);
 }
 
-header {
-    background-color: var(--color-black);
-    position: sticky;
-    top: 0px;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1;
-}
-
-header img {
-    width: 10rem;
-}
-
 .burger-icon span {
     display: block;
     width: 20px;
@@ -161,19 +146,6 @@ footer nav {
     margin-top: 20px;
 }
 
-.logo {
-    text-decoration: none;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover {
-    transform: scale(1.2);
-}
-
-.logo img {
-    max-height: 1.5rem;
-}
-
 footer p {
     text-align: center;
     font-size: var(--font-size-12);
@@ -198,10 +170,6 @@ footer p {
 
     footer nav {
         margin: 0;  
-    }
-
-    .logo img {
-        max-height: 2.5rem;
     }
 
     .a_button {

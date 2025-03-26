@@ -41,11 +41,11 @@ h2 {
     text-align: center;
 }
 
-main ul {
+.barre {
     padding: 0;
 }
 
-main li {
+.barre li {
     list-style: none;
     width: 100%;
     background: var(--color-white);
@@ -53,17 +53,17 @@ main li {
     margin-bottom: 10px;
 }
 
-main li:hover {
+.barre li:hover {
     background: var(--color-white-hover);
 }
 
-li div {
+.barre li div {
     padding: 8px 10px 8px 0px;
     border-radius: 4px;
     transition: width 0.3s ease-in-out;
 }
 
-li div span {
+.barre li div span {
     margin-left: 10px;
     color: var(--color-black);
 }

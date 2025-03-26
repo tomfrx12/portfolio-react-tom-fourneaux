@@ -10,7 +10,7 @@ function Competences() {
                 <h2>Langages Informatiques</h2>
             </div>
             <div className="inside_box">
-                <ul>
+                <ul className="barre">
                     <li>
                         <div id="python">
                             <span>Python</span>
@@ -65,7 +65,7 @@ function Competences() {
                 <h2>Autres compétences</h2>
             </div>
             <div className="inside_box">
-                <ul>
+                <ul className="barre">
                     <li>
                         <div id="canva">
                             <span>Canva</span>
