@@ -16,7 +16,7 @@ function Header() {
             <a href="/projets">Projets</a>
             <a href="/charte_graphique">Charte Graphique</a>
             <a href="/cv">CV</a>
-            <a href="/me_contater">Contact</a>
+            <a href="/me_contacter">Contact</a>
         </nav>
         <a className="menu">
             <span className="burger-icon">
