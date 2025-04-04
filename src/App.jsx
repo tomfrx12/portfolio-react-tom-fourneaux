@@ -8,7 +8,7 @@ import Competences from "./pages/competences";
 import Projets from "./pages/projets";
 import Charte_Graphique from "./pages/charte_graphique";
 import CV from "./pages/cv";
-import Contact from "./pages/me_contater";
+import Contact from "./pages/me_contacter";
 import Mentions_Legales from "./pages/mentions_legales";
 
 function App() {
