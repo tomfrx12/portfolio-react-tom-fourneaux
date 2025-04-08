@@ -10,8 +10,8 @@ function Header() {
         <a href="/">
             <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
         </a>
-        <nav className="navig">
-            <a href="/">Accueil</a>
+        <nav className="h-full w-250px fixed top-[0] right-[-250px] bg-black">
+            <a className="p-8 pl-32" href="/">Accueil</a>
             <a href="/competences">Compétences</a>
             <a href="/projets">Projets</a>
             <a href="/charte_graphique">Charte Graphique</a>
