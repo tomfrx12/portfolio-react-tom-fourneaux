@@ -12,11 +12,11 @@ function Header() {
         </a>
         <nav className="h-full w-250px fixed top-[0] right-[-250px] bg-black">
             <a className="text-white p-[0.5rem] pl-[2rem] no-underline" href="/">Accueil</a>
-            <a className="p-[0.5rem] pl-[2rem] no-underline" href="/competences">Compétences</a>
-            <a className="p-[0.5rem] pl-[2rem] no-underline" href="/projets">Projets</a>
-            <a className="p-[0.5rem] pl-[2rem] no-underline" href="/charte_graphique">Charte Graphique</a>
-            <a className="p-[0.5rem] pl-[2rem] no-underline" href="/cv">CV</a>
-            <a className="p-[0.5rem] pl-[2rem] no-underline" href="/me_contacter">Contact</a>
+            <a className="text-white p-[0.5rem] pl-[2rem] no-underline" href="/competences">Compétences</a>
+            <a className="text-white p-[0.5rem] pl-[2rem] no-underline" href="/projets">Projets</a>
+            <a className="text-white p-[0.5rem] pl-[2rem] no-underline" href="/charte_graphique">Charte Graphique</a>
+            <a className="text-white p-[0.5rem] pl-[2rem] no-underline" href="/cv">CV</a>
+            <a className="text-white p-[0.5rem] pl-[2rem] no-underline" href="/me_contacter">Contact</a>
         </nav>
         <a className="menu">
             <span className="burger-icon">
