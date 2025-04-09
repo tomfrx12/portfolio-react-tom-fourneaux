@@ -1,4 +1,4 @@
-import "/src/css/style-projet.css";
+// import "/src/css/style-projet.css";
 
 import logo_handisup from "../assets/img/projets/img/handisup/logo-handisup.png";
 import logo_handisup_noir_et_blanc from "../assets/img/projets/img/handisup/logo-handisup-noir-et-blanc.png";

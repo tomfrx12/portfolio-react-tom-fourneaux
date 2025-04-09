@@ -1,4 +1,4 @@
-import "/src/css/style-cv.css";
+// import "/src/css/style-cv.css";
 
 import TOM from "../assets/img/cv/TOM.jpeg"
 import qrcode_linkedin from "../assets/img/qrcode/qrcode_linkedin.jpg"

@@ -8,6 +8,7 @@ export default {
       extend: {
         colors: {
           black: '#000000',
+          colortext: '#999999',
         },
       },
     },

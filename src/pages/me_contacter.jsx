@@ -1,4 +1,4 @@
-import "/src/css/style-me_contacter.css";
+// import "/src/css/style-me_contacter.css";
 
 import qrcode_github from "../assets/img/qrcode/qrcode_github.png"
 import qrcode_linkedin from "../assets/img/qrcode/qrcode_linkedin.jpg"

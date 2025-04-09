@@ -1,4 +1,4 @@
-import "/src/css/styles.css";
+// import "/src/css/styles.css";
 
 import github from "../assets/img/img_reseaux/github.png"
 import linkedin from "../assets/img/img_reseaux/linkedin.png"

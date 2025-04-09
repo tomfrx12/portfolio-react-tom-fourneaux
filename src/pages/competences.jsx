@@ -1,4 +1,4 @@
-import "/src/css/style-competences.css";
+// import "/src/css/style-competences.css";
 
 function Competences() {
     return (

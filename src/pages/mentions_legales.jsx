@@ -1,4 +1,4 @@
-import "/src/css/style-mentions_legales.css";
+// import "/src/css/style-mentions_legales.css";
 
 function Mentions_Legales() {
     return (

@@ -1,4 +1,4 @@
-import "/src/css/style-charte-graphique.css";
+// import "/src/css/style-charte-graphique.css";
 
 import logo_vertical from "../assets/img/charte-graphique/logo-versions/logo-vertical.png"
 import logo_horizontal from "../assets/img/charte-graphique/logo-versions/logo-horizontal.png"

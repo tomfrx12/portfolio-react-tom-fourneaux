@@ -1,4 +1,4 @@
-import "/src/css/style-index.css";
+// import "/src/css/style-index.css";
 
 import pptom from "../assets/img/tom.png";
 import illustration_dev from "../assets/img/illustration presentation/illustration dev 1.png";
