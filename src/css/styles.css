@@ -47,90 +47,6 @@ main {
     color: var(--color-white-hover);
 }
 
-.burger-icon span {
-    display: block;
-    width: 20px;
-    height: 1px;
-    background-color: var(--color-white);
-    margin: 6px 0;
-}
-
-.navig {
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    right: -250px;
-    background-color: var(--color-black);
-}
-
-.navig a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: var(--color-white);
-    /* display: block; */
-}
-
-.navig a:hover {
-    color: var(--color-white-hover);
-}
-
-.menu {
-    display: block;
-    cursor: pointer;
-    top: 80px;
-    right: 20rem;
-}
-
-header.menu-open .navig {
-    display: flex;
-    flex-direction: column;
-    top: 60px;
-    right: 0;
-}
-
-.burger-icon {
-    display: block;
-}
-
-header.menu-open .burger-icon {
-    display: none;
-}
-
-.close-menu {
-    display: none;
-    color: var(--color-white-hover);
-}
-
-header.menu-open .close-menu {
-    display: block;
-}
-
-@media screen and (min-width: 1024px) {
-    .menu {
-        display: none;
-    }
-
-    .navig {
-        width: auto;
-        display: flex;
-        position: static;
-    }
-}
-
-.a_button {
-    background-color: var(--color-white-hover);
-    color: var(--color-black);
-    border-radius: 20px;
-    padding: 5px;
-    transition: transform 0.3s ease;
-}
-
-.a_button:hover {
-    transform: scale(1.05);
-}
-
 footer {
     margin-top: 20px;
     background-color: var(--color-black);
@@ -154,6 +70,19 @@ footer p {
 
 .mentions_legales {
     color: var(--color-white);
+}
+
+.logo {
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.logo img {
+    max-height: 1.5rem;
 }
     
 @media screen and (min-width: 1024px) {

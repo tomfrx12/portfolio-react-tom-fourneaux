@@ -8,11 +8,11 @@ import logo_club_st_sever from "../assets/img/logo_des_projets/logo-club-eco-st-
 function Index() {
     return (
         <>
-            <main>
+            <main className="flex-1 text-white">
                 <section className="me">
                     <div className="debut-presta">
-                            <img src={pptom} alt="photo de profil Tom FOURNEAUX"/>
-                            <h1>Tom Fourneaux</h1>
+                            <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="w-1/4"/>
+                            <h1 className="bg-primary">Tom Fourneaux</h1>
                             <p className="pres">Etudiant et passionné de codage, voici mon portfolio</p>
                             <a href="/me_contater" className="a_button">Contactez moi</a>
                     </div>

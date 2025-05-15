@@ -13,20 +13,29 @@ import Mentions_Legales from "./pages/mentions_legales";
 
 function App() {
     return (
-        <Router>
-            <Header/>
+        <div
+            className="flex flex-col min-h-screen bg-[#111111]"
+            style={{
+                backgroundImage: "url('/src/assets/img/background-pattern.png')",
+                backgroundSize: "100% 100%",
+            }}
+        >
+            <Router>
+                <Header />
                 <Routes>
                     <Route path="/" element={<Index />} />
-                    <Route path="/competences" element={<Competences/>} />
-                    <Route path="/projets" element={<Projets/>} />
-                    <Route path="/charte_graphique" element={<Charte_Graphique/>} />
-                    <Route path="/cv" element={<CV/>} />
-                    <Route path="/me_contacter" element={<Contact/>} />
-                    <Route path="/mentions_legales" element={<Mentions_Legales/>} />
+                    <Route path="/competences" element={<Competences />} />
+                    <Route path="/projets" element={<Projets />} />
+                    <Route path="/charte_graphique" element={<Charte_Graphique />} />
+                    <Route path="/cv" element={<CV />} />
+                    <Route path="/me_contacter" element={<Contact />} />
+                    <Route path="/mentions_legales" element={<Mentions_Legales />} />
                 </Routes>
-            <Footer/>
-        </Router>
+                <Footer />
+            </Router>
+        </div>
     );
 }
+
 
 export default App;
