@@ -17,13 +17,13 @@ import sql from "../assets/img/cv/logo outils/SQL.png"
 import php from "../assets/img/cv/logo outils/PHP.png"
 import react from "../assets/img/cv/logo outils/React.webp"
 import tailwindcss from "../assets/img/cv/logo outils/tailwindcss.png"
+import { Link } from "react-router"
 
 
 
 function CV() {
     return (
         <>
-            <main>
                 <div className="contenue">
                     <section className="header-cv">
                         <div className="text">
@@ -85,7 +85,7 @@ function CV() {
                                 <li><b>Club Eco Saint Sever: </b>2024</li>
                                 <li><b>Projet BDE, organisation voyage Dublin: </b>2024</li>
                             </ul>
-                            <a href="/projets" className="a_button" title="Projets">Mes projets</a>
+                            <Link to="/projets" className="a_button" title="Projets">Mes projets</Link>
                         </div>
                         <h3>FORMATION :</h3>
                         <div>
@@ -126,7 +126,7 @@ function CV() {
                                     </li>
                                 </ul>
                             </div>
-                            <a href="/competences" className="a_button" title="Compétences">Mes Compétences</a>
+                            <Link to="/competences" className="a_button" title="Compétences">Mes Compétences</Link>
                             <h3>Langages :</h3>
                             <div className="langages">
                                 <ul className="list-outils-langages">
@@ -166,12 +166,11 @@ function CV() {
                                     </li>
                                 </ul>
                             </div>
-                            <a href="/competences" className="a_button" title="Compétences">Mes Compétences</a>
+                            <Link to="/competences" className="a_button" title="Compétences">Mes Compétences</Link>
                         </div>
                     </section>
                 </div>
-                <a href="../assets/img/cv/CV Tom Fourneaux InDesign.pdf" download className="download-button" title="Télécharger mon cv">Télécharger mon CV</a>
-            </main>
+                <Link to="../assets/img/cv/CV Tom Fourneaux InDesign.pdf" download className="download-button" title="Télécharger mon cv">Télécharger mon CV</Link>
         </>
     );
 }

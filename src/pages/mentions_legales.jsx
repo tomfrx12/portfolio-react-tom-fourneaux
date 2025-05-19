@@ -3,7 +3,6 @@
 function Mentions_Legales() {
     return (
         <>
-            <main>
                 <h1>Mentions Légales</h1>
                 <h2>Propriétaire du site:</h2>
                 <ul className="infos">
@@ -19,7 +18,6 @@ function Mentions_Legales() {
                 <h2>Protection des données personnelles:</h2>
                 <p>Aucune donnée personnelle {"n'est"} collectée sur ce site, sauf si vous conctactez Tom Fourneaux grâce à la page <a href="/me_contacter">contact</a>. Les informations fournies ne seront utilisées que dans le cadre de la réponse à vos demandes. Vous avez un droit {"d'accès"}, de rectification et de suppression sur vos données personnelles.
                 </p>
-            </main> 
         </>
     );
 }

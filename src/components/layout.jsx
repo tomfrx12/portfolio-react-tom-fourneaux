@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
         >
             <Header />
 
-            <main className="flex-1 text-white lg:my-[2rem] lg:mx-[5rem]">{children}</main>
+            <main className="flex-1 text-white items-center lg:my-[2rem] lg:mx-[5rem] lg:flex lg:items-stretch lg:flex-col">{children}</main>
 
             <Footer />
         </div>

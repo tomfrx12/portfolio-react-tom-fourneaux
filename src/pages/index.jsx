@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import pptom from "../assets/img/tom.png";
 import illustration_dev from "../assets/img/illustration presentation/illustration dev 1.png";
 import petit_logo from "../assets/img/logo_des_projets/petit_logo.png";
@@ -11,7 +13,7 @@ function Index() {
                             <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-[1rem] mx-[0rem] rounded-full w-[30%] lg:w-[20%]"/>
                             <h1 className="text-white m-[0]">Tom Fourneaux</h1>
                             <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
-                            {/* <a href="/me_contacter" className="mt-[10px]">Contactez moi</a> */}
+                            <Link to="/me_contacter" className="mt-[10px]">Contactez moi</Link>
                     </div>
                         <h2 className="text-white m-[0] mt-[40px] lg:mt-[5rem]">A PROPOS DE MOI</h2>
                         <section>
@@ -30,8 +32,8 @@ function Index() {
                             </div>
                         </section>  
                         <div className="flex gap-[20px]">
-                            {/* <a href="/cv" className="mt-[10px]">Mon CV</a> */}
-                            {/* <a href="/competences" className="mt-[10px]">Compétences</a> */}
+                            <Link to="/cv" className="mt-[10px]">Mon CV</Link>
+                            <Link to="/competences" className="mt-[10px]">Compétences</Link>
                         </div>
                 </section>
                 <section className="flex flex-col items-center">
@@ -42,7 +44,7 @@ function Index() {
                             <div>
                                 <h3 className="text-white m-[0] mt-[40px] font-normal">Portfolio</h3>
                                 <p className="text-xs m-auto lg:text-2xl">Projet consistant à créer un portfolio.</p>
-                                {/* <a href="#" className="text-xs text-grey lg:text-2xl">Voir plus</a> */}
+                                <Link to="#" className="text-xs text-grey lg:text-2xl">Voir plus</Link>
                             </div>
                         </div>
 
@@ -51,11 +53,11 @@ function Index() {
                             <div>
                                 <h3 className="text-white m-[0] mt-[40px] font-normal">Club Eco Saint Sever</h3>
                                 <p className="text-xs m-auto lg:text-2xl">Projet qui consistait à créer une identité visuelle pour le Club Eco de Saint Sever.</p>
-                                {/* <a href="#" className="text-xs text-grey lg:text-2xl">Voir plus</a>  */}
+                                <Link to="#" className="text-xs text-grey lg:text-2xl">Voir plus</Link>
                             </div>
                         </div>
                     </div>
-                    {/* <a href="/projets" className="mt-[10px]">Mes projets</a> */}
+                    <Link to="/projets" className="mt-[10px]">Mes projets</Link>
                 </section>
         </>
     );
