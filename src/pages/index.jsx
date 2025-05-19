@@ -6,7 +6,6 @@ import logo_club_st_sever from "../assets/img/logo_des_projets/logo-club-eco-st-
 function Index() {
     return (
         <>
-            <main className="flex-1 text-white lg:my-[2rem] lg:mx-[5rem]">
                 <section className="flex flex-col items-center">
                     <div className="flex items-center text-center flex-col  lg:h-[80vh] lg:justify-center">
                             <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-[1rem] mx-[0rem] rounded-full w-[30%] lg:w-[20%]"/>
@@ -58,7 +57,6 @@ function Index() {
                     </div>
                     <a href="/projets" className="mt-[10px]">Mes projets</a>
                 </section>
-            </main>
         </>
     );
 }
