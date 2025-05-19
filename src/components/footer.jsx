@@ -18,7 +18,7 @@ function Footer() {
                     <img className="max-h-[1.5rem] lg:max-h-[2.5rem]" src={instagram} alt="Logo de Instagram"/>
                 </a>
             </nav>
-            <p className="text-center text-xs text-white lg:text-sm">Copyright © 2025 tom-fourneaux<br/>
+            <p className="text-center text-xs text-white lg:text-2xl">Copyright © 2025 tom-fourneaux<br/>
                 <a href="/mentions_legales" className="text-white">Mentions légales</a>
             </p>
         </footer>
