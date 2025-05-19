@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import logo from '../assets/img/logo.png'
+import { Link } from "react-router"
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -17,11 +18,11 @@ function Header() {
                 <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
             </a>
             <nav className={`lg:w-auto lg:flex lg:static ${menuOpen ? "flex flex-col top-[60px] right-0":"h-full w-[250px] fixed top-[0] right-[-250px] bg-black"}`}>
-                <a href="/" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Accueil</a>
-                <a href="./competences" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Compétences</a>
-                <a href="./projets" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Projets</a>
-                <a href="./charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Charte Graphique</a>
-                <a href="./cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >CV</a>
+                <Link to="/" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Accueil</Link>
+                <Link to="/competences" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Compétences</Link>
+                <Link to="/projets" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Projets</Link>
+                <Link to="/charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >Charte Graphique</Link>
+                <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" >CV</Link>
             </nav>
             <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
                 <span className={`${menuOpen ? 'hidden' : 'block'}`}>
