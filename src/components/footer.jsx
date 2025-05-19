@@ -26,3 +26,5 @@ function Footer() {
 }
 
 export default Footer;
+
+// flex-row justify-around py-[10px]

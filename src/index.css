@@ -1,17 +1,13 @@
-@tailwind utilities;
-@tailwind base;
-@tailwind components;
+@import "tailwindcss";
+
 
 @layer base {
     :root {
       font-family: 'Comic Neue', cursive !important;
+      --color-primary: #E21022;
+      --color-cv-primary: #5e3d8d;
+      --color-grey: #999999;
+      --color-text: #ffffff;
+      --color-black: #000000;  
     }
-}
-
-@theme {
-    --color-primary: #E21022;
-    --color-cv-primary: #5e3d8d;
-    --color-grey: #999999;
-    --color-text: #ffffff;
-    --color-black: #000000;    
 }
