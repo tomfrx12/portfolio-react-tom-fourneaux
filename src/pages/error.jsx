@@ -1,4 +1,4 @@
-import Yrieix from "../assets/img/yrieix.jpg"
+import NicoJr from "../assets/img/NicoJr.png"
 
 function Error() {
     return (
@@ -7,8 +7,8 @@ function Error() {
             <h1 className="text-xl flex justify-center lg:text-8xl">404</h1>
             <p className="text-sm flex justify-center lg:text-3xl">Page Not Found</p>
         </div>
-        <div className="flex">
-            <img src={Yrieix}/>
+        <div className="flex justify-center">
+            <img src={NicoJr}/>
         </div>
         </>
     )
