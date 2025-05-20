@@ -11,7 +11,7 @@ function Mentions_Legales() {
                     <li>- Nom: Tom Fourneaux</li>
                     <li>- Statut: Etudiant Bachelor chef de projets digitaux<br/>Normandie Web School, Rouen</li>
                     <li>- Email: tfourneaux@normandiewebschool.fr</li>
-                    <li>- Site web: <Link to="https://tom-fourneaux.fr" className="text-[var(--color-grey)] text-xs lg:text-2xl"><br/>https://tomfrx12.github.io/tom-fourneaux-portfolio/</Link></li>
+                    <li>- Site web: <Link to="https://tom-fourneaux.fr" className="text-[var(--color-grey)] text-xs lg:text-2xl"><br/>https://tom-fourneaux.fr</Link></li>
                 </ul>
 
                 <h2 className="pl-[10px] mt-[40px] mx-[0px] mb-[10px] text-left text-base lg:text-3xl">Propriété intellectuelle:</h2>
