@@ -24,29 +24,29 @@ import { Link } from "react-router"
 function CV() {
     return (
         <>
-                <div className="contenue">
-                    <section className="header-cv">
-                        <div className="text">
-                            <img src={TOM} alt="Photo de Profil CV Tom Fourneaux" className="tom"/>
-                            <h1>TOM FOURNEAUX</h1>
+                <div className="lg:grid lg:grid-cols-2">
+                    <section className="flex flex-col text-center border-5 border-solid border-[var(--color-cv-primary)]">
+                        <div>
+                            <img src={TOM} alt="Photo de Profil CV Tom Fourneaux" className="self-center max-w-[40%] rounded-full border-5 border-solid border-[var(--color-cv-primary)]"/>
+                            <h1 className="mt-[40px] mb-[10px]">TOM FOURNEAUX</h1>
                             <h2>DEVELOPPEUR WEB</h2>
-                            <div className="stage">
-                                <p>Recherche stage alterné non rémunéré</p>
-                                <p>Du 10 mars au 20 juin 2025</p>
+                            <div className="text-center my-[20px] mx-[0px] p-[10px] bg-[var(--color-cv-primary)] inline-block rounded-[5px] shadow[5px_5px_5px_white]">
+                                <p className="text-xs lg:text-2xl">Recherche stage alterné non rémunéré</p>
+                                <p className="text-xs lg:text-2xl">Du 10 mars au 20 juin 2025</p>
                             </div>
                         </div>
-                        <div className="gauche">
-                            <ul className="infos">
-                                <li><p>Âge<br/>18 ans</p></li>
-                                <li><p>E-mail<br/><span className="mail">tfourneaux@normandiewebschool.fr</span></p></li>
-                                <li><p>Mobile<br/>06 80 50 14 52</p></li>
-                                <li><p>Adresse<br/>799 rue du château,<br/>Bois-Héroult</p></li>
-                                <li><p>Langue<br/>Anglais</p></li>
-                                <li><p>Permis<br/>B + Véhicule</p></li>
+                        <div className="text-left">
+                            <ul className="list-none pl-[20px]">
+                                <li className="my-[20px] mx-[0px]"><p>Âge<br/>18 ans</p></li>
+                                <li className="my-[20px] mx-[0px]"><p>E-mail<br/><span className="text-xs lg:text-2xl">tfourneaux@normandiewebschool.fr</span></p></li>
+                                <li className="my-[20px] mx-[0px]"><p>Mobile<br/>06 80 50 14 52</p></li>
+                                <li className="my-[20px] mx-[0px]"><p>Adresse<br/>799 rue du château,<br/>Bois-Héroult</p></li>
+                                <li className="my-[20px] mx-[0px]"><p>Langue<br/>Anglais</p></li>
+                                <li className="my-[20px] mx-[0px]"><p>Permis<br/>B + Véhicule</p></li>
                             </ul>
                             <div>
-                                <h3>CENTRES {"D'INTÉRÊT"}</h3>
-                                <ul className="centre-dinteret">
+                                <h3 className="mt-[40px] ml-[10px]">CENTRES {"D'INTÉRÊT"}</h3>
+                                <ul className="list-none pl-[30px]">
                                     <li>Jeux-vidéos</li>
                                     <li>Codage</li>
                                     <li>Numérique</li>
@@ -55,122 +55,122 @@ function CV() {
                                     <li>Collections en<br/>tout genres</li>
                                 </ul>
                             </div>
-                            <div className="qrcodes">
-                                <div className="linkedin">
+                            <div className="my-[50px] mx-[20px] flex justify-around text-center lg:text-left lg:gap-[40px]">
+                                <div className="max-w-[50%] lg:max-w-full">
                                     <p>LinkedIn</p>
-                                    <img src={qrcode_linkedin} alt="qrcode LinkedIn"/>
+                                    <img className="max-w-[50%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_linkedin} alt="qrcode LinkedIn"/>
                                 </div>
-                                <div className="github">
+                                <div className="max-w-[50%] lg:max-w-full">
                                     <p>Github</p>
-                                    <img src={qrcode_github} alt="qrcode Github"/>
+                                    <img className="max-w-[50%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_github} alt="qrcode Github"/>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section className="main-cv">
-                        <h3>COMPÉTENCES</h3>
+                    <section>
+                        <h3 className="mt-[40px] ml-[10px]">COMPÉTENCES</h3>
                         <div>
-                            <ul className="competences">
-                                <li>SEO</li>
-                                <li>CMS création {"d'un"} site web</li>
-                                <li>Développer le site en fonction des cahiers des charges</li>
-                                <li>Savoir comment utiliser Git et Github</li>
-                                <li>Pratiques de développement W3c et débogage</li>
+                            <ul className="list-none mb-[30px]">
+                                <li className="my-[10px] mx-[0px]">- SEO</li>
+                                <li className="my-[10px] mx-[0px]">- CMS création {"d'un"} site web</li>
+                                <li className="my-[10px] mx-[0px]">- Développer le site en fonction des cahiers des charges</li>
+                                <li className="my-[10px] mx-[0px]">- Savoir comment utiliser Git et Github</li>
+                                <li className="my-[10px] mx-[0px]">- Pratiques de développement W3c et débogage</li>
                             </ul>
                         </div>
-                        <h3>EXPÉRIENCE :</h3>
+                        <h3 className="mt-[40px] ml-[10px]">EXPÉRIENCE :</h3>
                         <div>
-                            <ul className="experience">
-                                <li><b>Création Portfolio: </b>2024<br/><a href="/">mon portfolio</a></li>
-                                <li><b>Club Eco Saint Sever: </b>2024</li>
-                                <li><b>Projet BDE, organisation voyage Dublin: </b>2024</li>
+                            <ul className="list-none mb-[30px]">
+                                <li className="my-[10px] mx-[0px]"><b>Création Portfolio: </b>2024<br/><a href="/">mon portfolio</a></li>
+                                <li className="my-[10px] mx-[0px]"><b>Club Eco Saint Sever: </b>2024</li>
+                                <li className="my-[10px] mx-[0px]"><b>Projet BDE, organisation voyage Dublin: </b>2024</li>
                             </ul>
-                            <Link to="/projets" className="a_button" title="Projets">Mes projets</Link>
+                            <Link to="/projets" className="text-black ml-[20px] bg-white rounded-[20px] p-[5px]  transition:transform duration:300 ease-in-out hover:scale-105" title="Projets">Mes projets</Link>
                         </div>
-                        <h3>FORMATION :</h3>
+                        <h3 className="mt-[40px] ml-[10px]">FORMATION :</h3>
                         <div>
-                            <ul className="formation">
-                                <li><b>Bachelor chef de projet digitaux</b><br/>Normandie Web School (NWS)<br/>Développement Web<br/>Rouen<br/>2024-2027</li>
-                                <li><b>Baccalauréat Général Spécialités NSI et Maths</b><br/>Lycée Delamarre Debouteville<br/>Forges les eaux<br/>2021-2024</li>
+                            <ul className="list-none mb-[30px]">
+                                <li className="my-[10px] mx-[0px]"><b>Bachelor chef de projet digitaux</b><br/>Normandie Web School (NWS)<br/>Développement Web<br/>Rouen<br/>2024-2027</li>
+                                <li className="my-[10px] mx-[0px]"><b>Baccalauréat Général Spécialités NSI et Maths</b><br/>Lycée Delamarre Debouteville<br/>Forges les eaux<br/>2021-2024</li>
                             </ul>
                         </div>
-                        <div className="outils-langages">
-                            <h3>Mes Outils :</h3>
-                            <div className="outils">
-                                <ul className="list-outils-langages">
-                                    <li>
-                                        <img src={vscode} alt="logo visual studio code"/>
-                                        <span>Visual Studio Code</span>
+                        <div className="bg-[var(--color-cv-primary)] rounded-[20px] p-[10px] m-[10px] shadow-[5px_5px_5px_var(--color-grey)]">
+                            <h3 className="mt-[40px] ml-[10px]">Mes Outils :</h3>
+                            <div>
+                                <ul className="lg:inline-block lg:max-w-[40%]">
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={vscode} alt="logo visual studio code"/>
+                                        <span className="ml-[20px]">Visual Studio Code</span>
                                     </li>
-                                    <li>
-                                        <img src={wordpress} alt="logo wordpress"/>
-                                        <span>WordPress</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={wordpress} alt="logo wordpress"/>
+                                        <span className="ml-[20px]">WordPress</span>
                                     </li>
-                                    <li>
-                                        <img src={canva} alt="logo canva" id="canva"/>
-                                        <span>Canva</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={canva} alt="logo canva" id="canva"/>
+                                        <span className="ml-[20px]">Canva</span>
                                     </li>
                                 </ul>
-                                <ul className="list-outils-langages">
-                                    <li>
-                                        <img src={photoshop} alt="logo photoshop"/>
-                                        <span>Photoshop</span>
+                                <ul className="lg:inline-block lg:max-w-[40%]">
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={photoshop} alt="logo photoshop"/>
+                                        <span className="ml-[20px]">Photoshop</span>
                                     </li>
-                                    <li>
-                                        <img src={illustrator} alt="logo illustrator"/>
-                                        <span>Illustrator</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={illustrator} alt="logo illustrator"/>
+                                        <span className="ml-[20px]">Illustrator</span>
                                     </li>
-                                    <li>
-                                        <img src={indesign} alt="logo indesign"/>
-                                        <span>InDesign</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={indesign} alt="logo indesign"/>
+                                        <span className="ml-[20px]">InDesign</span>
                                     </li>
                                 </ul>
                             </div>
-                            <Link to="/competences" className="a_button" title="Compétences">Mes Compétences</Link>
-                            <h3>Langages :</h3>
-                            <div className="langages">
-                                <ul className="list-outils-langages">
-                                    <li>
-                                        <img src={python} alt="logo python"/>
-                                        <span>Python</span>
+                            <Link to="/competences" className=" bg-white text-black rounded-[20px] p-[5px] ml-[10px] transition:transform duration:300 ease-in-out hover:scale-105" title="Compétences">Mes Compétences</Link>
+                            <h3 className="mt-[40px] ml-[10px]">Langages :</h3>
+                            <div>
+                                <ul className="lg:inline-block lg:max-w-[40%]">
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={python} alt="logo python"/>
+                                        <span className="ml-[20px]">Python</span>
                                     </li>
-                                    <li>
-                                        <img src={html} alt="logo html"/>
-                                        <span>HTML</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={html} alt="logo html"/>
+                                        <span className="ml-[20px]">HTML</span>
                                     </li>
-                                    <li>
-                                        <img src={css} alt="logo css"/>
-                                        <span>CSS</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={css} alt="logo css"/>
+                                        <span className="ml-[20px]">CSS</span>
                                     </li>
-                                    <li>
-                                        <img src={js} alt="logo javascript"/>
-                                        <span>JavaScript</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={js} alt="logo javascript"/>
+                                        <span className="ml-[20px]">JavaScript</span>
                                     </li>
                                 </ul>
-                                <ul className="list-outils-langages">
-                                    <li>
-                                        <img src={sql} alt="logo my sql"/>
-                                        <span>MySQL</span>
+                                <ul className="lg:inline-block lg:max-w-[40%]">
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={sql} alt="logo my sql"/>
+                                        <span className="ml-[20px]">MySQL</span>
                                     </li>
-                                    <li>
-                                        <img src={php} alt="logo php"/>
-                                        <span>PHP</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={php} alt="logo php"/>
+                                        <span className="ml-[20px]">PHP</span>
                                     </li>
-                                    <li>
-                                        <img src={react} alt="logo react.js"/>
-                                        <span>React.js</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={react} alt="logo react.js"/>
+                                        <span className="ml-[20px]">React.js</span>
                                     </li>
-                                    <li>
-                                        <img src={tailwindcss} alt="logo tailwind css"/>
-                                        <span>TailwindCSS</span>
+                                    <li className="flex items-center my-[10px] mx-[0px]">
+                                        <img className="max-w-[10%] lg:max-w-[20%]" src={tailwindcss} alt="logo tailwind css"/>
+                                        <span className="ml-[20px]">TailwindCSS</span>
                                     </li>
                                 </ul>
                             </div>
-                            <Link to="/competences" className="a_button" title="Compétences">Mes Compétences</Link>
+                            <Link to="/competences" className=" bg-white text-black rounded-[20px] p-[5px] ml-[10px] transition:transform duration:300 ease-in-out hover:scale-105" title="Compétences">Mes Compétences</Link>
                         </div>
                     </section>
                 </div>
-                <Link to="../assets/img/cv/CV Tom Fourneaux InDesign.pdf" download className="download-button" title="Télécharger mon cv">Télécharger mon CV</Link>
+                <Link to="../assets/img/cv/CV Tom Fourneaux InDesign.pdf" download className="flex justify-center mb-[40px] mx-[50px] mt-[0px] p-[10px] bg-black text-white no-underline font-bold text-center transition:transform duration:200 linear" title="Télécharger mon cv">Télécharger mon CV</Link>
         </>
     );
 }
