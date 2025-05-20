@@ -1,6 +1,16 @@
+import Yrieix from "../assets/img/yrieix.jpg"
+
 function Error() {
     return (
-        <></>
+        <>
+        <div className="flex flex-col justify-center justify-items-center max-h-[600px] h-screen">
+            <h1 className="text-xl flex justify-center lg:text-8xl">404</h1>
+            <p className="text-sm flex justify-center lg:text-3xl">Page Not Found</p>
+        </div>
+        <div className="flex">
+            <img src={Yrieix}/>
+        </div>
+        </>
     )
 }
 
