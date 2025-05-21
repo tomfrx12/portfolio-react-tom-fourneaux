@@ -23,9 +23,10 @@ function Header() {
                 <Link to="/projets" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => window.scrollTo(0, 0)}>Projets</Link>
                 <Link to="/charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => window.scrollTo(0, 0)}>Charte Graphique</Link>
                 <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => window.scrollTo(0, 0)}>CV</Link>
+                <Link to="/me_contacter" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => window.scrollTo(0, 0)}>Contact</Link>
             </nav>
             <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
-                <span className={`${menuOpen ? 'hidden' : 'block'}`}>
+                <span className={`${menuOpen ? 'hidden' : 'block'}`}> {/* Expression ternaire */}
                     <span className="block w-[20px] h-px bg-white my-[6px]"></span>
                     <span className="block w-[20px] h-px bg-white my-[6px]"></span>
                     <span className="block w-[20px] h-px bg-white my-[6px]"></span>
