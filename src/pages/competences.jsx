@@ -5,9 +5,8 @@
 function Competences() {
     return (
     <>
-        {/* <h1 className="text-center m-[20px] bg-black lg:text-2xl">Mes compétences</h1> */}
-        {/* <Text>Mes compétences</Text> */}
-        {/* py-[10px] px-[20px] */}
+        <h1 className="text-center m-[20px] py-[10px] px-[20px] bg-black lg:text-2xl">Mes compétences</h1>
+        {/* <Text tag="h1" name="h1">Mes compétences</Text> */}
         <div className="flex items-center flex-col">
             <div className="m-[20px] bg-[#121212] rounded-t-[1rem] overflow-hidden lg:w-[75%]">
                 <div className="bg-[#333333] p-[5px]">
