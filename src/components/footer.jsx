@@ -5,7 +5,7 @@ import linkedin from "../assets/img/img_reseaux/linkedin.png"
 import instagram from "../assets/img/img_reseaux/instagram.png"
 import { Link } from "react-router";
 
-function Footer() {
+const Footer = () => {
     return (
         <footer className="mt-[20px] bg-black flex justify-center flex-col items-center lg:flex-row lg:justify-around lg:py-[10px]">
             <nav className="flex gap-[40px] mt-[20px] lg:m-[0]">

@@ -1,4 +1,6 @@
-// import "/src/css/style-projet.css";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
+import { Link } from "react-router";
 
 import logo_handisup from "../assets/img/projets/img/handisup/logo-handisup.png";
 import logo_handisup_noir_et_blanc from "../assets/img/projets/img/handisup/logo-handisup-noir-et-blanc.png";
@@ -15,11 +17,19 @@ import fiches from "../assets/img/projets/img/interview/Fiches.png";
 import banniere_bde from "../assets/img/projets/img/banniere.png";
 import e_commerce from"../assets/img/projets/img/E-commerce.png"
 import figma from "../assets/img/logo_des_projets/figma-logo.webp"
-import { Link } from "react-router";
-
-
 
 function Projets() {
+    const location = useLocation();
+
+    useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
     return (
         <>
             <h1 className="text-center m-[20px] py-[10px] px-[20] bg-black lg:text-3xl">Projet</h1>
@@ -60,7 +70,7 @@ function Projets() {
                     </div>
                 </div>
 
-                <div className="bg-[var(--color-grey)] rounded-[10px] shadow-[5px_5px_5px_white] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px]">
+                <div id="projet-portfolio" className="bg-[var(--color-grey)] rounded-[10px] shadow-[5px_5px_5px_white] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px]">
                     <img className="m-[30px] max-w-full max-h-max text-center lg:max-w-[20%]" src={logo_vertical} alt="illustration pour projet portfolio"/>
                     <div className="flex flex-col lg:w-[50%] lg:justify-center">
                         <div className="text">
@@ -76,7 +86,7 @@ function Projets() {
                     </div>
                 </div>
 
-                    <div className="bg-[var(--color-grey)] rounded-[10px] shadow-[5px_5px_5px_white] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px]">
+                    <div id="projet-clubecosaintsever" className="bg-[var(--color-grey)] rounded-[10px] shadow-[5px_5px_5px_white] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px]">
                         <img className="m-[30px] max-w-full max-h-max text-center" src={alternative_banniere} alt="illustration pour projet club eco saint sever"/>
                         <div className="flex flex-col lg:w-[50%] lg:justify-center">
                             <div className="text">
@@ -84,11 +94,11 @@ function Projets() {
                                 <p className="m-[10px]" >A la NWS et avec {"l'aide"} de la Mission Locale Agglomération de Rouen, {"j'ai"} eu la chance avec un groupe {"d'élèves"}, de mettre en place une nouvelle charte graphique du Club Eco Saint Sever qui est une association à but non lucratif qui regroupe des entreprises pour des actions communues à Saint Sever comme {"l'écologie"}.</p>
                             </div>
                             <p className="mb-[0px] ml-[10px]" >En voir plus :</p>
-                            <Link to="assets/img/projets/downloads/Présentation Club Eco St Sever.pdf" title="projet site Club Eco Saint Sever" className="max-w-[40px] max-h-[40px] bg-white text-black rounded-[20px] p-[5px] my-[5px] text-center self-center transition-transform duration-300 ease-in-out shadow-[0px_0px_50px_black] hover:scale-105 lg:flex lg:justify-center lg:hover:scale-115">
+                            <a href="assets/img/projets/downloads/Présentation_Club_Eco_St_Sever.pdf" title="projet site Club Eco Saint Sever" download className="max-w-[40px] max-h-[40px] bg-white text-black rounded-[20px] p-[5px] my-[5px] text-center self-center transition-transform duration-300 ease-in-out shadow-[0px_0px_50px_black] hover:scale-105 lg:flex lg:justify-center lg:hover:scale-115">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 32 32">
                                     <path d="M 19 3 C 13.488281 3 9 7.488281 9 13 C 9 15.394531 9.839844 17.589844 11.25 19.3125 L 3.28125 27.28125 L 4.71875 28.71875 L 12.6875 20.75 C 14.410156 22.160156 16.605469 23 19 23 C 24.511719 23 29 18.511719 29 13 C 29 7.488281 24.511719 3 19 3 Z M 19 5 C 23.429688 5 27 8.570313 27 13 C 27 17.429688 23.429688 21 19 21 C 14.570313 21 11 17.429688 11 13 C 11 8.570313 14.570313 5 19 5 Z"></path>
                                 </svg>
-                            </Link>
+                            </a>
                         </div>
                     </div>
 
@@ -139,11 +149,11 @@ function Projets() {
                                 <p className="m-[10px]" >{"J'ai"} eu la chance lors de mon apprentisages {"d'interviewé"} un élève de troisième année dans ma spécialités, donc le développement web.</p>
                             </div>
                             <p className="mb-[0px] ml-[10px]" >Voir plus :</p>
-                            <Link to="https://docs.google.com/presentation/d/1ZEFo_4b6HNd6ZAQLk3P96uUDnKV_ACOEaF4wqa-OuiE/edit?usp=sharing" title="google docs presentation interview A3" className="max-w-[40px] max-h-[40px] bg-white text-black rounded-[20px] p-[5px] my-[5px] text-center self-center transition-transform duration-300 ease-in-out shadow-[0px_0px_50px_black] hover:scale-105 lg:flex lg:justify-center lg:hover:scale-115">
+                            <a href="assets/img/projets/downloads/Fiches_interview.pdfpdf" title="google docs presentation interview A3" download className="max-w-[40px] max-h-[40px] bg-white text-black rounded-[20px] p-[5px] my-[5px] text-center self-center transition-transform duration-300 ease-in-out shadow-[0px_0px_50px_black] hover:scale-105 lg:flex lg:justify-center lg:hover:scale-115">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 32 32">
                                     <path d="M 19 3 C 13.488281 3 9 7.488281 9 13 C 9 15.394531 9.839844 17.589844 11.25 19.3125 L 3.28125 27.28125 L 4.71875 28.71875 L 12.6875 20.75 C 14.410156 22.160156 16.605469 23 19 23 C 24.511719 23 29 18.511719 29 13 C 29 7.488281 24.511719 3 19 3 Z M 19 5 C 23.429688 5 27 8.570313 27 13 C 27 17.429688 23.429688 21 19 21 C 14.570313 21 11 17.429688 11 13 C 11 8.570313 14.570313 5 19 5 Z"></path>
                                 </svg>
-                            </Link>
+                            </a>
                         </div>
                     </div>
 

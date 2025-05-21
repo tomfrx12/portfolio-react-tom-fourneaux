@@ -1,9 +1,8 @@
-import { Link } from "react-router";
-
 import pptom from "../assets/img/tom.png";
 import illustration_dev from "../assets/img/illustration presentation/illustration dev 1.png";
 import petit_logo from "../assets/img/logo_des_projets/petit_logo.png";
 import logo_club_st_sever from "../assets/img/logo_des_projets/logo-club-eco-st-sever.png";
+import ButtonNav from "../components/a_button";
 
 function Index() {
     return (
@@ -13,7 +12,7 @@ function Index() {
                         <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-[1rem] mx-[0rem] rounded-full w-[30%] lg:w-[20%]"/>
                         <h1 className="text-white m-[0]">Tom Fourneaux</h1>
                         <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
-                        <Link to="/me_contacter" className="mt-[10px]">Contactez moi</Link>
+                        <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
                 </div>
                     <h2 className="text-white m-[0] mt-[40px] lg:mt-[5rem]">A PROPOS DE MOI</h2>
                     <section>
@@ -32,8 +31,8 @@ function Index() {
                         </div>
                     </section>  
                     <div className="flex gap-[20px]">
-                        <Link to="/cv" className="mt-[10px]">Mon CV</Link>
-                        <Link to="/competences" className="mt-[10px]">Compétences</Link>
+                        <ButtonNav link="cv">Mon CV</ButtonNav>
+                        <ButtonNav link="competences">Compétences</ButtonNav>
                     </div>
             </section>
             <section className="flex flex-col items-center">
@@ -44,7 +43,7 @@ function Index() {
                         <div>
                             <h3 className="text-white m-[0] mt-[40px] font-normal">Portfolio</h3>
                             <p className="text-xs m-auto lg:text-2xl">Projet consistant à créer un portfolio.</p>
-                            <Link to="#" className="text-xs text-grey lg:text-2xl">Voir plus</Link>
+                            <ButtonNav link="projets#projet-portfolio">Voir plus</ButtonNav>
                         </div>
                     </div>
 
@@ -53,11 +52,11 @@ function Index() {
                         <div>
                             <h3 className="text-white m-[0] mt-[40px] font-normal">Club Eco Saint Sever</h3>
                             <p className="text-xs m-auto lg:text-2xl">Projet qui consistait à créer une identité visuelle pour le Club Eco de Saint Sever.</p>
-                            <Link to="#" className="text-xs text-grey lg:text-2xl">Voir plus</Link>
+                            <ButtonNav link="projets#projet-clubecosaintsever">Voir plus</ButtonNav>
                         </div>
                     </div>
                 </div>
-                <Link to="/projets" className="mt-[10px]">Mes projets</Link>
+                <ButtonNav link="projets">Mes projets</ButtonNav>
             </section>
         </>
     );

@@ -17,13 +17,15 @@ const text = tv({
   },
 });
 
-const Text = ({ tag: Tag, name, size, align, children, className, ...props}) => {
+const Text = ({ tag: Tag, name, size, align, children, className}) => {
   return (
-    <Tag className={text({name, size, align, className})}  {...props}>
+    <Tag className={text({name, size, align, className})}>
       {children}
     </Tag>
   );
 };
+
+export {Text};
 
 Text.propTypes = {
   tag: PropTypes.elementType.isRequired,
@@ -34,7 +36,6 @@ Text.propTypes = {
   className: PropTypes.node,
 };
 
-export {Text};
 
 // const Texte = ({ tag: Tag, balise, couleur = "classique", texte, lien, marge, padding, className, children }) => {
 //   return (

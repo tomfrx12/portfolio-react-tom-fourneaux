@@ -7,7 +7,7 @@ import qrcode_linkedin from "../assets/img/qrcode/qrcode_linkedin.jpg"
 function Contact() {
     return (
         <>
-                <h1 className="text-center m-[20px] py-[10px] px-[20px] bg-black lg:self-center">Me contacter</h1>
+                <h1 className="text-center m-[20px] py-[10px] px-[20px] bg-black text-base lg:text-3xl">Me contacter</h1>
                 <div className="mt-[50px]">
                     <p className="flex justify-center text-center text-sm text-white transition:transform duration:300 ease-in-out lg:text-3xl">
                         <svg className="lg:m-[10px]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
@@ -24,11 +24,11 @@ function Contact() {
                 </div>
                 <div className="flex justify-around text-center lg:mt-[50px]">
                     <div className="qrcode">
-                        <p>Profil <Link className="text-white lg:text-[var(--color-grey)]" to="https://github.com/tomfrx12">Github</Link></p>
+                        <p>Profil <Link className="text-white lg:text-[var(--color-white)]" to="https://github.com/tomfrx12">Github</Link></p>
                         <img className="max-w-[100px] max-h-[100px] lg:max-w-[10rem] lg:max-h-[10rem]" src={qrcode_github} alt="QR Code Github"/>
                     </div>
                     <div className="qrcode">
-                        <p>Profil <Link className="text-white lg:text-[var(--color-grey)]" to="https://www.linkedin.com/in/tom-fourneaux-078644332/">LinkedIn</Link></p>
+                        <p>Profil <Link className="text-white lg:text-[var(--color-white)]" to="https://www.linkedin.com/in/tom-fourneaux-078644332/">LinkedIn</Link></p>
                         <img className="max-w-[100px] max-h-[100px] lg:max-w-[10rem] lg:max-h-[10rem]" src={qrcode_linkedin} alt="QR Code LinkedIn"/>
                     </div>
                 </div>
