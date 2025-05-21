@@ -29,7 +29,7 @@ function CV() {
             <div className="lg:grid lg:grid-cols-2">
                 <section className="flex flex-col text-center border-5 border-solid border-[var(--color-cv-primary)]">
                     <div>
-                        <img src={TOM} alt="Photo de Profil CV Tom Fourneaux" className="justify-self-center max-w-[40%] rounded-full border-5 border-solid border-[var(--color-cv-primary)]"/>
+                        <img src={TOM} alt="Photo de Profil CV Tom Fourneaux" className="justify-self-center max-w-[40%] mt-[20px] rounded-full border-5 border-solid border-[var(--color-cv-primary)]"/>
                         <h1 className="mt-[40px] mb-[10px]">TOM FOURNEAUX</h1>
                         <h2>DEVELOPPEUR WEB</h2>
                         <div className="text-center my-[20px] mx-[0px] p-[10px] bg-[var(--color-cv-primary)] inline-block rounded-[5px] shadow[5px_5px_5px_white]">
@@ -58,13 +58,17 @@ function CV() {
                             </ul>
                         </div>
                         <div className="my-[50px] mx-[20px] flex justify-around text-center lg:text-left lg:gap-[40px]">
-                            <div className="max-w-[50%] lg:max-w-full">
+                            <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>LinkedIn</p>
-                                <img className="max-w-[50%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_linkedin} alt="qrcode LinkedIn"/>
+                                <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/">
+                                    <img className="max-w-[70%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_linkedin} alt="qrcode LinkedIn"/>
+                                </Link>
                             </div>
-                            <div className="max-w-[50%] lg:max-w-full">
+                            <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>Github</p>
-                                <img className="max-w-[50%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_github} alt="qrcode Github"/>
+                                <Link to="https://github.com/tomfrx12">
+                                    <img className="max-w-[70%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_github} alt="qrcode Github"/>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -83,7 +87,7 @@ function CV() {
                     <h3 className="mt-[40px] ml-[10px]">EXPÉRIENCE :</h3>
                     <div>
                         <ul className="list-none mb-[30px]">
-                            <li className="my-[0px] mx-[20px]"><b>- Création Portfolio: </b>2024<Link href="/" className="pl-[20px]">Mon portfolio</Link></li>
+                            <li className="my-[0px] mx-[20px]"><b>- Création Portfolio: </b>2024<p className="underline"><Link href="/" className="pl-[20px]">Mon portfolio</Link></p></li>
                             <li className="my-[0px] mx-[20px]"><b>- Club Eco Saint Sever: </b>2024</li>
                             <li className="my-[0px] mx-[20px]"><b>- Projet BDE, organisation voyage Dublin: </b>2024</li>
                         </ul>
@@ -96,83 +100,87 @@ function CV() {
                             <li className="my-[10px] mx-[20px]"><b>- Baccalauréat Général Spécialités NSI et Maths</b><br/>Lycée Delamarre Debouteville<br/>Forges les eaux<br/>2021-2024</li>
                         </ul>
                     </div>
-                    <div className="bg-[var(--color-cv-primary)] rounded-[20px] p-[10px] m-[10px] shadow-[5px_5px_5px_var(--color-grey)]">
-                        <h3 className="mt-[40px] ml-[10px]">Mes Outils :</h3>
+                    <div className="flex flex-col gap-[50px] bg-[var(--color-cv-primary)] rounded-[20px] p-[10px] m-[10px] shadow-[5px_5px_5px_var(--color-grey)]">
                         <div>
-                            <ul className="lg:inline-block lg:max-w-[40%]">
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={vscode} alt="logo visual studio code"/>
-                                    <span className="ml-[20px]">Visual Studio Code</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={wordpress} alt="logo wordpress"/>
-                                    <span className="ml-[20px]">WordPress</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={canva} alt="logo canva" id="canva"/>
-                                    <span className="ml-[20px]">Canva</span>
-                                </li>
-                            </ul>
-                            <ul className="lg:inline-block lg:max-w-[40%]">
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={photoshop} alt="logo photoshop"/>
-                                    <span className="ml-[20px]">Photoshop</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={illustrator} alt="logo illustrator"/>
-                                    <span className="ml-[20px]">Illustrator</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={indesign} alt="logo indesign"/>
-                                    <span className="ml-[20px]">InDesign</span>
-                                </li>
-                            </ul>
-                        </div>
+                            <h3>Mes Outils :</h3>
+                            <div className="flex justify-around h-34 lg:h-auto lg:mb-[20px]">
+                                <ul className="grid content-between lg:gap-[20px]">
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={vscode} alt="logo visual studio code"/>
+                                        <span className="mx-5">Visual Studio Code</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={wordpress} alt="logo wordpress"/>
+                                        <span className="mx-5">WordPress</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={canva} alt="logo canva" id="canva"/>
+                                        <span className="mx-5">Canva</span>
+                                    </li>
+                                </ul>
+                                <ul className=" grid content-between lg:gap-[20px]">
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={photoshop} alt="logo photoshop"/>
+                                        <span className="mx-5">Photoshop</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={illustrator} alt="logo illustrator"/>
+                                        <span className="mx-5">Illustrator</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={indesign} alt="logo indesign"/>
+                                        <span className="mx-5">InDesign</span>
+                                    </li>
+                                </ul>
+                            </div>
                         <ButtonNav link="competences">Mes Compétences</ButtonNav>
-                        <h3 className="mt-[40px] ml-[10px]">Langages :</h3>
+                        </div>
                         <div>
-                            <ul className="lg:inline-block lg:max-w-[40%]">
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={python} alt="logo python"/>
-                                    <span className="ml-[20px]">Python</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={html} alt="logo html"/>
-                                    <span className="ml-[20px]">HTML</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={css} alt="logo css"/>
-                                    <span className="ml-[20px]">CSS</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={js} alt="logo javascript"/>
-                                    <span className="ml-[20px]">JavaScript</span>
-                                </li>
-                            </ul>
-                            <ul className="lg:inline-block lg:max-w-[40%]">
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={sql} alt="logo my sql"/>
-                                    <span className="ml-[20px]">MySQL</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={php} alt="logo php"/>
-                                    <span className="ml-[20px]">PHP</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={react} alt="logo react.js"/>
-                                    <span className="ml-[20px]">React.js</span>
-                                </li>
-                                <li className="flex items-center my-[10px] mx-[0px]">
-                                    <img className="max-w-[10%] lg:max-w-[20%]" src={tailwindcss} alt="logo tailwind css"/>
-                                    <span className="ml-[20px]">TailwindCSS</span>
-                                </li>
-                            </ul>
-                        </div>
+                            <h3>Langages :</h3>
+                            <div className="flex justify-around h-34 lg:h-auto lg:mb-[20px]">
+                                <ul className="grid content-between lg:gap-[20px]">
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={python} alt="logo python"/>
+                                        <span className="mx-5">Python</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={html} alt="logo html"/>
+                                        <span className="mx-5">HTML</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={css} alt="logo css"/>
+                                        <span className="mx-5">CSS</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={js} alt="logo javascript"/>
+                                        <span className="mx-5">JavaScript</span>
+                                    </li>
+                                </ul>
+                                <ul className="grid content-between lg:gap-[20px]">
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={sql} alt="logo my sql"/>
+                                        <span className="mx-5">MySQL</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={php} alt="logo php"/>
+                                        <span className="mx-5">PHP</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={react} alt="logo react.js"/>
+                                        <span className="mx-5">React.js</span>
+                                    </li>
+                                    <li className="flex items-center">
+                                        <img className="w-[30px] lg:w-[50px]" src={tailwindcss} alt="logo tailwind css"/>
+                                        <span className="mx-5">TailwindCSS</span>
+                                    </li>
+                                </ul>
+                            </div>
                         <ButtonNav link="competences">Mes Compétences</ButtonNav>
+                        </div>
                     </div>
                 </section>
             </div>
-            <a href="../assets/img/cv/CV Tom Fourneaux InDesign.pdf" download className="mb-[40px] mx-[0px] mt-[50px] p-[10px] bg-black text-white no-underline font-bold text-center transition:transform duration:200 linear lg:self-center" title="Télécharger mon cv">Télécharger mon CV</a>
+            <a href="../assets/img/cv/CV Tom Fourneaux InDesign.pdf" download className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger mon CV</a>
         </>
     );
 }
