@@ -23,6 +23,7 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/tomfrx12/portfolio-react-tom-fourneaux.git your-repo-name
 cd your-repo-name
+```bash
 
 # Install dependencies:
 npm install
