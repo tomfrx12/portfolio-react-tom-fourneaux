@@ -60,13 +60,13 @@ function CV() {
                         <div className="my-[50px] mx-[20px] flex justify-around text-center lg:text-left lg:gap-[40px]">
                             <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>LinkedIn</p>
-                                <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/">
-                                    <img className="max-w-[70%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_linkedin} alt="qrcode LinkedIn"/>
+                                <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/" className="flex justify-center">
+                                    <img className="items-center max-w-[70%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_linkedin} alt="qrcode LinkedIn"/>
                                 </Link>
                             </div>
                             <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>Github</p>
-                                <Link to="https://github.com/tomfrx12">
+                                <Link to="https://github.com/tomfrx12" className="flex justify-center">
                                     <img className="max-w-[70%] lg:max-w-[200px] lg:w-[200px]" src={qrcode_github} alt="qrcode Github"/>
                                 </Link>
                             </div>
@@ -133,7 +133,9 @@ function CV() {
                                     </li>
                                 </ul>
                             </div>
-                        <ButtonNav link="competences">Mes Compétences</ButtonNav>
+                            <div className="flex justify-center">
+                                <ButtonNav link="competences">Mes Compétences</ButtonNav>
+                            </div>
                         </div>
                         <div>
                             <h3>Langages :</h3>
@@ -175,7 +177,9 @@ function CV() {
                                     </li>
                                 </ul>
                             </div>
-                        <ButtonNav link="competences">Mes Compétences</ButtonNav>
+                            <div className="flex justify-center">
+                                <ButtonNav link="competences">Mes Compétences</ButtonNav>
+                            </div>
                         </div>
                     </div>
                 </section>
