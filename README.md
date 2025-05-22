@@ -23,24 +23,42 @@ Make sure you have the following installed:
 ```bash
 git clone https://github.com/tomfrx12/portfolio-react-tom-fourneaux.git your-repo-name
 cd your-repo-name
+```
+
+2. **Install dependencies:**
 ```bash
-
-# Install dependencies:
 npm install
+```
 
-# Start the development server:
+3. **Start the development server:**
+```bash
 npm run dev
+```
 
-# Open http://localhost:5173 in your browser to see the app.
+4. **Open http://localhost:5173 in your browser to see the app.**
 
-# 📁 Project Structure
+5. **📁 Project Structure**
+```bash
+├── public/             # Static files
+├── src/
+│   ├── assets/         # Images, fonts, etc.
+│   ├── components/     # Reusable components
+│   ├── App.jsx         # Main app component
+│   ├── main.jsx        # App entry point
+│   └── index.css       # Tailwind CSS imports
+├── index.html          # App html file
+├── tailwind.config.js  # Tailwind configuration
+├── vite.config.js      # Vite configuration
+```
 
-# ├── public/             # Static files
-# ├── src/
-# │   ├── assets/         # Images, fonts, etc.
-# │   ├── components/     # Reusable components
-# │   ├── App.jsx         # Main app component
-# │   ├── main.jsx        # App entry point
-# │   └── index.css       # Tailwind CSS imports
-# ├── tailwind.config.js  # Tailwind configuration
-# ├── vite.config.js      # Vite configuration
+## Deployment
+
+The site is deployed on my domain name: **tom-fourneaux.fr**
+
+## Author
+
+**Tom Fourneaux**
+
+## License
+
+Produced within the **school** and personal framework in February 2025 and is updated regularly.
