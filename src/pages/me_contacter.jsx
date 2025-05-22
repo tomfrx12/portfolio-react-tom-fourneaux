@@ -8,7 +8,7 @@ function Contact() {
     return (
         <>
             <h1 className="text-center m-[20px] py-[10px] px-[20px] bg-black text-base lg:text-3xl">Me contacter</h1>
-            <div className="mt-[50px]">
+            <div className="my-[50px]">
                 <p className="flex justify-center text-center text-sm text-white transition:transform duration:300 ease-in-out lg:text-3xl">
                     <svg className="lg:m-[10px]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 14H4V8l8 5l8-5zm-8-7L4 6h16z"/>
