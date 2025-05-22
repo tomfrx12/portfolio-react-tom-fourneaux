@@ -1,37 +1,45 @@
-# Mon Portfolio
+# React + Vite + Tailwind CSS Starter
 
-J'ai créé mon portfolio en HTML, CSS et JavaScript, React avec Vite.
+This is a modern front-end project setup using **React**, **Vite**, and **Tailwind CSS**. It's designed to help you quickly start developing performant and stylish web applications.
 
-Il est disponible ici :
+## 🔧 Tech Stack
 
-## Sur mon portfolio, vous trouverez :
+- ⚛️ **React** – A JavaScript library for building user interfaces
+- ⚡ **Vite** – Next-generation frontend tooling for fast development and hot module replacement
+- 🎨 **Tailwind CSS** – A utility-first CSS framework for rapid UI development
 
-- Une présentation de moi
-- Mes compétences, avec des barres de progression
-- Les projets que j'ai réalisés
-- Une présentation de ma charte graphique et ma maquette
-- Mon CV en HTML/CSS et en PDF
-- Mes moyens de contact
+## 🚀 Getting Started
 
-## Sommaire
+### Prerequisites
 
-- [Fonctionnalités](#fonctionnalités)
-- [Technologies Utilisées](#technologies-utilisées)
-- [Licence](#licence)
+Make sure you have the following installed:
 
-## Fonctionnalités
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
 
-- **Responsive** : Mon portfolio est entièrement responsive.
-- **Mode sombre** : Un mode sombre est unique. J'ai choisis de ne pas mettre de mode clair pour garder mon style
+### Installation
 
-## Technologies Utilisées
+1. **Clone the repository:**
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Vite
+```bash
+git clone https://github.com/tomfrx12/portfolio-react-tom-fourneaux.git your-repo-name
+cd your-repo-name
 
-## Licence
+# Install dependencies:
+npm install
 
-Ce projet a été réalisé dans le cadre d'un projet scolaire à partir de novembre 2024.
+# Start the development server:
+npm run dev
+
+# Open http://localhost:5173 in your browser to see the app.
+
+# 📁 Project Structure
+
+# ├── public/             # Static files
+# ├── src/
+# │   ├── assets/         # Images, fonts, etc.
+# │   ├── components/     # Reusable components
+# │   ├── App.jsx         # Main app component
+# │   ├── main.jsx        # App entry point
+# │   └── index.css       # Tailwind CSS imports
+# ├── tailwind.config.js  # Tailwind configuration
+# ├── vite.config.js      # Vite configuration
