@@ -1,11 +1,15 @@
-import Footer from "./footer";
-import Header from "./header";
+import { useContext } from "react";
 import PropTypes from "prop-types";
 
+import Footer from "./footer";
+import Header from "./header";
+import { DarkModeContext } from "./DarkModeProvider";
+
 const Layout = ({ children }) => {
+    const {darkMode} = useContext(DarkModeContext);
     return (
         <div
-            className="flex flex-col min-h-screen bg-[#111111]"
+            className={`flex flex-col min-h-screen text-white ${darkMode ? 'bg-[#111111]' : 'bg-[#eeeeee]'}`}
             style={{
                 backgroundImage: "url('/src/assets/img/background-pattern.png')",
                 backgroundSize: "100% 100%",
@@ -13,7 +17,7 @@ const Layout = ({ children }) => {
         >
             <Header />
 
-            <main className="flex-1 text-white items-center lg:my-[2rem] lg:mx-[5rem] lg:flex lg:items-stretch lg:flex-col">{children}</main>
+            <main className={`flex-1 text-black items-center lg:my-[2rem] lg:mx-[5rem] lg:flex lg:items-stretch lg:flex-col ${darkMode ? 'text-white' : 'text-black'}`}>{children}</main>
 
             <Footer />
         </div>

@@ -1,12 +1,14 @@
-// import "/src/css/styles.css";
-//import "/src/assets/script.js"
-
 import { useState } from "react";
-import logo from '../assets/img/logo.png'
-import { Link } from "react-router"
+import { Link } from "react-router";
+
+import logo from '../assets/img/logo.png';
+
+import { useContext } from 'react';
+import { DarkModeContext } from './DarkModeProvider'
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const {toggleDarkMode} = useContext(DarkModeContext);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -17,13 +19,14 @@ const Header = () => {
             <a href="/">
                 <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
             </a>
-            <nav className={`h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col left-[70px]" : "right-[-250px] top-[0] left-auto" }`}>
+            <nav className={`h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col" : "right-[-250px] top-[0] left-auto" }`}>
                 <Link to="/" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Accueil</Link>
                 <Link to="/competences" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Compétences</Link>
                 <Link to="/projets" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Projets</Link>
                 <Link to="/charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Charte Graphique</Link>
                 <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>CV</Link>
                 <Link to="/me_contacter" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Contact</Link>
+                <button title="Mode nuit" onClick={toggleDarkMode}>Toggle</button>
             </nav>
             <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
                 <span className={`${menuOpen ? 'hidden' : 'block'}`}> {/* Expression ternaire */}
@@ -35,6 +38,6 @@ const Header = () => {
             </a>
         </header>
     );
-}
+};
 
 export default Header;

@@ -10,11 +10,11 @@ function Index() {
             <section className="flex flex-col items-center">
                 <div className="flex items-center text-center flex-col lg:h-[80vh] lg:justify-center">
                         <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-[1rem] mx-[0rem] rounded-full w-[30%] lg:w-[20%]"/>
-                        <h1 className="text-white m-[0]">Tom Fourneaux</h1>
+                        <h1 className="m-[0]">Tom Fourneaux</h1>
                         <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
                         <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
                 </div>
-                    <h2 className="text-white m-[0] mt-[40px] lg:mt-[5rem]">A PROPOS DE MOI</h2>
+                    <h2 className="m-[0] mt-[40px] lg:mt-[5rem]">A PROPOS DE MOI</h2>
                     <section>
                         <div className="lg:flex lg:flex-col">
                             <div>
@@ -36,12 +36,12 @@ function Index() {
                     </div>
             </section>
             <section className="flex flex-col items-center">
-                <h2 className="text-white m-[0] mt-[40px] lg:mt-[5rem]">PROJETS</h2>
+                <h2 className="m-[0] mt-[40px] lg:mt-[5rem]">PROJETS</h2>
                 <div>
                     <div className="flex items-center">
                         <img src={petit_logo} alt="Portfolio Tom Fourneaux" className="bg-white max-h-[5rem] my-[10px] mx-[20px]"/>
                         <div>
-                            <h3 className="text-white m-[0] mt-[40px] font-normal">Portfolio</h3>
+                            <h3 className="m-[0] mt-[40px] font-normal">Portfolio</h3>
                             <p className="text-xs m-auto lg:text-2xl">Projet consistant à créer un portfolio.</p>
                             <ButtonNav link="projets#projet-portfolio">Voir plus</ButtonNav>
                         </div>
@@ -50,7 +50,7 @@ function Index() {
                     <div className="flex items-center">
                         <img src={logo_club_st_sever} alt="Club Eco Saint Sever" className="bg-white max-h-[5rem] my-[10px] mx-[20px]"/>
                         <div>
-                            <h3 className="text-white m-[0] mt-[40px] font-normal">Club Eco Saint Sever</h3>
+                            <h3 className="m-[0] mt-[40px] font-normal">Club Eco Saint Sever</h3>
                             <p className="text-xs m-auto lg:text-2xl">Projet qui consistait à créer une identité visuelle pour le Club Eco de Saint Sever.</p>
                             <ButtonNav link="projets#projet-clubecosaintsever">Voir plus</ButtonNav>
                         </div>
