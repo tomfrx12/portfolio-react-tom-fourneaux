@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     const {darkMode} = useContext(DarkModeContext);
     return (
         <div
-            className={`flex flex-col min-h-screen text-white ${darkMode ? 'bg-[#111111]' : 'bg-[#eeeeee]'}`}
+            className={`flex flex-col min-h-screen text-white ${darkMode ? 'bg-[#111111]' : 'bg-[#bbbbbb]'}`}
             style={{
                 backgroundImage: "url('/src/assets/img/background-pattern.png')",
                 backgroundSize: "100% 100%",

@@ -30,9 +30,10 @@ function Projets() {
       }
     }
   }, [location]);
+
     return (
         <>
-            <h1 className="text-center m-[20px] py-[10px] px-[20] bg-black lg:text-3xl">Projet</h1>
+            <h1 className="text-white text-center m-[20px] py-[10px] px-[20] bg-black lg:text-3xl">Projet</h1>
             <section className="projets">
                 {/* <div class="carte">
                     <img src="" alt="">

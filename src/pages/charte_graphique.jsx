@@ -14,7 +14,7 @@ import merge from "../assets/img/charte-graphique/interdits/merge.jpg"
 function Charte_Graphique() {
     return (
         <>
-            <h1 className="text-center m-[20px] py-[10px] px-[20px] bg-black text-base lg:text-3xl">Charte Graphique</h1>
+            <h1 className="text-white text-center m-[20px] py-[10px] px-[20px] bg-black text-base lg:text-3xl">Charte Graphique</h1>
             <section className="flex flex-col">
                 <h2 className="mt-[50px] ml-[10px] text-base lg:text-3xl" >Logotype et ses déclinaisons :</h2>
                     <p className="text-xs my-[5px] ml-[20px] lg:text-2xl lg:my-[5px] lg:mx-[40px]">Version verticale :</p>
@@ -78,7 +78,7 @@ function Charte_Graphique() {
                     <div className="justify-items-center text-center w-[5rem] h-[5rem] bg-[#e21823] lg:flex lg:justify-center lg:w-[10rem] lg:h-[10rem]">
                         <span className="self-center">#e21823</span>
                     </div>
-                    <div className="justify-items-center text-center w-[5rem] h-[5rem] bg-black lg:flex lg:justify-center lg:w-[10rem] lg:h-[10rem]">
+                    <div className="text-white justify-items-center text-center w-[5rem] h-[5rem] bg-black lg:flex lg:justify-center lg:w-[10rem] lg:h-[10rem]">
                         <span className="self-center">#000000</span>
                     </div>
                     <div className="justify-items-center text-center w-[5rem] h-[5rem] bg-white text-black lg:flex lg:justify-center lg:w-[10rem] lg:h-[10rem]">

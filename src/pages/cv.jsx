@@ -1,6 +1,6 @@
 import { Link } from "react-router"
 
-import TOM from "../assets/img/cv/TOM.jpeg"
+import TOM from "../assets/img/tom.png"
 import qrcode_linkedin from "../assets/img/qrcode/qrcode_linkedin.jpg"
 import qrcode_github from "../assets/img/qrcode/qrcode_github.png"
 import vscode from "../assets/img/cv/logo outils/VSCode.png"
@@ -25,7 +25,7 @@ import ButtonNav from "../components/a_button"
 function CV() {
     return (
         <>
-            <h1 className="text-center m-[20px] py-[10px] px-[20px] bg-black lg:text-2xl">Mon CV</h1>
+            <h1 className="text-white text-center m-[20px] py-[10px] px-[20px] bg-black lg:text-2xl">Mon CV</h1>
             <div className="lg:grid lg:grid-cols-2">
                 <section className="flex flex-col text-center border-5 border-solid border-[var(--color-cv-primary)]">
                     <div>

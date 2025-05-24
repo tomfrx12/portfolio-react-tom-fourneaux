@@ -5,12 +5,12 @@
 function Competences() {
     return (
     <>
-        <h1 className="text-center m-[20px] py-[10px] px-[20px] bg-black lg:text-2xl">Mes compétences</h1>
+        <h1 className="text-white text-center m-[20px] py-[10px] px-[20px] bg-black lg:text-2xl">Mes compétences</h1>
         {/* <Text tag="h1" name="h1">Mes compétences</Text> */}
         <div className="lg:flex lg:items-center">
             <div className="m-[20px] bg-[#121212] rounded-t-[1rem] overflow-hidden lg:w-[75%]">
                 <div className="bg-[#333333] p-[5px]">
-                    <h2 className="mb-[10px] text-center lg:text-xl">Langages Informatiques</h2>
+                    <h2 className="text-white mb-[10px] text-center lg:text-xl">Langages Informatiques</h2>
                 </div> 
                 <div className="p-[10px] border-1 border-solid border-white rounded-[0px 0px 16px 16px] border-t-0">
                     <ul className="p-0">
@@ -65,7 +65,7 @@ function Competences() {
 
             <div className="m-[20px] bg-[#121212] rounded-t-[1rem] overflow-hidden lg:w-[75%]">
                 <div className="bg-[#333333] p-[5px]">
-                    <h2 className="mb-[10px] text-center lg:text-xl">Autres compétences</h2>
+                    <h2 className="text-white mb-[10px] text-center lg:text-xl">Autres compétences</h2>
                 </div>
                 <div className="p-[10px] border-1 border-solid border-white rounded-[0px 0px 16px 16px] border-t-0">
                     <ul className="p-0">

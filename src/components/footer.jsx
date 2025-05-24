@@ -20,7 +20,7 @@ const Footer = () => {
                 </Link>
             </nav>
             <p className="text-center text-xs text-white lg:text-2xl">Copyright © 2025 tom-fourneaux<br/>
-                <Link to="/mentions_legales" className="text-white">Mentions légales</Link>
+                <Link to="/mentions_legales" className="text-white underline">Mentions légales</Link>
             </p>
         </footer>
     );
