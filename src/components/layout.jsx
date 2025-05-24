@@ -8,13 +8,7 @@ import { DarkModeContext } from "./DarkModeProvider";
 const Layout = ({ children }) => {
     const {darkMode} = useContext(DarkModeContext);
     return (
-        <div
-            className={`flex flex-col min-h-screen text-white ${darkMode ? 'bg-[#111111]' : 'bg-[#bbbbbb]'}`}
-            style={{
-                backgroundImage: "url('/src/assets/img/background-pattern.png')",
-                backgroundSize: "100% 100%",
-            }}
-        >
+        <div className={`flex flex-col min-h-screen text-white ${darkMode ? 'bg-[#111111]' : 'bg-[#bbbbbb]'}`}>
             <Header />
 
             <main className={`flex-1 text-black items-center lg:my-[2rem] lg:mx-[5rem] lg:flex lg:items-stretch lg:flex-col ${darkMode ? 'text-white' : 'text-black'}`}>{children}</main>

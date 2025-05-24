@@ -8,10 +8,16 @@ import { DarkModeContext } from './DarkModeProvider'
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const [isDark, setIsDark] = useState(false);
     const {toggleDarkMode} = useContext(DarkModeContext);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
+    };
+
+    const handleToggleDarkMode = () => {
+        toggleDarkMode();
+        setIsDark(!isDark);
     };
 
     return (
@@ -26,7 +32,9 @@ const Header = () => {
                 <Link to="/charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Charte Graphique</Link>
                 <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>CV</Link>
                 <Link to="/me_contacter" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Contact</Link>
-                <button title="Mode nuit" onClick={toggleDarkMode}>Toggle</button>
+                <button className="cursor-pointer px-[2rem]" title="Mode nuit" onClick={handleToggleDarkMode}>
+                    <span className="text-2xl">{isDark ? '🌙' : '☀️'}</span>
+                </button>
             </nav>
             <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
                 <span className={`${menuOpen ? 'hidden' : 'block'}`}> {/* Expression ternaire */}
