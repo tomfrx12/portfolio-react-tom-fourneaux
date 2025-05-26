@@ -62,7 +62,7 @@ function Projets() {
                 </div>
 
                 <div className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
-                    <img className="m-[30px] max-w-full max-h-max text-center" src={logo_handisup} alt="logo handisup"/>
+                    <img className="m-[30px] text-center lg:w-[200px]" src={logo_handisup} alt="logo handisup"/>
                     <div className="flex flex-col lg:w-[50%] lg:justify-center">
                         <div>
                             <h2 className="m-[0] text-center lg:text-2xl lg:font-black">Refonte Handisup</h2>
