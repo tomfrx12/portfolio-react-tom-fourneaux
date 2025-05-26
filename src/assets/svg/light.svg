@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.79 258.44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff4c5;
+        mix-blend-mode: luminosity;
+        opacity: .45;
+      }
+    </style>
+  </defs>
+  <g id="Calque_1" data-name="Calque 1">
+    <path class="cls-1" d="M93.98,0L0,258.44h248.79L146.58,0h-52.6Z"/>
+  </g>
+</svg>

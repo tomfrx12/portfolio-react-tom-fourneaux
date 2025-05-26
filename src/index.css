@@ -6,7 +6,10 @@
       font-family: 'Comic Neue', cursive !important;
       --color-primary: #E21022;
       --color-cv-primary: #5e3d8d;
-      --color-grey: #999999;
+      --color-white-background: #f3f3f3;
+      --color-white-background-dark: #0f0f0f;
+      --color-red-background: #970000;
+      --color-red-background-dark: #2c1152;
       --color-text: #ffffff;
       --color-black: #000000;
     }

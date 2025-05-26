@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const text = tv({
   variants: {
     name: {
-      h1: 'm-5 text-center bg-black text-base lg:text-2xl',
+      h1: 'p-[5px] text-center text-base lg:text-2xl',
     },
     size: {
       md: 'text-base lg:text-2xl',
@@ -14,35 +14,27 @@ const text = tv({
       left: "text-left",
       right: "text-right",
     },
+    background: {
+      black: "bg-black",
+      white: "bg-white",
+    },
   },
 });
 
-const Text = ({ tag: Tag, name, size, align, children, className}) => {
+export const Text = ({ tag: Tag, name, size, align, background, children, className}) => {
   return (
-    <Tag className={text({name, size, align, className})}>
+    <Tag className={text({name, size, align, background, className})}>
       {children}
     </Tag>
   );
 };
-
-export {Text};
 
 Text.propTypes = {
   tag: PropTypes.elementType.isRequired,
   name: PropTypes.string,
   size: PropTypes.string,
   align: PropTypes.string,
+  background: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.node,
 };
-
-
-// const Texte = ({ tag: Tag, balise, couleur = "classique", texte, lien, marge, padding, className, children }) => {
-//   return (
-//     <Tag className={texteTags({ balise, couleur, marge, padding, className })} href={lien}>
-//       {children ? children : texte}
-//     </Tag>
-//   );
-// };
-
-// export { Texte };

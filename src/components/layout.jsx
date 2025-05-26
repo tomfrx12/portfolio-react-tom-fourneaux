@@ -11,7 +11,7 @@ const Layout = ({ children }) => {
         <div className={`flex flex-col min-h-screen text-white ${darkMode ? 'bg-[#111111]' : 'bg-[#bbbbbb]'}`}>
             <Header />
 
-            <main className={`flex-1 text-black items-center lg:my-[2rem] lg:mx-[5rem] lg:flex lg:items-stretch lg:flex-col ${darkMode ? 'text-white' : 'text-black'}`}>{children}</main>
+            <main className={`flex-1 text-black items-center lg:mb-[2rem] lg:flex lg:items-stretch lg:flex-col ${darkMode ? 'text-white' : 'text-black'}`}>{children}</main>
 
             <Footer />
         </div>

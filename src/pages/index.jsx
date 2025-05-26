@@ -1,18 +1,37 @@
+import { useContext } from "react";
+
 import pptom from "../assets/img/tom.png";
 import illustration_dev from "../assets/img/illustration presentation/illustration dev 1.png";
 import petit_logo from "../assets/img/logo_des_projets/petit_logo.png";
 import logo_club_st_sever from "../assets/img/logo_des_projets/logo-club-eco-st-sever.png";
+import Light from "../assets/svg/light.svg";
+import Lamp from "../assets/svg/lamp.svg";
+
 import ButtonNav from "../components/a_button";
+import { Text } from "../components/texte";
+import { DarkModeContext } from "../components/DarkModeProvider";
 
 function Index() {
+    const {darkMode} = useContext(DarkModeContext);
+    
     return (
         <>
             <section className="flex flex-col items-center">
-                <div className="flex items-center text-center flex-col lg:h-[80vh] lg:justify-center">
-                        <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-[1rem] mx-[0rem] rounded-full w-[30%] lg:w-[20%]"/>
-                        <h1 className="m-[0]">Tom Fourneaux</h1>
-                        <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
-                        <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
+                <div className="flex items-center text-center lg:h-screen">
+                    <div className={`w-[40%] h-full flex items-center ${darkMode ? 'bg-[var(--color-white-background-dark)]' : 'bg-[var(--color-white-background)]'}`}>
+                        <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-[1rem] mx-auto rounded-full w-[30%] lg:w-[40%]"/>
+                    </div>
+                    <div className={`h-full w-[60%] ${darkMode ? 'bg-[var(--color-red-background-dark)]' : 'bg-[var(--color-red-background)]'}`}>
+                        <div className="flex flex-col items-center">
+                            <img className="size-50" src={Lamp} alt="LampIcon" />
+                            <img className="size-80 top-[100px]" src={Light} alt="LightIcon"/>
+                        </div>
+                        <div className="flex flex-col items-center ">
+                            <Text tag='h1' name='h1'>Tom Fourneaux</Text>
+                            <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
+                            <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
+                        </div>
+                    </div>
                 </div>
                     <h2 className="m-[0] mt-[40px] lg:mt-[5rem]">A PROPOS DE MOI</h2>
                     <section>
