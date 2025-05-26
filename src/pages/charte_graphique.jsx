@@ -24,7 +24,7 @@ function Charte_Graphique() {
                     <p className="text-xs my-[5px] ml-[20px] lg:text-2xl lg:my-[5px] lg:mx-[40px]">Version verticale :</p>
                     <img src={logo_vertical} className="self-center max-w-[10rem] m-[10px] bg-white p-[10px] rounded-[10px]" alt="Logo Vertical Charte Graphique"/>
                     <p className="text-xs my-[5px] ml-[20px] lg:text-2xl lg:my-[5px] lg:mx-[40px]">Versions horizontales :</p>
-                    <div className="flex justify-around">
+                    <div className="flex items-center justify-around flex-col lg:flex-row">
                         <img className="max-w-[145px] m-[5px] p-[2px] bg-white rounded-[5px] lg:max-w-[20rem]" src={logo_horizontal} alt="Logo Horizontal Charte Graphique"/>
                         <img className="max-w-[145px] m-[5px] p-[2px] bg-white rounded-[5px] lg:max-w-[20rem]" src={logo_horizontal_inverse} alt="Logo Horizontal inversé"/>
                     </div>
@@ -37,40 +37,40 @@ function Charte_Graphique() {
                     <li>- Ne pas {"l'utiliser"} à de mauvaises fins</li>
                 </ul>
             </section>
-            <section className="section3">
+            <section>
                 <h2 className="mt-[50px] ml-[10px] text-base lg:text-3xl" >Interdits du logo :</h2>
                 <div className="interdit">
-                    <h3 className="text-xs ml-[20px] lg:text-2xl lg:ml-[40px]">Versions verticales :</h3>
-                    <div className="flex flex-col gap-[25px] lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center lg:m-[20px]">
-                        <div className={`flex justify-around max-w-[400px] w-[400px] bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
+                    <h3 className="text-xs mt-[20px] ml-[20px] lg:text-2xl lg:ml-[40px]">Versions verticales :</h3>
+                    <div className="flex flex-col gap-[10px] lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center lg:m-[20px]">
+                        <div className={`flex justify-around bg-white mb-[0px] mt-[10px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
                             <img className="max-w-[100px] lg:max-w-[200px]" src={bg_black} alt="Fond noir, partie du logo non voyante" />
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">Fond Noir</p>
                         </div>
-                        <div className={`flex justify-around max-w-[400px] w-[400px] bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
+                        <div className={`flex justify-around bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">Fond Rouge</p>
                             <img className="max-w-[100px] lg:max-w-[200px]" src={bg_red} alt="Fond rouge, partie du logo non voyante"/>
                         </div>
-                        <div className={`flex justify-around max-w-[400px] w-[400px] bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
+                        <div className={`flex justify-around bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
                             <img className="max-w-[100px] lg:max-w-[200px]" src={upside_down} alt="A l'envers"/>
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">A {"l'envers"}</p>
                         </div>
-                        <div className={`flex justify-around max-w-[400px] w-[400px] bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
+                        <div className={`flex justify-around bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">Supprimer une partie du logo</p>
                             <img className="max-w-[100px] max-h-[100px] lg:max-w-[200px] lg:max-h-[200px]" src={supp_logo} alt="Supprimer une partie du logo"/>
                         </div>
                     </div>
-                    <h3 className="text-xs ml-[20px] lg:text-2xl lg:ml-[40px]">Versions horizontales :</h3>
-                    <div className="flex flex-col lg:justify-center lg:flex-row">
-                        <div className={`flex flex-col items-center bg-white mb-[0px] m-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
-                            <img className="max-w-[250px] p-[10px] lg:max-w-[20rem]" src={supp_letters} alt="Supprimer des lettres"/>
+                    <h3 className="text-xs mt-[20px] ml-[20px] lg:text-2xl lg:ml-[40px]">Versions horizontales :</h3>
+                    <div className="flex flex-col gap-[10px] lg:justify-center lg:flex-row">
+                        <div className={`flex flex-col items-center bg-white mt-[5px] mb-[0px] m-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
+                            <img className="p-[10px] lg:max-w-[20rem]" src={supp_letters} alt="Supprimer des lettres"/>
                             <p className="text-black m-[10px]">Supprimer des lettres</p>
                         </div>
                         <div className={`flex flex-col items-center bg-white mb-[0px] m-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
-                            <img className="max-w-[250px] p-[10px] lg:max-w-[20rem]" src={non_uniform} alt="Couleurs non uniformes"/>
+                            <img className="p-[10px] lg:max-w-[20rem]" src={non_uniform} alt="Couleurs non uniformes"/>
                             <p className="text-black m-[10px]">Couleurs non uniformes</p>
                         </div>
                         <div className={`flex flex-col items-center bg-white mb-[0px] m-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 ${darkMode ? 'shadow-[10px_10px_5px_var(--color-grey)]' : 'shadow-[10px_10px_5px_black]'}`}>
-                            <img className="max-w-[250px] p-[10px] lg:max-w-[20rem]" src={merge} alt="Fusionner lettres et logo"/>
+                            <img className="p-[10px] lg:max-w-[20rem]" src={merge} alt="Fusionner lettres et logo"/>
                             <p className="text-black m-[10px]">Fusionner les lettres et le logo</p>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ function Charte_Graphique() {
             </section>
             <section>
                 <h2 className="mt-[50px] ml-[10px] text-base lg:text-3xl" >Palette de couleurs :</h2>
-                <div className="flex justify-around">
+                <div className="flex justify-around items-center flex-col gap-[10px] lg:flex-row">
                     <div className="justify-items-center text-center w-[5rem] h-[5rem] bg-[#e21823] lg:flex lg:justify-center lg:w-[10rem] lg:h-[10rem]">
                         <span className="self-center">#e21823</span>
                     </div>

@@ -29,7 +29,7 @@ function CV() {
             <div className="lg:grid lg:grid-cols-2">
                 <section className="flex flex-col text-center border-5 border-solid border-[var(--color-cv-primary)]">
                     <div>
-                        <img src={TOM} alt="Photo de Profil CV Tom Fourneaux" className="justify-self-center max-w-[40%] mt-[20px] rounded-full border-5 border-solid border-[var(--color-cv-primary)]"/>
+                        <img src={TOM} alt="Photo de Profil CV Tom Fourneaux" className="m-auto max-w-[40%] mt-[20px] rounded-full border-5 border-solid border-[var(--color-cv-primary)]"/>
                         <h1 className="mt-[40px] mb-[10px]">TOM FOURNEAUX</h1>
                         <h2>DEVELOPPEUR WEB</h2>
                         <div className="text-center my-[20px] mx-[0px] p-[10px] bg-[var(--color-cv-primary)] inline-block rounded-[5px] shadow[5px_5px_5px_white]">

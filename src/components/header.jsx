@@ -32,7 +32,7 @@ const Header = () => {
                 <Link to="/charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Charte Graphique</Link>
                 <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>CV</Link>
                 <Link to="/me_contacter" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Contact</Link>
-                <button className="cursor-pointer px-[2rem]" title="Mode nuit" onClick={handleToggleDarkMode}>
+                <button className="cursor-pointer px-[2rem]" title="Mode nuit" onClick={() => { handleToggleDarkMode(); setMenuOpen(false); }}>
                     <span className="text-2xl">{isDark ? '🌙' : '☀️'}</span>
                 </button>
             </nav>
