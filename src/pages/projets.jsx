@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router";
 
@@ -18,8 +18,6 @@ import banniere_bde from "../assets/img/projets/img/banniere.png";
 import e_commerce from"../assets/img/projets/img/E-commerce.png"
 import figma from "../assets/img/logo_des_projets/figma-logo.webp"
 
-import { DarkModeContext } from "../components/DarkModeProvider";
-
 function Projets() {
     const location = useLocation();
 
@@ -33,8 +31,6 @@ function Projets() {
     }
   }, [location]);
 
-    const {darkMode} = useContext(DarkModeContext);
-
     return (
         <>
             <h1 className="text-white text-center m-[20px] py-[10px] px-[20] bg-black lg:text-3xl">Projet</h1>
@@ -47,7 +43,8 @@ function Projets() {
                     </div>
                 </div> */}
 
-                <div className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                <div className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                {/* shadow-[10px_10px_10px_white] */}
                     <img className="m-[30px] max-w-full max-h-max text-center" src={e_commerce} alt="page produit site e-commerce"/>
                     <div className="flex flex-col lg:w-[50%] lg:justify-center">
                         <div>
@@ -61,7 +58,8 @@ function Projets() {
                     </div>
                 </div>
 
-                <div className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                <div className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                {/* shadow-[10px_10px_10px_white] */}
                     <img className="m-[30px] text-center lg:w-[200px]" src={logo_handisup} alt="logo handisup"/>
                     <div className="flex flex-col lg:w-[50%] lg:justify-center">
                         <div>
@@ -75,7 +73,8 @@ function Projets() {
                     </div>
                 </div>
 
-                <div id="projet-portfolio" className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                <div id="projet-portfolio" className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                    {/* shadow-[10px_10px_10px_white] */}
                     <img className="m-[30px] max-w-full max-h-max text-center lg:max-w-[20%]" src={logo_vertical} alt="illustration pour projet portfolio"/>
                     <div className="flex flex-col lg:w-[50%] lg:justify-center">
                         <div className="text">
@@ -91,7 +90,8 @@ function Projets() {
                     </div>
                 </div>
 
-                    <div id="projet-clubecosaintsever" className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                    <div id="projet-clubecosaintsever" className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                    {/* shadow-[10px_10px_10px_white] */}
                         <img className="m-[30px] max-w-full max-h-max text-center" src={alternative_banniere} alt="illustration pour projet club eco saint sever"/>
                         <div className="flex flex-col lg:w-[50%] lg:justify-center">
                             <div className="text">
@@ -107,7 +107,8 @@ function Projets() {
                         </div>
                     </div>
 
-                    <div className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                    <div className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                        {/* shadow-[10px_10px_10px_white] */}
                         <img className="block m-[30px] max-w-full max-h-max text-center lg:hidden" src={maquette} alt="illustration projet maquette figma"/>
                         <div className="hidden lg:block lg:max-h-[300px] lg:overflow-y-scroll lg:scroll-smooth">
                             <div className="lg:flex"><img src={maquette1} alt="maquette figma" className="lg:max-w-[200%] lg:mr-[10px]"/></div>
@@ -130,7 +131,8 @@ function Projets() {
                         </div>
                     </div>
 
-                    <div className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                    <div className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                    {/* shadow-[10px_10px_10px_white] */}
                         <img className="m-[30px] max-w-full max-h-max text-center" src={banniere} alt="illustration projet bibliothèque vidéos"/>
                         <div className="flex flex-col lg:w-[50%] lg:justify-center">
                             <div className="text">
@@ -146,7 +148,8 @@ function Projets() {
                         </div>
                     </div>
 
-                    <div className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                    <div className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                        {/* shadow-[10px_10px_10px_white] */}
                         <img className="m-[30px] max-w-full max-h-max text-center lg:max-w-full" src={fiches} alt="illustration interview"/>
                         <div className="flex flex-col lg:w-[50%] lg:justify-center">
                             <div className="text">
@@ -162,7 +165,8 @@ function Projets() {
                         </div>
                     </div>
 
-                    <div className={`bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] ${darkMode ? 'shadow-[10px_10px_10px_white]' : 'shadow-[10px_10px_10px_black]'}`}>
+                    <div className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
+                    {/* shadow-[10px_10px_10px_white] */}
                         <img className="m-[30px] max-w-full max-h-max text-center" src={banniere_bde} alt="illustrator projet bde"/>
                         <div className="flex flex-col lg:w-[50%] lg:justify-center">
                             <div className="text">

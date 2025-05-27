@@ -1,58 +1,51 @@
-import { useContext } from "react";
-
 import pptom from "../assets/img/tom.png";
 import illustration_dev from "../assets/img/illustration presentation/illustration dev 1.png";
 import petit_logo from "../assets/img/logo_des_projets/petit_logo.png";
 import logo_club_st_sever from "../assets/img/logo_des_projets/logo-club-eco-st-sever.png";
-import Light from "../assets/svg/light.svg";
-import Lamp from "../assets/svg/lamp.svg";
 
 import ButtonNav from "../components/a_button";
 import { Text } from "../components/texte";
-import { DarkModeContext } from "../components/DarkModeProvider";
+import Lamp from "../components/lamp_light";
 
 function Index() {
-    const {darkMode} = useContext(DarkModeContext);
-    
     return (
         <>
-            <section className="flex flex-col items-center">
-                <div className="flex items-center text-center lg:h-screen">
-                    <div className={`w-[40%] h-full flex items-center ${darkMode ? 'bg-[var(--color-white-background-dark)]' : 'bg-[var(--color-white-background)]'}`}>
-                        <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-[1rem] mx-auto rounded-full w-[30%] lg:w-[40%]"/>
+            <div className="flex flex-col h-[95vh] lg:flex-row">
+                <div className="flex items-center lg:w-[40%] bg-[var(--color-white-background)]">
+                    <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
+                </div>
+                <div className="h-full flex flex-col items-center lg:w-[60%] bg-[var(--color-red-background)]">
+                    <div className="lg:flex lg:flex-col lg:items-center hidden">
+                        <Lamp/>
                     </div>
-                    <div className={`h-full w-[60%] ${darkMode ? 'bg-[var(--color-red-background-dark)]' : 'bg-[var(--color-red-background)]'}`}>
-                        <div className="flex flex-col items-center">
-                            <img className="size-50" src={Lamp} alt="LampIcon" />
-                            <img className="size-80 top-[100px]" src={Light} alt="LightIcon"/>
-                        </div>
-                        <div className="flex flex-col items-center ">
-                            <Text tag='h1' name='h1'>Tom Fourneaux</Text>
-                            <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
-                            <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
-                        </div>
+                    <div className="flex flex-col items-center m-auto">
+                        <Text tag='h1' name='h1' color='white'>Tom Fourneaux</Text>
+                        <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
+                        <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
                     </div>
                 </div>
-                    <h2 className="m-[0] mt-[40px] lg:mt-[5rem]">A PROPOS DE MOI</h2>
-                    <section>
-                        <div className="lg:flex lg:flex-col">
-                            <div>
-                                <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Je suis un jeune développeur web de 18 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Chef de Projets Digitaux. Passionné par le monde du développement web depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution. Ce qui me motive avant tout, c’est la possibilité de créer des expériences numériques qui répondent aux besoins des utilisateurs tout en étant techniquement performantes et esthétiquement soignées.</p>
-                    
-                                <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Ma formation m’a permis de me familiariser avec plusieurs technologies essentielles, notamment HTML, CSS, et JavaScript, des langages que j’utilise au quotidien pour la création et l’optimisation de sites web. En parallèle, je me forme également à des frameworks modernes comme React, afin d’élargir mes compétences et d’être capable de réaliser des projets web plus complexes et dynamiques. Cette diversité de technologies me permet de m’adapter aux différents besoins des projets et de toujours offrir des solutions efficaces et innovantes.</p>
-                            </div>
-                            <img src={illustration_dev} alt="illustration developpeur web" className="m-auto max-w-[90%] p-[15px] lg:self-center lg:w-auto lg:max-w-[35%]"/>
-                            <div>
-                                <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Au-delà de la technique, mon cursus à la NWS m’a aussi permis de me perfectionner dans des compétences transversales telles que la gestion de projet et la collaboration au sein d’équipes pluridisciplinaires. Je suis convaincu que la réussite d’un projet web ne réside pas seulement dans la qualité du code, mais aussi dans la capacité à communiquer, à organiser le travail et à respecter les délais tout en répondant aux attentes du client. C’est pourquoi je {"m'efforce d’allier"} expertise technique et sens de l’organisation pour garantir la réussite des projets auxquels je participe.</p>
-                    
-                                <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Aujourd’hui, je suis à la recherche d’un stage ou d’une alternance en développement web, afin de mettre en pratique mes connaissances et de continuer à apprendre au contact de professionnels expérimentés. Je suis particulièrement intéressé par les environnements de travail collaboratifs, où je pourrais à la fois apporter mes compétences et en acquérir de nouvelles. Vous pouvez consulter mon CV pour plus de détails sur mes compétences et expériences.</p>
-                            </div>
+            </div>
+            <section className="flex flex-col items-center">
+                <h2 className="m-[0] mt-[40px] lg:mt-[5rem]">A PROPOS DE MOI</h2>
+                <section>
+                    <div className="lg:flex lg:flex-col">
+                        <div>
+                            <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Je suis un jeune développeur web de 18 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Chef de Projets Digitaux. Passionné par le monde du développement web depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution. Ce qui me motive avant tout, c’est la possibilité de créer des expériences numériques qui répondent aux besoins des utilisateurs tout en étant techniquement performantes et esthétiquement soignées.</p>
+                
+                            <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Ma formation m’a permis de me familiariser avec plusieurs technologies essentielles, notamment HTML, CSS, et JavaScript, des langages que j’utilise au quotidien pour la création et l’optimisation de sites web. En parallèle, je me forme également à des frameworks modernes comme React, afin d’élargir mes compétences et d’être capable de réaliser des projets web plus complexes et dynamiques. Cette diversité de technologies me permet de m’adapter aux différents besoins des projets et de toujours offrir des solutions efficaces et innovantes.</p>
                         </div>
-                    </section>  
-                    <div className="flex gap-[20px]">
-                        <ButtonNav link="cv">Mon CV</ButtonNav>
-                        <ButtonNav link="competences">Compétences</ButtonNav>
+                        <img src={illustration_dev} alt="illustration developpeur web" className="m-auto max-w-[90%] p-[15px] lg:self-center lg:w-auto lg:max-w-[35%]"/>
+                        <div>
+                            <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Au-delà de la technique, mon cursus à la NWS m’a aussi permis de me perfectionner dans des compétences transversales telles que la gestion de projet et la collaboration au sein d’équipes pluridisciplinaires. Je suis convaincu que la réussite d’un projet web ne réside pas seulement dans la qualité du code, mais aussi dans la capacité à communiquer, à organiser le travail et à respecter les délais tout en répondant aux attentes du client. C’est pourquoi je {"m'efforce d’allier"} expertise technique et sens de l’organisation pour garantir la réussite des projets auxquels je participe.</p>
+                
+                            <p className="m-[0px 0px 20px 20px] text-xs border-l-5 border-l-[#ff6347] px-[15px] lg:text-2xl mt-[2.5rem]">Aujourd’hui, je suis à la recherche d’un stage ou d’une alternance en développement web, afin de mettre en pratique mes connaissances et de continuer à apprendre au contact de professionnels expérimentés. Je suis particulièrement intéressé par les environnements de travail collaboratifs, où je pourrais à la fois apporter mes compétences et en acquérir de nouvelles. Vous pouvez consulter mon CV pour plus de détails sur mes compétences et expériences.</p>
+                        </div>
                     </div>
+                </section>  
+                <div className="flex gap-[20px]">
+                    <ButtonNav link="cv">Mon CV</ButtonNav>
+                    <ButtonNav link="competences">Compétences</ButtonNav>
+                </div>
             </section>
             <section className="flex flex-col items-center">
                 <h2 className="m-[0] mt-[40px] lg:mt-[5rem]">PROJETS</h2>
