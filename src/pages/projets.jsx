@@ -75,7 +75,7 @@ function Projets() {
 
                 <div id="projet-portfolio" className="bg-[var(--color-grey)] rounded-[10px] m-[20px] flex flex-col lg: p-[20px] lg:items-center lg:justify-around lg:mb-[40px] lg:mt-[40px] shadow-[10px_10px_10px_black]">
                     {/* shadow-[10px_10px_10px_white] */}
-                    <img className="m-[30px] max-w-full max-h-max text-center lg:max-w-[20%]" src={logo_vertical} alt="illustration pour projet portfolio"/>
+                    <img className="bg-white p-1 rounded-[10px] m-[30px] max-w-full max-h-max text-center lg:max-w-[20%]" src={logo_vertical} alt="illustration pour projet portfolio"/>
                     <div className="flex flex-col lg:w-[50%] lg:justify-center">
                         <div className="text">
                             <h2 className="m-[0] text-center lg:text-2xl lg:font-black" >Portfolio</h2>
