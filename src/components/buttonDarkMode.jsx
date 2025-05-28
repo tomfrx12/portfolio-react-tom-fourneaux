@@ -1,21 +1,21 @@
 import PropTypes from 'prop-types';
 
-const ButtonDarkMode = ({isDark}) => {
+const ButtonDarkMode = () => {
     let icon;
-    if (isDark) {
-        icon = '🌙';
+    if (localStorage.getItem("theme") === "dark") {
+        icon = '☀️';
     }
     else {
-        icon = '☀️';
+        icon = '🌙';
     }
 
     return (
-        <span>{icon}</span>
+        <span className="cursor-pointer">{icon}</span>
     );
 };
 
 ButtonDarkMode.propTypes = {
-    isDark: PropTypes.bool.isRequired,
+    itsDark: PropTypes.bool.isRequired,
 };
 
 export default ButtonDarkMode;

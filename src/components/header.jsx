@@ -8,12 +8,12 @@ import ButtonDarkMode from "./buttonDarkMode";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [ isDark, setDarkMode ] = DarkMode();
+    const [ itsDark, setItsDark ] = DarkMode();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
-
+    
     return (
         <header className="bg-black sticky top-0 p-[0.5rem] flex justify-between items-center z-1">
             <Link to="/" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>
@@ -26,8 +26,8 @@ const Header = () => {
                 <Link to="/charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Charte Graphique</Link>
                 <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>CV</Link>
                 <Link to="/me_contacter" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Contact</Link>
-                <button onClick={() => {setDarkMode(!isDark); setMenuOpen(false);}}>
-                    <ButtonDarkMode isDark={isDark}  />
+                <button onClick={() => {setItsDark(!itsDark); setMenuOpen(false);}}>
+                    <ButtonDarkMode/>
                 </button>
             </nav>
             <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
