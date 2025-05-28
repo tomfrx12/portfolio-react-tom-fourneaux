@@ -11,10 +11,10 @@ function Index() {
     return (
         <>
             <div className="flex flex-col h-[95vh] lg:flex-row">
-                <div className="flex items-center lg:w-[40%] bg-[var(--color-white-background)]">
+                <div className="flex items-center lg:w-[40%] bg-[var(--color-white-background)] dark:bg-[var(--color-white-background-dark)]">
                     <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
                 </div>
-                <div className="h-full flex flex-col items-center lg:w-[60%] bg-[var(--color-red-background)]">
+                <div className="h-full flex flex-col items-center lg:w-[60%] bg-[var(--color-red-background)] dark:bg-[var(--color-red-background-dark)]">
                     <div className="lg:flex lg:flex-col lg:items-center hidden">
                         <Lamp/>
                     </div>

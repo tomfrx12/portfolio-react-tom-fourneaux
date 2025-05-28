@@ -4,7 +4,7 @@ const ButtonDarkMode = ({isDark}) => {
     let icon;
     if (isDark) {
         icon = '🌙';
-    } 
+    }
     else {
         icon = '☀️';
     }

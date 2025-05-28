@@ -8,7 +8,7 @@ import ButtonDarkMode from "./buttonDarkMode";
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const { isDark, setIsDark } = DarkMode();
+    const [ isDark, setDarkMode ] = DarkMode();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -16,9 +16,9 @@ const Header = () => {
 
     return (
         <header className="bg-black sticky top-0 p-[0.5rem] flex justify-between items-center z-1">
-            <a href="/">
+            <Link to="/" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>
                 <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
-            </a>
+            </Link>
             <nav className={`h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col" : "right-[-250px] top-[0] left-auto" }`}>
                 <Link to="/" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Accueil</Link>
                 <Link to="/competences" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Compétences</Link>
@@ -26,7 +26,7 @@ const Header = () => {
                 <Link to="/charte_graphique" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Charte Graphique</Link>
                 <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>CV</Link>
                 <Link to="/me_contacter" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Contact</Link>
-                <button onClick={() => setIsDark(!isDark)}>
+                <button onClick={() => {setDarkMode(!isDark); setMenuOpen(false);}}>
                     <ButtonDarkMode isDark={isDark}  />
                 </button>
             </nav>

@@ -1,11 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+import customVariants from 'tailwindcss-custom-variants';
 export default {
-  content: ['./src/**/*.{js,jsx,ts,tsx,html}'],
-  theme: {
-    extend: {
-      colors: {
-      },
-    },
-  },
-  plugins: [],
+  plugins: [customVariants],
 }
