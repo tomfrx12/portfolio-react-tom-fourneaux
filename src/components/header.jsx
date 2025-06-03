@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import PropTypes from "prop-types";
 
 import logo from '../assets/img/logo.png';
 
-import {DarkMode} from './darkmode';
 import ButtonDarkMode from "./buttonDarkMode";
 
-const Header = () => {
+const Header = ({ itsDark, setItsDark }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-    const [ itsDark, setItsDark ] = DarkMode();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -27,8 +26,9 @@ const Header = () => {
                 <Link to="/cv" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>CV</Link>
                 <Link to="/me_contacter" className="text-white p-[0.5rem] pl-[2rem] text-2xl hover:text-grey" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Contact</Link>
                 <button onClick={() => {setItsDark(!itsDark); setMenuOpen(false);}}>
-                    <ButtonDarkMode/>
+                    <ButtonDarkMode itsDark={itsDark} />
                 </button>
+                
             </nav>
             <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
                 <span className={`${menuOpen ? 'hidden' : 'block'}`}> {/* Expression ternaire */}
@@ -40,6 +40,11 @@ const Header = () => {
             </a>
         </header>
     );
+};
+
+Header.propTypes = {
+    itsDark: PropTypes.bool.isRequired,
+    setItsDark: PropTypes.func.isRequired,
 };
 
 export default Header;

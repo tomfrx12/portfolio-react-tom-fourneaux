@@ -16,16 +16,18 @@ function App() {
     return (
         <Router>
             <Layout>
-                <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/competences" element={<Competences />} />
-                    <Route path="/projets" element={<Projets />} />
-                    <Route path="/charte_graphique" element={<Charte_Graphique />} />
-                    <Route path="/cv" element={<CV />} />
-                    <Route path="/me_contacter" element={<Contact />} />
-                    <Route path="/mentions_legales" element={<Mentions_Legales />} />
-                    <Route path="*" element={<Error />} />
-                </Routes>
+                {({ itsDark, setItsDark }) => (
+                    <Routes>
+                        <Route path="/" element={<Index itsDark={itsDark} setItsDark={setItsDark} />} />
+                        <Route path="/competences" element={<Competences />} />
+                        <Route path="/projets" element={<Projets />} />
+                        <Route path="/charte_graphique" element={<Charte_Graphique />} />
+                        <Route path="/cv" element={<CV />} />
+                        <Route path="/me_contacter" element={<Contact />} />
+                        <Route path="/mentions_legales" element={<Mentions_Legales />} />
+                        <Route path="*" element={<Error />} />
+                    </Routes>
+                )}
             </Layout>
         </Router>
     );

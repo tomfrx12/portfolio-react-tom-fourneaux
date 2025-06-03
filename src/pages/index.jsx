@@ -6,8 +6,9 @@ import logo_club_st_sever from "../assets/img/logo_des_projets/logo-club-eco-st-
 import ButtonNav from "../components/a_button";
 import { Text } from "../components/texte";
 import Lamp from "../components/lamp_light";
+import PropTypes from "prop-types";
 
-function Index() {
+function Index({ itsDark, setItsDark }) {
     return (
         <>
             <div className="flex flex-col h-[95vh] lg:flex-row">
@@ -15,10 +16,10 @@ function Index() {
                     <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
                 </div>
                 <div className="h-full flex flex-col items-center lg:w-[60%] bg-[var(--color-red-background)] dark:bg-[var(--color-red-background-dark)]">
-                    <div className="lg:flex lg:flex-col lg:items-center hidden">
-                        <Lamp/>
+                    <div className="lg:flex lg:flex-col lg:items-center">
+                        <Lamp itsDark={itsDark} setItsDark={setItsDark} />
                     </div>
-                    <div className="flex flex-col items-center m-auto">
+                    <div className="flex flex-col items-center m-auto mt-[200px]">
                         <Text tag='h1' name='h1' color='white'>Tom Fourneaux</Text>
                         <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
                         <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
@@ -73,5 +74,10 @@ function Index() {
         </>
     );
 }
+
+Index.propTypes = {
+    itsDark: PropTypes.bool.isRequired,
+    setItsDark: PropTypes.func.isRequired,
+};
 
 export default Index;

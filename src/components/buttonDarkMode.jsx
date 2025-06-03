@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 
-const ButtonDarkMode = () => {
+const ButtonDarkMode = ({ itsDark }) => {
     let icon;
-    if (localStorage.getItem("theme") === "dark") {
-        icon = '☀️';
+    if (itsDark) {
+        icon = '🌙';
     }
     else {
-        icon = '🌙';
+        icon = '☀️';
     }
 
     return (
