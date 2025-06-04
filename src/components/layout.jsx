@@ -14,12 +14,11 @@ const Layout = ({ children }) => {
             <main className="flex-1 items-center lg:mb-[2rem] lg:flex lg:items-stretch lg:flex-col text-[var(--color-black)] dark:text-[var(--color-white)]">
                 {(() => {
                     if (typeof children === 'function') {
-                        return children({ itsDark, setItsDark });
-                    } 
-                    else {
-                        return children;
+                    return children({ itsDark, setItsDark });
+                    } else {
+                    return children;
                     }
-                })}
+                })()}
             </main>
 
             <Footer />

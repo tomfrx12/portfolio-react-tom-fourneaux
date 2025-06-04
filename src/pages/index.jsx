@@ -16,10 +16,10 @@ function Index({ itsDark, setItsDark }) {
                     <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
                 </div>
                 <div className="h-full flex flex-col items-center lg:w-[60%] bg-[var(--color-red-background)] dark:bg-[var(--color-red-background-dark)]">
-                    <div className="lg:flex lg:flex-col lg:items-center">
+                    <div className="lg:flex lg:flex-col lg:items-center hidden">
                         <Lamp itsDark={itsDark} setItsDark={setItsDark} />
                     </div>
-                    <div className="flex flex-col items-center m-auto mt-[200px]">
+                    <div className="flex flex-col items-center m-auto lg:mt-[200px]">
                         <Text tag='h1' name='h1' color='white'>Tom Fourneaux</Text>
                         <p className="m-[0px 5px 10px 5px] text-center text-xs lg:text-2xl">Etudiant et passionné de codage, voici mon portfolio</p>
                         <ButtonNav link="me_contacter">Contactez moi</ButtonNav>

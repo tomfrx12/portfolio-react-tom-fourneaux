@@ -42,7 +42,7 @@ function CV() {
                             <li className="my-[20px] mx-[0px]"><p>Âge<br/>18 ans</p></li>
                             <li className="my-[20px] mx-[0px]"><p>E-mail<br/><span className="text-xs lg:text-2xl">tfourneaux@normandiewebschool.fr</span></p></li>
                             <li className="my-[20px] mx-[0px]"><p>Mobile<br/>06 80 50 14 52</p></li>
-                            <li className="my-[20px] mx-[0px]"><p>Adresse<br/>799 rue du château,<br/>Bois-Héroult</p></li>
+                            <li className="my-[20px] mx-[0px]"><p>Adresse<br/>Bois-Héroult</p></li>
                             <li className="my-[20px] mx-[0px]"><p>Langue<br/>Anglais</p></li>
                             <li className="my-[20px] mx-[0px]"><p>Permis<br/>B + Véhicule</p></li>
                         </ul>

@@ -5,6 +5,7 @@
         fill: #fff4c5;
         mix-blend-mode: luminosity;
         opacity: .45;
+        height: 100vh;
       }
     </style>
   </defs>
