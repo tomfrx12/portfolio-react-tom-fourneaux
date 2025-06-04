@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
             <Header itsDark={itsDark} setItsDark={setItsDark} />
 
             <main className="flex-1 items-center lg:mb-[2rem] lg:flex lg:items-stretch lg:flex-col text-[var(--color-black)] dark:text-[var(--color-white)]">
-                {children && typeof children === 'function'
+                {typeof children === 'function'
                   ? children({ itsDark, setItsDark })
                   : children}
             </main>
