@@ -33,8 +33,8 @@ function CV() {
                         <h1 className="mt-[40px] mb-[10px]">TOM FOURNEAUX</h1>
                         <h2>DEVELOPPEUR WEB</h2>
                         <div className="text-center my-[20px] mx-[0px] p-[10px] bg-[var(--color-cv-primary)] inline-block rounded-[5px] shadow[5px_5px_5px_white]">
-                            <p className="text-xs lg:text-2xl">Recherche stage alterné non rémunéré</p>
-                            <p className="text-xs lg:text-2xl">Du 10 mars au 20 juin 2025</p>
+                            <p className="text-xs lg:text-2xl">Recherche alternance</p>
+                            <p className="text-xs lg:text-2xl">A partir du 1 septembre</p>
                         </div>
                     </div>
                     <div className="text-left">
@@ -184,7 +184,7 @@ function CV() {
                     </div>
                 </section>
             </div>
-            <a href="../assets/img/cv/CV Tom Fourneaux InDesign.pdf" download className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger mon CV</a>
+            <a href="src\assets\img\cv\CV_Tom_Fourneaux_InDesign.pdf" download="Cv Tom Fourneaux" className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger mon CV</a>
         </>
     );
 }

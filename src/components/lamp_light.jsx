@@ -8,7 +8,7 @@ const Lamp = ({ itsDark, setItsDark }) => {
         <div className="flex flex-col items-center">
             <img className="w-[300px] h-[300px] mb-[-25px] cursor-pointer" src={lamp} alt="Lamp of the Lamp" onClick={() => setItsDark(!itsDark)}/>
             {itsDark && (
-                <img className="absolute w-[300px] h-[300px] top-[344px]" src={light} alt="Light enabled"/>
+                <img className="absolute w-[300px] h-[300px] top-[360px]" src={light} alt="Light enabled"/>
             )}
         </div>
     )

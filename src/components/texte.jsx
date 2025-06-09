@@ -4,10 +4,14 @@ import PropTypes from "prop-types";
 const text = tv({
   variants: {
     name: {
-      h1: 'p-[5px] text-center text-base lg:text-2xl',
+      h1: 'p-[5px] text-center text-xl lg:text-4xl',
+      h2: 'm-[0] text-center text-lg lg:text-3xl',
+      h3: 'm-[0] text-lg lg:text-3xl',
     },
     size: {
-      md: 'text-base lg:text-2xl',
+      base: 'text-base lg:text-2xl',
+      lg: 'text-lg lg:text-3xl',
+      xl: 'text-xl lg:text-4xl',
     },
     align: {
       center: "text-center",

@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 import { Link } from "react-router";
+import { Text } from "../components/texte";
 
 import qrcode_github from "../assets/img/qrcode/qrcode_github.png";
 import qrcode_linkedin from "../assets/img/qrcode/qrcode_linkedin.jpg";
@@ -37,31 +38,31 @@ const Contact = () => {
 
     return (
         <>
-            <h1 className="text-white text-center m-[20px] py-[10px] px-[20px] bg-black text-base lg:text-3xl">Me contacter</h1>
+            <Text tag="h1" name="h1" color="white" background="black" className="m-[20px] py-[10px] px-[20px]">Me contacter</Text>
             <div className="my-[50px]">
-                <p className="flex justify-center text-center text-sm transition:transform duration:300 ease-in-out lg:text-3xl">
+                <Text tag="p" size="lg" align="center" className="flex justify-center transition:transform duration:300 ease-in-out">
                     <svg className="lg:m-[10px]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 14H4V8l8 5l8-5zm-8-7L4 6h16z"/>
                     </svg>
                     <Link className="self-center hover:scale-105" to="mailto:tfourneaux@normandiewebschool.fr">tfourneaux@normandiewebschool.fr</Link>
-                </p>
-                <p className="flex justify-center text-center text-sm transition:transform duration:300 ease-in-out lg:text-3xl">
+                </Text>
+                <Text tag="p" size="lg" alig="center" className="flex justify-center transition:transform duration:300 ease-in-out">
                     <svg className="lg:m-[10px]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                         <path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/>
                     </svg>
                     <Link className="self-center hover:scale-105" to="tel:0680501452">+33 6 80 50 14 52</Link>
-                </p>
+                </Text>
             </div>
             <div className="mx-10 flex flex-col gap-20 lg:flex-row lg:justify-around">
                 <div className="flex flex-wrap justify-between lg:flex-col lg:gap-10">
                     <div className="qrcode">
-                        <p className='text-center'>Profil <Link className="underline" to="https://github.com/tomfrx12">Github</Link></p>
+                        <Text tag="p" size="base" align="center">Profil <Link className="underline" to="https://github.com/tomfrx12">Github</Link></Text>
                         <Link to="https://github.com/tomfrx12">
                             <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src={qrcode_github} alt="QR Code Github"/>
                         </Link>
                     </div>
                     <div className="qrcode">
-                        <p className='text-center'>Profil <Link className="underline" to="https://www.linkedin.com/in/tom-fourneaux-078644332/">LinkedIn</Link></p>
+                        <Text tag="p" size="base" align="center">Profil <Link className="underline" to="https://www.linkedin.com/in/tom-fourneaux-078644332/">LinkedIn</Link></Text>
                         <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/">
                             <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src={qrcode_linkedin} alt="QR Code LinkedIn"/>
                         </Link>
@@ -78,10 +79,10 @@ const Contact = () => {
                         <input className='bg-[var(--color-white)] text-[var(--color-black)] rounded-[10px] mt-5' type="submit" value="Envoyer"/>
                     </form>
                     {messageSent && ( //L'opérateur AND logique (&&) (conjonction logique) renvoie vrai si et uniquement si ses deux opérandes sont true ou équivalents à true.
-                        <p className="text-green-600 text-center mt-4">Votre message a bien été envoyé !</p>
+                        <Text tag="p" size="base" alig="center" className="text-green-600 mt-4">Votre message a bien été envoyé !</Text>
                     )}
                     {errorSent && (
-                        <p className="text-red-600 text-center mt-4">Votre message {"n'a"} pas été envoyé !</p>
+                        <Text tag="p" size="base" alig="center" className="text-red-600 mt-4">Votre message {"n'a"} pas été envoyé !</Text>
                     )}
                 </div>
             </div>
