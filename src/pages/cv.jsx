@@ -184,7 +184,7 @@ function CV() {
                     </div>
                 </section>
             </div>
-            <a href="src\assets\img\cv\CV_Tom_Fourneaux_InDesign.pdf" download="Cv Tom Fourneaux" className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger mon CV</a>
+            <a href="/CV_Tom_Fourneaux_InDesign.pdf" download="Cv Tom Fourneaux" className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger mon CV</a>
         </>
     );
 }
