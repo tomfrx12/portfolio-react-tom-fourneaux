@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import logo from '../assets/img/logo.png';
 
 import ButtonDarkMode from "./buttonDarkMode";
-import ANav from "./a_nav";
+import HeaderNav from "./header_nav";
 
 const Header = ({ itsDark, setItsDark }) => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,20 +15,19 @@ const Header = ({ itsDark, setItsDark }) => {
     
     return (
         <header className="bg-black sticky top-0 p-[0.5rem] flex justify-between items-center z-1">
-            <ANav link=""  onClick={() => { setMenuOpen(false); }}>
+            <HeaderNav className="pl-0" link=""  onClick={() => { setMenuOpen(false); }}>
                 <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
-            </ANav>
+            </HeaderNav>
             <nav className={`h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col" : "right-[-250px] top-[0] left-auto" }`}>
-                <ANav link=""  onClick={() => { setMenuOpen(false); }}>Accueil</ANav>
-                <ANav link="competences"  onClick={() => { setMenuOpen(false); }}>Compétences</ANav>
-                <ANav link="projets"  onClick={() => { setMenuOpen(false); }}>Projets</ANav>
-                <ANav link="charte_graphique"  onClick={() => { setMenuOpen(false); }}>Charte Graphique</ANav>
-                <ANav link="cv"  onClick={() => { setMenuOpen(false); }}>CV</ANav>
-                <ANav link="me_contacter"  onClick={() => { setMenuOpen(false); }}>Contact</ANav>
+                <HeaderNav link="" onClick={() => { setMenuOpen(false); }}>Accueil</HeaderNav>
+                <HeaderNav link="competences" onClick={() => { setMenuOpen(false); }}>Compétences</HeaderNav>
+                <HeaderNav link="projets" onClick={() => { setMenuOpen(false); }}>Projets</HeaderNav>
+                <HeaderNav link="charte_graphique" onClick={() => { setMenuOpen(false); }}>Charte Graphique</HeaderNav>
+                <HeaderNav link="cv" onClick={() => { setMenuOpen(false); }}>CV</HeaderNav>
+                <HeaderNav link="me_contacter" onClick={() => { setMenuOpen(false); }}>Contact</HeaderNav>
                 <button onClick={() => {setItsDark(!itsDark); setMenuOpen(false);}}>
                     <ButtonDarkMode itsDark={itsDark} />
                 </button>
-                
             </nav>
             <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
                 <span className={`${menuOpen ? 'hidden' : 'block'}`}> {/* Expression ternaire */}
