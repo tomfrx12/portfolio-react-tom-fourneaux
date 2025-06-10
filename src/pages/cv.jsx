@@ -61,13 +61,13 @@ function CV() {
                             <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>LinkedIn</p>
                                 <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/" className="flex justify-center">
-                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[10rem] lg:max-h-[10rem]" src={qrcode_linkedin} alt="qrcode LinkedIn"/>
+                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[9rem] lg:max-h-[9rem]" src={qrcode_linkedin} alt="qrcode LinkedIn"/>
                                 </Link>
                             </div>
                             <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>Github</p>
                                 <Link to="https://github.com/tomfrx12" className="flex justify-center">
-                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[10rem] lg:max-h-[10rem]" src={qrcode_github} alt="qrcode Github"/>
+                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[9rem] lg:max-h-[9rem]" src={qrcode_github} alt="qrcode Github"/>
                                 </Link>
                             </div>
                         </div>
