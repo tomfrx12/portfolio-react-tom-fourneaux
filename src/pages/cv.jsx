@@ -85,13 +85,17 @@ function CV() {
                         </ul>
                     </div>
                     <h3 className="mt-[40px] ml-[10px]">EXPÉRIENCE :</h3>
-                    <div>
-                        <ul className="list-none mb-[30px]">
-                            <li className="my-[0px] mx-[20px]"><b>- Création Portfolio: </b>2024<p className="underline"><Link href="/" className="pl-[20px]">Mon portfolio</Link></p></li>
-                            <li className="my-[0px] mx-[20px]"><b>- Club Eco Saint Sever: </b>2024</li>
-                            <li className="my-[0px] mx-[20px]"><b>- Projet BDE, organisation voyage Dublin: </b>2024</li>
-                        </ul>
-                        <ButtonNav link="projets">Mes projets</ButtonNav>
+                    <div className="flex flex-col">
+                        <div>
+                            <ul className="list-none">
+                                <li className="my-[0px] mx-[20px]"><b>- Création Portfolio: </b>2024<p className="underline"><Link href="/" className="pl-[20px]">Mon portfolio</Link></p></li>
+                                <li className="my-[0px] mx-[20px]"><b>- Club Eco Saint Sever: </b>2024</li>
+                                <li className="my-[0px] mx-[20px]"><b>- Projet BDE, organisation voyage Dublin: </b>2024</li>
+                            </ul>
+                        </div>
+                        <div className="flex justify-start">
+                            <ButtonNav className="ml-5" link="projets">Mes projets</ButtonNav>
+                        </div>
                     </div>
                     <h3 className="mt-[40px] ml-[10px]">FORMATION :</h3>
                     <div>
