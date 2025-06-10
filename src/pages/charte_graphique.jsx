@@ -87,8 +87,8 @@ function Charte_Graphique() {
                 </div>
             </section>
             <div className="flex flex-col gap-[20px] m-[40px_50px_0px_50px] py-[10px] px-[20px] lg:flex-row lg:justify-center">
-                <a href="../assets/img/charte_graphique/Charte-Graphique-Tom-Fourneaux.pdf" download className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger ma charte graphique</a>
-                <a href="../img/charte_graphique/Maquette Figma Portfolio.zip" download className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger ma maquette</a>
+                <a href="/Charte_Graphique_Tom_Fourneaux.pdf" download="Charte Graphique Tom Fourneaux" className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger ma charte graphique</a>
+                <a href="/Maquette_Figma_Portfolio.zip" download="Maquette Portfolio" className="flex justify-center self-center bg-white text-black rounded-[20px] m-[10px] px-[10px] transition:transform duration:300 ease-in-out hover:scale-105 lg:py-[10px] lg:px-[15x]">Télécharger ma maquette</a>
             </div>
         </>
     );
