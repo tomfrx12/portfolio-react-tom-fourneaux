@@ -8,11 +8,12 @@ import { Text } from "../components/texte";
 import Lamp from "../components/lamp_light";
 import PropTypes from "prop-types";
 import { PresentationIndex } from "../components/presentation_index";
+import SeeMore from "../components/see_more";
 
 function Index({ itsDark, setItsDark }) {
     return (
         <>
-            <div className="flex flex-col h-[95vh] lg:flex-row">
+            <section className="flex flex-col h-[95vh] lg:flex-row">
                 <div className="flex items-center lg:w-[40%] bg-[var(--color-white-background)] dark:bg-[var(--color-white-background-dark)]">
                     <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
                 </div>
@@ -26,8 +27,8 @@ function Index({ itsDark, setItsDark }) {
                         <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
                     </div>
                 </div>
-            </div>
-            <section className="flex flex-col items-center">
+            </section>
+            <section className="flex flex-col items-center mx-5 lg:mx-20">
                 <Text tag='h2' name='h2' className="mt-10 lg:mt-20">A PROPOS DE MOI</Text>
                 <section>
                     <div className="lg:flex lg:flex-col">
@@ -55,7 +56,7 @@ function Index({ itsDark, setItsDark }) {
                         <div>
                             <Text tag="h3" name="h3" size="lg">Portfolio</Text>
                             <Text tag="p" size="base">Projet consistant à créer un portfolio.</Text>
-                            <ButtonNav link="projets#projet-portfolio">Voir plus</ButtonNav>
+                            <SeeMore link="projets#projet-portfolio"/>
                         </div>
                     </div>
 
@@ -64,7 +65,7 @@ function Index({ itsDark, setItsDark }) {
                         <div>
                             <Text tag="h3" name="h3" size="lg">Club Eco Saint Sever</Text>
                             <Text tag="p" size="base">Projet qui consistait à créer une identité visuelle pour le Club Eco de Saint Sever.</Text>
-                            <ButtonNav link="projets#projet-clubecosaintsever">Voir plus</ButtonNav>
+                            <SeeMore link="projets#projet-clubecosaintsever"/>
                         </div>
                     </div>
                 </div>
