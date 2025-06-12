@@ -68,7 +68,7 @@ const Contact = () => {
                         </Link>
                     </div>
                 </div>
-                <div className='flex items-center'>
+                <div className='flex items-center flex-col'>
                     <form className='bg-[var(--color-bg-grey)] rounded-[10px] flex flex-col p-5 lg:py-20' ref={form} onSubmit={sendEmail}>
                         <label className='self-center'>Nom</label>
                         <input className='bg-[var(--color-white)] text-[var(--color-black)] p-2 lg:w-80' type="text" name="user_name" placeholder='Nom' required/>
