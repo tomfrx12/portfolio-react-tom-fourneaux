@@ -16,18 +16,6 @@ import php from "../assets/img/cv/logo outils/PHP.png"
 import react from "../assets/img/cv/logo outils/React.webp"
 import tailwindcss from "../assets/img/cv/logo outils/tailwindcss.png"
 
-// export const CardSkill = ({img_illustr, alt_illustr, text_illustr, description_illustr}) => {
-//     return (
-//         <div className="relative w-[80px] h-[100px] lg:w-[195px] lg:h-[285px] bg-[#313131] rounded-[20px] flex flex-col items-center justify-center text-white transition-all duration-200 ease-in-out group overflow-hidden shadow-lg hover:scale-105 hover:-rotate-1">
-//             <img src={img_illustr} alt={alt_illustr} className="absolute top-1/2 left-1/2 w-[60%] max-h-[65%] -translate-x-1/2 -translate-y-1/2 transition-all duration-200 group-hover:blur-sm group-hover:w-[80%] group-hover:max-h-[80%]"/>
-//             <div className="relative z-20 flex flex-col items-center justify-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-//                 <Text tag="p" size="lg" color="white">{text_illustr}</Text>
-//                 <Text tag="span" size="base" color="white">{description_illustr}</Text>
-//             </div>
-//         </div>
-//     );
-// };
-
 function Competences() {
     return (
     <>
