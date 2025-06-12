@@ -26,12 +26,17 @@ const text = tv({
       black: "text-black",
       white: "text-white",
     },
+    font: {
+      normal: 'font-normal',
+      semibold: 'font-semibold',
+      bold: 'font-bold',
+    },
   },
 });
 
-export const Text = ({ tag: Tag, name, size, align, background, color, children, className}) => {
+export const Text = ({ tag: Tag, name, size, align, background, color, font, children, className}) => {
   return (
-    <Tag className={text({name, size, align, background, color, className})}>
+    <Tag className={text({name, size, align, background, color, font, className})}>
       {children}
     </Tag>
   );
@@ -44,6 +49,7 @@ Text.propTypes = {
   align: PropTypes.string,
   background: PropTypes.string,
   color: PropTypes.string,
+  font: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.node,
 };
