@@ -8,7 +8,7 @@ export const CardSkill = ({img_illustr, alt_illustr, text_illustr, description_i
                 <img src={img_illustr} alt={alt_illustr} className="absolute top-1/2 left-1/2 w-[60%] max-h-[65%] -translate-x-1/2 -translate-y-1/2 transition-all duration-200 lg:group-hover:blur-sm lg:group-hover:w-[80%] lg:group-hover:max-h-[80%]"/>
                 <div className="relative flex flex-col items-center justify-center gap-3 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-200">
                     <Text tag="p" size="lg" color="white" align="center">{text_illustr}</Text>
-                    <Text tag="span" size="base" color="white">{description_illustr}</Text>
+                    <Text tag="span" size="base" color="white" align="center">{description_illustr}</Text>
                 </div>
             </div>
             <div className="mx-2 my-4 flex flex-col items-center lg:hidden w-[150px] bg-[#313131] rounded-[20px]">
