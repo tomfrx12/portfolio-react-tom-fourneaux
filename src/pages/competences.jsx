@@ -33,207 +33,104 @@ function Competences() {
     <>
         <Text tag="h1" name="h1" color="white" background="black" className="m-[20px] py-[10px] px-[20px]">Mes compétences</Text>
 
-        <div>
+        <div className="m-auto flex flex-row flex-wrap justify-around">
+            <CardSkill
+                img_illustr={python}
+                alt_illustr="Python Logo"
+                text_illustr="Python"
+                description_illustr="Lorem Ipsum"
+            />
 
-        </div>
-        <CardSkill
-            img_illustr={python}
-            alt_illustr="Python Logo"
-            text_illustr="Python"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={html}
+                alt_illustr="HTML Logo"
+                text_illustr="HTML"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={html}
-            alt_illustr="HTML Logo"
-            text_illustr="HTML"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={css}
+                alt_illustr="CSS Logo"
+                text_illustr="CSS"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={css}
-            alt_illustr="CSS Logo"
-            text_illustr="CSS"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={js}
+                alt_illustr="JavaScript Logo"
+                text_illustr="JavaScript"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={js}
-            alt_illustr="JavaScript Logo"
-            text_illustr="JavaScript"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={sql}
+                alt_illustr="SQL Logo"
+                text_illustr="SQL"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={sql}
-            alt_illustr="SQL Logo"
-            text_illustr="SQL"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={php}
+                alt_illustr="PHP Logo"
+                text_illustr="PHP"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={php}
-            alt_illustr="PHP Logo"
-            text_illustr="PHP"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={react}
+                alt_illustr="React Logo"
+                text_illustr="React"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={react}
-            alt_illustr="React Logo"
-            text_illustr="React"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={tailwindcss}
+                alt_illustr="TailwindCSS Logo"
+                text_illustr="TailwindCSS"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={tailwindcss}
-            alt_illustr="TailwindCSS Logo"
-            text_illustr="TailwindCSS"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={vscode}
+                alt_illustr="Visual Studio Code Logo"
+                text_illustr="Visual Studio Code"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={vscode}
-            alt_illustr="Visual Studio Code Logo"
-            text_illustr="Visual Studio Code"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={wordpress}
+                alt_illustr="Wordpress Logo"
+                text_illustr="Wordpress"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={wordpress}
-            alt_illustr="Wordpress Logo"
-            text_illustr="Wordpress"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={canva}
+                alt_illustr="Canva Logo"
+                text_illustr="Canva"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={canva}
-            alt_illustr="Canva Logo"
-            text_illustr="Canva"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={indesign}
+                alt_illustr="InDesign Logo"
+                text_illustr="InDesign"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={indesign}
-            alt_illustr="InDesign Logo"
-            text_illustr="InDesign"
-            description_illustr="Lorem Ipsum"
-        />
+            <CardSkill
+                img_illustr={illustrator}
+                alt_illustr="Illustrator Logo"
+                text_illustr="Illustrator"
+                description_illustr="Lorem Ipsum"
+            />
 
-        <CardSkill
-            img_illustr={illustrator}
-            alt_illustr="Illustrator Logo"
-            text_illustr="Illustrator"
-            description_illustr="Lorem Ipsum"
-        />
-
-        <CardSkill
-            img_illustr={photoshop}
-            alt_illustr="Photoshop Logo"
-            text_illustr="Photoshop"
-            description_illustr="Lorem Ipsum"
-        />
-
-        <div className="lg:flex lg:items-center">
-            <div className="m-[20px] bg-[#121212] rounded-t-[1rem] overflow-hidden lg:w-[75%]">
-                <div className="bg-[#333333] p-[5px]">
-                    <Text tag="h2" name="h2" color="white" className="my-2">Langages Informatiques</Text>
-                </div> 
-                <div className="p-[10px] border-1 border-solid border-white rounded-[0px 0px 16px 16px] border-t-0">
-                    <ul className="p-0">
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="python">
-                                <Text tag="span" color="black" className="ml-[10px]">Python</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="html">
-                                <Text tag="span" color="black" className="ml-[10px]">HTML</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="css">
-                                <Text tag="span" color="black" className="ml-[10px]">CSS</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="js">
-                                <Text tag="span" color="black" className="ml-[10px]">JavaScript</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="php">
-                                <Text tag="span" color="black" className="ml-[10px]">PHP</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="sql">
-                                <Text tag="span" color="black" className="ml-[10px]">SQL</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="linux">
-                                <Text tag="span" color="black" className="ml-[10px]">Linux:Debian</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="react">
-                                <Text tag="span" color="black" className="ml-[10px]">React.js</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="tailwind">
-                                <Text tag="span" color="black" className="ml-[10px]">TailwindCSS</Text>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="m-[20px] bg-[#121212] rounded-t-[1rem] overflow-hidden lg:w-[75%]">
-                <div className="bg-[#333333] p-[5px]">
-                    <Text tag="h2" name="h2" color="white" className="my-2">Autres compétences</Text>
-                </div>
-                <div className="p-[10px] border-1 border-solid border-white rounded-[0px 0px 16px 16px] border-t-0">
-                    <ul className="p-0">
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="canva">
-                                <Text tag="span" color="black" className="ml-[10px]">Canva</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="photoshop">
-                                <Text tag="span" color="black" className="ml-[10px]">Photoshop</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="illustrator">
-                                <Text tag="span" color="black" className="ml-[10px]">Illustrator</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="indesign">
-                                <Text tag="span" color="black" className="ml-[10px]">InDesign</Text>    
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="wordpress">
-                                <Text tag="span" color="black" className="ml-[10px]">Wordpress</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="github">
-                                <Text tag="span" color="black" className="ml-[10px]">Github</Text>
-                            </div>
-                        </li>
-                        <li className="list-none w-full bg-white rounded-sm mb-[10px] hover:bg-[var(--color-grey)]">
-                            <div className="py-[8px] pr-[10px] rounded-sm transition-[width] duration-300 ease-in-out bg-[#0e6b0e] animate-[fadeIn_1.5s_ease_forwards] w-[0%] hover:bg-[#149414]" id="figma">
-                                <Text tag="span" color="black" className="ml-[10px]">Figma</Text>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <CardSkill
+                img_illustr={photoshop}
+                alt_illustr="Photoshop Logo"
+                text_illustr="Photoshop"
+                description_illustr="Lorem Ipsum"
+            />
         </div>
     </>
     );
