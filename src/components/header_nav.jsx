@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 const HeaderNav = ({children, link, onClick, ...props}) => {
     
-    const handleClick = (e) => {
+    const handleClick = (element) => {
         window.scrollTo(0, 0);
-        if (onClick) onClick(e);
+        if (onClick) onClick(element); //s'il y a un onClick passé en ...props, alors il est aussi appélé
     };
 
     return (

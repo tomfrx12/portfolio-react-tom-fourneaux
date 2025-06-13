@@ -16,7 +16,7 @@ function App() {
     return (
         <Router>
             <Layout>
-                {({ itsDark, setItsDark }) => (
+                {({ itsDark, setItsDark }) => ( //fonction qui reçoit l'état du dark mode (bool) et la fonction pour la changer (func). Afin que toutes les pages puissent avoir accès au dark mode ( c'est le "render prop")
                     <Routes>
                         <Route path="/" element={<Index itsDark={itsDark} setItsDark={setItsDark} />} />
                         <Route path="/competences" element={<Competences />} />

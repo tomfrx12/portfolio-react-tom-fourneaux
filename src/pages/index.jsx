@@ -10,7 +10,7 @@ import PropTypes from "prop-types";
 import { PresentationIndex } from "../components/presentation_index";
 import SeeMore from "../components/see_more";
 
-function Index({ itsDark, setItsDark }) {
+function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie dans l'App, afin que la Lamp puisse modifier le dark mode
     return (
         <>
             <section className="flex flex-col h-[95vh] lg:flex-row">
@@ -19,7 +19,8 @@ function Index({ itsDark, setItsDark }) {
                 </div>
                 <div className="h-full flex flex-col items-center lg:w-[60%] bg-[var(--color-red-background)] dark:bg-[var(--color-red-background-dark)]">
                     <div className="lg:flex lg:flex-col lg:items-center hidden">
-                        <Lamp itsDark={itsDark} setItsDark={setItsDark} />
+                        <Lamp itsDark={itsDark} setItsDark={setItsDark} /> 
+                        {/* donne les infos du dark mode à la Lamp */}
                     </div>
                     <div className="flex flex-col items-center m-auto lg:mt-[200px]">
                         <Text tag='h1' name='h1'>Tom Fourneaux</Text>
@@ -42,7 +43,7 @@ function Index({ itsDark, setItsDark }) {
                             <PresentationIndex>Aujourd’hui, je suis à la recherche d’un stage ou d’une alternance en développement web, afin de mettre en pratique mes connaissances et de continuer à apprendre au contact de professionnels expérimentés. Je suis particulièrement intéressé par les environnements de travail collaboratifs, où je pourrais à la fois apporter mes compétences et en acquérir de nouvelles. Vous pouvez consulter mon CV pour plus de détails sur mes compétences et expériences.</PresentationIndex>
                         </div>
                     </div>
-                </section>  
+                </section>
                 <div className="flex gap-[20px]">
                     <ButtonNav link="cv">Mon CV</ButtonNav>
                     <ButtonNav link="competences">Compétences</ButtonNav>

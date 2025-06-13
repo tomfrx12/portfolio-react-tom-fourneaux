@@ -7,6 +7,7 @@ import qrcode_github from "../assets/img/qrcode/qrcode_github.png";
 import qrcode_linkedin from "../assets/img/qrcode/qrcode_linkedin.jpg";
 
 const Contact = () => {
+    //template de EmailJs
     const YOUR_SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
     const YOUR_TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
     const YOUR_PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;

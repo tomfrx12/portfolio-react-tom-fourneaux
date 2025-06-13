@@ -19,17 +19,17 @@ import magnifying_glass from "../assets/svg/magnifying_glass.svg";
 import github from "../assets/svg/github.svg";
 
 function Projets() {
-    const location = useLocation();
+    const location = useLocation(); //récupére les objets de localisation de la page
 
     useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.replace("#", "");
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+    if (location.hash) { //s'il possède un hash ( avec le #)
+      const id = location.hash.replace("#", ""); //le supprimer
+      const element = document.getElementById(id);
+      if (element) {  //s'il y a un id
+        element.scrollIntoView({ behavior: "smooth" }); //y scooler en smooth
       }
     }
-  }, [location]);
+  }, [location]); //relance le hook à chaque fois que la localisation change
 
     return (
         <>

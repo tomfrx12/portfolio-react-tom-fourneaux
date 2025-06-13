@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const ButtonDarkMode = ({ itsDark }) => {
+const ButtonDarkMode = ({ itsDark }) => { //récupére le bool itsDark pour changer l'icon
     let icon;
     if (itsDark) {
         icon = '🌙';

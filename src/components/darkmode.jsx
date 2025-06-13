@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 
 export function DarkMode() {
-  const [itsDark, setItsDark] = useState(() => {
-    return localStorage.getItem("theme") === "dark"; 
+  const [itsDark, setItsDark] = useState(() => { //initialise l'état du dark mode, et regarde si le thème est "dark"
+    return localStorage.getItem("theme") === "dark"; //si true, active le dark mode
   });
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export function DarkMode() {
       document.body.classList.remove("dark");
       localStorage.setItem("theme", "light");
     }
-  }, [itsDark]);
+  }, [itsDark]); //relance le hook a chaque fois que le dark mode est modifier
 
   return [itsDark, setItsDark]
 }

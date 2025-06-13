@@ -12,11 +12,12 @@ const Layout = ({ children }) => {
             <Header itsDark={itsDark} setItsDark={setItsDark} />
 
             <main className="flex-1 items-center lg:mb-[2rem] lg:flex lg:items-stretch lg:flex-col text-[var(--color-black)] dark:text-[var(--color-white)]">
-                {(() => {
-                    if (typeof children === 'function') {
-                    return children({ itsDark, setItsDark });
-                    } else {
-                    return children;
+                {(() => { //fonction auto-exécutée (IIFE)
+                    if (typeof children === 'function') { //si le type de children est une fonction (Initialement dans le App le rendre prop définie comme une fonction)
+                        return children({ itsDark, setItsDark }); //on l'appelle en lui passant les paramètres du dark mode
+                    } 
+                    else {
+                        return children;
                     }
                 })()}
             </main>

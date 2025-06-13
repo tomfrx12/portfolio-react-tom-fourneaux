@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router";
 
 import github from "../assets/img/img_reseaux/github.png"
@@ -6,8 +5,6 @@ import linkedin from "../assets/img/img_reseaux/linkedin.png"
 import instagram from "../assets/img/img_reseaux/instagram.png"
 
 const Footer = () => {
-    const [setMenuOpen] = useState(false);
-
     return (
         <footer className="mt-[20px] bg-black flex justify-center flex-col items-center lg:flex-row lg:justify-around lg:py-[10px]">
             <nav className="flex gap-[40px] my-[20px] lg:m-[0]">
@@ -22,7 +19,7 @@ const Footer = () => {
                 </Link>
             </nav>
             <p className="text-center text-xs text-white lg:text-2xl">Copyright © 2025 tom-fourneaux<br/>
-                <Link to="/mentions_legales" className="text-white underline" onClick={() => { window.scrollTo(0, 0); setMenuOpen(false); }}>Mentions légales</Link>
+                <Link to="/mentions_legales" className="text-white underline" onClick={() => { window.scrollTo(0, 0); }}>Mentions légales</Link>
             </p>
         </footer>
     );

@@ -8,13 +8,9 @@ import HeaderNav from "./header_nav";
 
 const Header = ({ itsDark, setItsDark }) => {
     const [menuOpen, setMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
     
     return (
-        <header className="bg-black sticky top-0 p-[0.5rem] flex justify-between items-center z-1">
+        <header className="bg-black sticky top-0 p-[0.5rem] flex justify-between items-center z-2">
             <HeaderNav className="pl-0" link=""  onClick={() => { setMenuOpen(false); }}>
                 <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
             </HeaderNav>
@@ -29,7 +25,7 @@ const Header = ({ itsDark, setItsDark }) => {
                     <ButtonDarkMode itsDark={itsDark} />
                 </button>
             </nav>
-            <a onClick={toggleMenu} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
+            <a onClick={() => {setMenuOpen(!menuOpen);}} className="block cursor-pointer top-[80px] right-[20rem] lg:hidden">
                 <span className={`${menuOpen ? 'hidden' : 'block'}`}> {/* Expression ternaire */}
                     <span className="block w-[20px] h-px bg-white my-[6px]"></span>
                     <span className="block w-[20px] h-px bg-white my-[6px]"></span>
