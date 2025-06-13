@@ -14,7 +14,7 @@ const Header = ({ itsDark, setItsDark }) => {
             <HeaderNav className="pl-0" link=""  onClick={() => { setMenuOpen(false); }}>
                 <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
             </HeaderNav>
-            <nav className={`h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col" : "right-[-250px] top-[0] left-auto" }`}>
+            <nav className={`flex h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col" : "right-[-250px] top-[0] left-auto" }`}>
                 <HeaderNav link="" onClick={() => { setMenuOpen(false); }}>Accueil</HeaderNav>
                 <HeaderNav link="competences" onClick={() => { setMenuOpen(false); }}>Compétences</HeaderNav>
                 <HeaderNav link="projets" onClick={() => { setMenuOpen(false); }}>Projets</HeaderNav>
