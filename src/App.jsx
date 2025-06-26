@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Layout from "./components/layout";
 
@@ -10,6 +10,7 @@ import CV from "./pages/cv";
 import Contact from "./pages/me_contacter";
 import Mentions_Legales from "./pages/mentions_legales";
 import Error from "./pages/error";
+import Clicker from "./pages/clicker";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                         <Route path="/me_contacter" element={<Contact />} />
                         <Route path="/mentions_legales" element={<Mentions_Legales />} />
                         <Route path="*" element={<Error />} />
+                        <Route path="/clicker" element={<Clicker />} />
                     </Routes>
                 )}
             </Layout>

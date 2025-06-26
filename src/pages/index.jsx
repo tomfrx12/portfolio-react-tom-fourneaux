@@ -3,6 +3,7 @@ import illustration_dev from "../assets/img/illustration presentation/illustrati
 import petit_logo from "../assets/img/logo_des_projets/petit_logo.png";
 import logo_club_st_sever from "../assets/img/logo_des_projets/logo-club-eco-st-sever.png";
 
+import { useState } from "react";
 import ButtonNav from "../components/a_button";
 import { Text } from "../components/texte";
 import Lamp from "../components/lamp_light";
@@ -11,11 +12,34 @@ import { PresentationIndex } from "../components/presentation_index";
 import SeeMore from "../components/see_more";
 
 function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie dans l'App, afin que la Lamp puisse modifier le dark mode
+
+    const [ButtonClicker, setButtonClicker] = useState(false);
+    const [NbClick, setNbClick] = useState(0);
+    const [LinkClicker, setLinkClicker] = useState(false);
+    
+    function Clicker() {
+        if ( ButtonClicker === false ) {
+            setButtonClicker(!ButtonClicker);
+        };
+        setNbClick(NbClick + 1)
+        if ( LinkClicker === false && NbClick == 29 ) {
+            setLinkClicker(!LinkClicker);
+        };
+    };
+
     return (
         <>
             <section className="flex flex-col h-[95vh] lg:flex-row">
-                <div className="flex items-center lg:w-[40%] bg-[var(--color-white-background)] dark:bg-[var(--color-white-background-dark)]">
-                    <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
+                <div className="flex items-center justify-center flex-col lg:w-[40%] bg-[var(--color-white-background)] dark:bg-[var(--color-white-background-dark)]">
+                    <button className="cursor-pointer" onClick={Clicker}>
+                        <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
+                    </button>
+                    {ButtonClicker && (
+                        <Text tag="p" size="base">Nombre de click : {NbClick}</Text>
+                    )}
+                    {LinkClicker && (
+                        <ButtonNav link="clicker">Help</ButtonNav>
+                    )}
                 </div>
                 <div className="h-full flex flex-col items-center lg:w-[60%] bg-[var(--color-red-background)] dark:bg-[var(--color-red-background-dark)]">
                     <div className="lg:flex lg:flex-col lg:items-center hidden">
