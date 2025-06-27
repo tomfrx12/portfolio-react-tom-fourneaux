@@ -88,7 +88,7 @@ function CV() {
                     <div className="flex flex-col">
                         <div>
                             <ul className="list-none">
-                                <li className="my-[0px] mx-[20px]"><b>- Création Portfolio: </b>2024<p className="underline"><Link href="/" className="pl-[20px]">Mon portfolio</Link></p></li>
+                                <li className="my-[0px] mx-[20px]"><b>- Création Portfolio: </b>2024<p className="underline"><Link to="/" className="pl-[20px]">Mon portfolio</Link></p></li>
                                 <li className="my-[0px] mx-[20px]"><b>- Club Eco Saint Sever: </b>2024</li>
                                 <li className="my-[0px] mx-[20px]"><b>- Projet BDE, organisation voyage Dublin: </b>2024</li>
                             </ul>
