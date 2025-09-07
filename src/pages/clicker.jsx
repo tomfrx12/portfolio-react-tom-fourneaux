@@ -14,13 +14,20 @@ function Clicker() {
     };
 
     return (
-        <>
-            <div className="flex items-center flex-col justify-center">
-                <img src={pptom} alt="Clicker Tom Fourneaux" className={`my-5 m-auto rounded-full w-[25%] cursor-pointer transition-transform duration-150 ${isClick ? 'scale-102' : ''}`} onClick={Clicker}/>
-                <Text tag="p" size="base">Nombre de click : {NbClick}</Text>
+        <div className="lg:flex min-h-screen">
+            <section className="flex flex-col justify-center items-center h-[95vh] flex-1">
+                <Text tag="p" size="base" className="my-4">Nombre de click : {NbClick}</Text>
+                <img src={pptom} alt="Clicker Tom Fourneaux" className={`my-5 rounded-full cursor-pointer w-50 lg:w-75 transition-transform duration-150 ${isClick ? 'scale-102' : ''}`} onClick={Clicker}/>
+            </section>
+            <section className="flex flex-col items-center justify-center h-full lg:w-[30%] flex-1">
                 <Upgrade text_upgrade="Upgrade"/>
-            </div>
-        </>
+                <Upgrade text_upgrade="Upgrade"/>
+                <Upgrade text_upgrade="Upgrade"/>
+                <Upgrade text_upgrade="Upgrade"/>
+                <Upgrade text_upgrade="Upgrade"/>
+                <Upgrade text_upgrade="Upgrade"/>
+            </section>
+        </div>
     )
 }
 
