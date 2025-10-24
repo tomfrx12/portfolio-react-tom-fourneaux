@@ -31,7 +31,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
         <>
             <section className="flex flex-col h-[95vh] lg:flex-row">
                 <div className="flex items-center justify-center flex-col lg:w-[40%] bg-[var(--color-white-background)] dark:bg-[var(--color-white-background-dark)]">
-                    <button className="cursor-pointer" onClick={Clicker}>
+                    <button onClick={Clicker}>
                         <img src={pptom} alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full w-[60%]"/>
                     </button>
                     {ButtonClicker && (

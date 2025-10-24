@@ -18,8 +18,8 @@ const Header = ({ itsDark, setItsDark }) => {
                 <HeaderNav link="" onClick={() => { setMenuOpen(false); }}>Accueil</HeaderNav>
                 <HeaderNav link="competences" onClick={() => { setMenuOpen(false); }}>Compétences</HeaderNav>
                 <HeaderNav link="projets" onClick={() => { setMenuOpen(false); }}>Projets</HeaderNav>
-                <HeaderNav link="charte_graphique" onClick={() => { setMenuOpen(false); }}>Charte Graphique</HeaderNav>
-                <HeaderNav link="cv" onClick={() => { setMenuOpen(false); }}>CV</HeaderNav>
+                {/* <HeaderNav link="charte_graphique" onClick={() => { setMenuOpen(false); }}>Charte Graphique</HeaderNav>
+                <HeaderNav link="cv" onClick={() => { setMenuOpen(false); }}>CV</HeaderNav> */}
                 <HeaderNav link="me_contacter" onClick={() => { setMenuOpen(false); }}>Contact</HeaderNav>
                 <button onClick={() => {setItsDark(!itsDark); setMenuOpen(false);}}>
                     <ButtonDarkMode itsDark={itsDark} />
