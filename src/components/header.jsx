@@ -9,7 +9,7 @@ const Header = ({ itsDark, setItsDark }) => {
     return (
         <header className="bg-black sticky top-0 p-2 flex justify-between items-center z-2">
             <HeaderNav className="pl-0" link=""  onClick={() => { setMenuOpen(false); }}>
-                <img src="/src/assets/img/logo.png" alt="logo horizontal Fourneaux Tom" className="w-40"/>
+                <img src="src/assets/img/logo.png" alt="logo horizontal Fourneaux Tom" className="w-40"/>
             </HeaderNav>
             <nav className={`flex gap-10 h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-0 top-[60px] flex flex-col" : "right-[-250px] top-0 left-auto" }`}>
                 <HeaderNav link="" onClick={() => { setMenuOpen(false); }}>Accueil</HeaderNav>
