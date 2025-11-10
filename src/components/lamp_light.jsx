@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import '../assets/Lamp.css';
+// import '../assets/Lamp.css';
 
 export default function Lamp({ itsDark, setItsDark }) {
     const [pressed, setPressed] = useState(false);
