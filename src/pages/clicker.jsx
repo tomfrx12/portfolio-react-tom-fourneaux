@@ -1,6 +1,5 @@
 import { Text } from "../components/texte";
 import { useState } from "react";
-import pptom from "../assets/img/tom.png";
 import {Upgrade} from "../components/upgrade";
 
 function Clicker() {
@@ -17,7 +16,7 @@ function Clicker() {
         <div className="lg:flex min-h-screen">
             <section className="flex flex-col justify-center items-center h-[95vh] flex-1">
                 <Text tag="p" size="base" className="my-4">Nombre de click : {NbClick}</Text>
-                <img src={pptom} alt="Clicker Tom Fourneaux" className={`my-5 rounded-full cursor-pointer w-50 lg:w-75 transition-transform duration-150 ${isClick ? 'scale-102' : ''}`} onClick={Clicker}/>
+                <img src="/src/assets/img/A2_Fourneaux_Tom.png" alt="Clicker Tom Fourneaux" className={`my-5 rounded-full cursor-pointer w-50 lg:w-75 transition-transform duration-150 ${isClick ? 'scale-102' : ''}`} onClick={Clicker}/>
             </section>
             <section className="flex flex-col items-center justify-center h-full lg:w-[30%] flex-1">
                 <Upgrade text_upgrade="Upgrade"/>

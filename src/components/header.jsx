@@ -1,7 +1,4 @@
 import { useState } from "react";
-import PropTypes from "prop-types";
-
-import logo from '../assets/img/logo.png';
 
 import ButtonDarkMode from "./buttonDarkMode";
 import HeaderNav from "./header_nav";
@@ -12,14 +9,12 @@ const Header = ({ itsDark, setItsDark }) => {
     return (
         <header className="bg-black sticky top-0 p-[0.5rem] flex justify-between items-center z-2">
             <HeaderNav className="pl-0" link=""  onClick={() => { setMenuOpen(false); }}>
-                <img src={logo} alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
+                <img src="/src/assets/img/logo.png" alt="logo horizontal Fourneaux Tom" className="w-[10rem]"/>
             </HeaderNav>
-            <nav className={`flex h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col" : "right-[-250px] top-[0] left-auto" }`}>
+            <nav className={`flex gap-10 h-full w-[250px] bg-black fixed lg:static lg:w-auto ${menuOpen ? "right-[0] top-[60px] flex flex-col" : "right-[-250px] top-[0] left-auto" }`}>
                 <HeaderNav link="" onClick={() => { setMenuOpen(false); }}>Accueil</HeaderNav>
                 <HeaderNav link="competences" onClick={() => { setMenuOpen(false); }}>Compétences</HeaderNav>
                 <HeaderNav link="projets" onClick={() => { setMenuOpen(false); }}>Projets</HeaderNav>
-                {/* <HeaderNav link="charte_graphique" onClick={() => { setMenuOpen(false); }}>Charte Graphique</HeaderNav>
-                <HeaderNav link="cv" onClick={() => { setMenuOpen(false); }}>CV</HeaderNav> */}
                 <HeaderNav link="me_contacter" onClick={() => { setMenuOpen(false); }}>Contact</HeaderNav>
                 <button onClick={() => {setItsDark(!itsDark); setMenuOpen(false);}}>
                     <ButtonDarkMode itsDark={itsDark} />
@@ -35,11 +30,6 @@ const Header = ({ itsDark, setItsDark }) => {
             </a>
         </header>
     );
-};
-
-Header.propTypes = {
-    itsDark: PropTypes.bool.isRequired,
-    setItsDark: PropTypes.func.isRequired,
 };
 
 export default Header;
