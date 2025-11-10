@@ -1,6 +1,6 @@
 import { Text } from "../components/texte";
 import { useState } from "react";
-import {Upgrade} from "../components/upgrade";
+import { Upgrade } from "../components/upgrade";
 
 function Clicker() {
     const [NbClick, setNbClick] = useState(0);

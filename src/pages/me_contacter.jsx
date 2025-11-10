@@ -3,9 +3,6 @@ import { useRef, useState } from 'react';
 import { Link } from "react-router";
 import { Text } from "../components/texte";
 
-import qrcode_github from "../assets/img/qrcode/qrcode_github.png";
-import qrcode_linkedin from "../assets/img/qrcode/qrcode_linkedin.jpg";
-
 const Contact = () => {
     //template de EmailJs
     const YOUR_SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
@@ -60,13 +57,13 @@ const Contact = () => {
                     <div className="qrcode">
                         <Text tag="p" size="base" align="center">Profil <Link className="underline" to="https://github.com/tomfrx12">Github</Link></Text>
                         <Link to="https://github.com/tomfrx12">
-                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src={qrcode_github} alt="QR Code Github"/>
+                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src="/public/img/qrcode/qrcode_github.png" alt="QR Code Github"/>
                         </Link>
                     </div>
                     <div className="qrcode">
                         <Text tag="p" size="base" align="center">Profil <Link className="underline" to="https://www.linkedin.com/in/tom-fourneaux-078644332/">LinkedIn</Link></Text>
                         <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/">
-                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src={qrcode_linkedin} alt="QR Code LinkedIn"/>
+                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src="/public/img/qrcode/qrcode_github.png" alt="QR Code LinkedIn"/>
                         </Link>
                     </div>
                 </div>

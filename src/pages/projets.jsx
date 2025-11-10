@@ -4,20 +4,6 @@ import { useLocation } from "react-router";
 import { CardProjet } from "../components/card_projet";
 import { Text } from "../components/texte";
 
-import logo_handisup from "../assets/img/projets/img/handisup/logo-handisup.png";
-import logo_handisup_noir_et_blanc from "../assets/img/projets/img/handisup/logo-handisup-noir-et-blanc.png";
-import logo_vertical from "../assets/img/projets/img/logo-vertical.png";
-import alternative_banniere from "../assets/img/projets/img/alternative bannière.png";
-import maquette from "../assets/img/projets/img/maquette/maquette.png";
-import banniere from "../assets/img/projets/img/bannière.png";
-import fiches from "../assets/img/projets/img/interview/Fiches.png";
-import banniere_bde from "../assets/img/projets/img/banniere.png";
-import e_commerce from"../assets/img/projets/img/E-commerce.png"
-import figma from "../assets/img/logo_des_projets/figma-logo.webp"
-import home from "../assets/svg/home.svg";
-import magnifying_glass from "../assets/svg/magnifying_glass.svg";
-import github from "../assets/svg/github.svg";
-
 function Projets() {
     const location = useLocation(); //récupére les objets de localisation de la page
 
@@ -59,50 +45,50 @@ function Projets() {
 
                 <CardProjet
                     className_img="m-[30px] max-w-full max-h-max text-center"
-                    img_illustr={e_commerce} 
+                    img_illustr="/public/img/projets/img/E-commerce.png"
                     alt_illustr="Page produit site E-commerce" 
                     title_text="Création site E-commerce" 
                     text="Pendant deux semaines de cours que j'ai eu pendant mon apprentisage j'ai appris à utiliser WordPress et Figma afin de créer un site e-commerce et de créer une maquette sur figma avec un wireframe et des composants (malheuresement il n'est qu'en local)" 
                     link="https://www.figma.com/design/xQuzIs2UGqYwRKOxep17rb/Maquettage?node-id=0-1&t=gZJTag1SQ0CL5CcZ-1"
                     title_link="Création site e-commerce"
-                    img_link={figma}
+                    img_link="/public/img/logo_des_projets/figma-logo.webp"
                     alt_link="Logo Figma"
                 />
 
                 <CardProjet 
                     className_img="m-[30px] text-center lg:w-[200px]"
-                    img_illustr={logo_handisup} 
+                    img_illustr="/public/img/projets/img/handisup/logo-handisup.png"
                     alt_illustr="Logo Handisup" 
                     title_text="Refonte Handisup" 
                     text="Lors de mon apprentisage à la NWS, j'ai eu la chance de crée avec un groupe d'autres éléves, uen refonte de tout le site de l'association Handisup est une association qui conseille les lycéens, les étudiants et les jeunes diplômés en situation de handicap de Haute-Normandie pour qu’ils puissent réussir leurs études et trouver un emploi à la hauteur de leurs attentes et de leurs compétences." 
                     link="https://handisup5.normandieweb.school/"
                     title_link="Site refonte Handisup"
-                    img_link={logo_handisup_noir_et_blanc}
+                    img_link="/public/img/projets/img/handisup/logo-handisup-noir-et-blanc.png"
                     alt_link="Logo Handisup noir et blanc"
                 />
 
                 <CardProjet
                     id="projet-portfolio"
                     className_img="bg-white p-1 rounded-[10px] m-[30px] max-w-full max-h-max text-center lg:max-w-[20%]"
-                    img_illustr={logo_vertical} 
+                    img_illustr="/public/img/projets/img/logo-vertical.png"
                     alt_illustr="illustration pour projet portfolio" 
                     title_text="Portfolio" 
                     text="Ceci est la création de mon portfolio, vous êtes actuellement sur celui-ci. Il a été crée en HTML CSS et JavaScript." 
                     link="/"
                     title_link="Home portfolio"
-                    img_link={home}
+                    img_link="/public/svg/home.svg"
                 />
 
                 <CardProjet
                     id_project="projet-clubecosaintsever"
                     className_img="m-[30px] max-w-full max-h-max text-center"
-                    img_illustr={alternative_banniere} 
+                    img_illustr="/public/img/projets/img/alternative bannière.png"
                     alt_illustr="illustration pour projet club eco saint sever" 
                     title_text="Club Eco Saint Sever" 
                     text="A la NWS et avec l'aide de la Mission Locale Agglomération de Rouen, j'ai eu la chance avec un groupe d'élèves, de mettre en place une nouvelle charte graphique du Club Eco Saint Sever qui est une association à but non lucratif qui regroupe des entreprises pour des actions communues à Saint Sever comme l'écologie."
                     link="/Presentation_Club_Eco_St_Sever.pdf"
                     title_link=""
-                    img_link={magnifying_glass}
+                    img_link="/public/svg/magnifying_glass.svg"
                     alt_link=""
                     // download="Présentation Club Eco St Sever"
                 />
@@ -111,36 +97,36 @@ function Projets() {
 
                 <CardProjet 
                     className_img="m-[30px] max-w-full max-h-max text-center"
-                    img_illustr={maquette} 
+                    img_illustr="/public/img/projets/img/maquette/maquette.png"
                     alt_illustr="illustration projet maquette figma" 
                     title_text="" 
                     text="Je devais reproduire en HTML CSS, une maquette figma au pixel perfect en ajoutant des éléments utilisateur, comme un mode jour nuit en JavaScript."
                     link="https://tomfrx12.github.io/controle-html-css/"
                     title_link="Projet maquette HTML CSS"
-                    img_link={github}
+                    img_link="/public/svg/github.svg"
                 />
 
                 <CardProjet 
                     className_img="m-[30px] max-w-full max-h-max text-center"
-                    img_illustr={banniere} 
+                    img_illustr="/public/img/projets/img/bannière.png" 
                     alt_illustr="illustration projet bibliothèque vidéos" 
                     title_text="Bibliothèque vidéos" 
                     text="Le but était de concevoir un site de partage de contenus collaboratif en groupe suite a des cours d'intégration web de j'ai eu lors que mon apprentisage à la NWS." 
                     link="https://github.com/Quentin-SAMSON-NWS/Projet-bibliotheque-video"
                     title_link="Projet de bibliothèque video github"
-                    img_link={github}
+                    img_link="/public/svg/github.svg"
                     alt_link=""
                 />
 
                 <CardProjet 
                     className_img="m-[30px] max-w-full max-h-max text-center lg:max-w-full"
-                    img_illustr={fiches} 
+                    img_illustr="/public/img/projets/img/interview/Fiches.png"
                     alt_illustr="illustration interview" 
                     title_text="Interview" 
                     text="J'ai eu la chance lors de mon apprentisages d'interviewé un élève de troisième année dans ma spécialités, donc le développement web." 
                     link=""
                     title_link="google docs presentation interview A3"
-                    img_link={magnifying_glass}
+                    img_link="/public/svg/magnifying_glass.svg"
                     alt_link=""
                 />
 
@@ -148,13 +134,13 @@ function Projets() {
 
                 <CardProjet 
                     className_img="m-[30px] max-w-full max-h-max text-center"
-                    img_illustr={banniere_bde} 
+                    img_illustr="/public/img/projets/img/banniere.png"
                     alt_illustr="illustrator projet bde" 
                     title_text="Projet BDE" 
                     text="Suite à ma rentrée dans l'école NWS en octobre, mon premier projet était de proposé une idée d'activité que les élèves de l'école pourrais effectuer, par la suite l'organisé et la presenté au BDE de l'école. Mon groupe et moi-même d'avions désidé d'essayer d'organisé un voyage à Dublin en Irlande." 
                     link="https://gamma.app/docs/Voyage-a-Dublin-bdop9hv6473b9r3?mode=doc"
                     title_link="Projet BDE Dublin"
-                    img_link={magnifying_glass}
+                    img_link="/public/svg/magnifying_glass.svg"
                 />
             </section>
         </>
