@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import '../assets/Lamp.css';
+
 export default function Lamp({ itsDark, setItsDark }) {
     const [pressed, setPressed] = useState(false);
 
@@ -15,28 +17,6 @@ export default function Lamp({ itsDark, setItsDark }) {
     return (
         <div className="flex flex-col items-center relative">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.67 155.95" className="z-1 w-32 h-auto">
-                <defs>
-                    <style>
-                        {`
-                        .color-lamp-1 { fill: #b2b2d8; }
-                        .color-lamp-2 { fill: #fff9cc; }
-                        .color-lamp-3 { fill: #af91db; }
-
-                        /* Animation clignotement plus douce */
-                        @keyframes flicker {
-                            0%, 15%, 30%, 45%, 60%, 75% { opacity: 0; }
-                            7%, 22%, 37%, 52%, 67%, 82% { opacity: 0.45; }
-                            100% { opacity: 0.45; }
-                        }
-
-                        .light-flicker {
-                            animation: flicker 1.5s linear forwards;
-                            mix-blend-mode: luminosity;
-                        }
-                        `}
-                    </style>
-                </defs>
-
                 {/* Lampe */}
                 <g id="lamp">
                     <path className="color-lamp-2" d="M38.07,143.07c0,7.11-5.26,12.88-11.75,12.88s-11.74-5.77-11.74-12.88,5.26-12.86,11.74-12.86,11.75,5.74,11.75,12.86Z"/>
@@ -57,22 +37,6 @@ export default function Lamp({ itsDark, setItsDark }) {
             )}
 
             <svg viewBox="0 0 100 200" xmlns="http://www.w3.org/2000/svg" className="z-0 absolute top-[-100px] left-[210px] w-20 h-150">
-
-                <style>
-                    {`
-                    @keyframes pressDown {
-                        0% { transform: translateY(0); }
-                        50% { transform: translateY(8px); }
-                        100% { transform: translateY(0); }
-                    }
-
-                    .pressed {
-                        animation: pressDown 1s ease forwards;
-                    }
-                    `}
-                </style>
-
-
                 <g className={`cursor-pointer ${pressed ? "pressed" : ""}`} onClick={handleClick} onAnimationEnd={handleAnimationEnd}>
                     <line x1="50" y1="-1000" x2="50" y2="160" stroke="#b8a070" strokeWidth="6" strokeLinecap="round"/>
                     <circle cx="50" cy="160" r="14" fill="#d4c4a0" stroke="#8d7a4c" strokeWidth="1.5"/>
