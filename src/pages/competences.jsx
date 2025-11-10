@@ -1,20 +1,20 @@
 import { CardSkill } from "../components/card_skills";
 import { Text } from "../components/texte";
 
-import vscode from "../assets/img/cv/logo outils/VSCode.png"
-import wordpress from "../assets/img/cv/logo outils/WordPress.png"
-import canva from "../assets/img/cv/logo outils/canva.png"
-import photoshop from "../assets/img/cv/logo outils/photoshop.png"
-import illustrator from "../assets/img/cv/logo outils/Illustrator.png"
-import indesign from "../assets/img/cv/logo outils/InDesign.png"
-import python from "../assets/img/cv/logo outils/python.png"
-import html from "../assets/img/cv/logo outils/HTML.png"
-import css from "../assets/img/cv/logo outils/CSS.png"
-import js from "../assets/img/cv/logo outils/JS.png"
-import sql from "../assets/img/cv/logo outils/SQL.png"
-import php from "../assets/img/cv/logo outils/PHP.png"
-import react from "../assets/img/cv/logo outils/React.webp"
-import tailwindcss from "../assets/img/cv/logo outils/tailwindcss.png"
+import vscode from "../assets/img/cv/logo-outils/VSCode.png"
+import wordpress from "../assets/img/cv/logo-outils/WordPress.png"
+import canva from "../assets/img/cv/logo-outils/canva.png"
+import photoshop from "../assets/img/cv/logo-outils/photoshop.png"
+import illustrator from "../assets/img/cv/logo-outils/Illustrator.png"
+import indesign from "../assets/img/cv/logo-outils/InDesign.png"
+import python from "../assets/img/cv/logo-outils/python.png"
+import html from "../assets/img/cv/logo-outils/HTML.png"
+import css from "../assets/img/cv/logo-outils/CSS.png"
+import js from "../assets/img/cv/logo-outils/JS.png"
+import sql from "../assets/img/cv/logo-outils/SQL.png"
+import php from "../assets/img/cv/logo-outils/PHP.png"
+import react from "../assets/img/cv/logo-outils/React.webp"
+import tailwindcss from "../assets/img/cv/logo-outils/tailwindcss.png"
 
 function Competences() {
     return (
