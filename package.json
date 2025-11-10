@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
-    "@tailwindcss/vite": "^4.1.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "@tailwindcss/vite": "^4.1.16",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
     "react-router": "^7.2.0",
     "react-router-dom": "^7.6.2",
     "tailwind-variants": "^1.0.0"
@@ -30,10 +30,10 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.7",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.16",
     "tailwindcss-cli": "^0.1.2",
-    "vite": "^6.2.5"
+    "vite": "^7.1.12"
   },
   "description": "J'ai créé mon portfolio en HTML, CSS et JavaScript, React avec Vite.",
   "main": "eslint.config.js",
