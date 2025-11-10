@@ -8,7 +8,7 @@ const HeaderNav = ({children, link, onClick, ...props}) => {
     };
 
     return (
-        <Link to={`/${link}`} className="text-white p-[0.5rem] text-2xl hover:text-grey" {...props} onClick={handleClick}>
+        <Link to={`/${link}`} className="text-white p-2 text-2xl hover:text-grey" {...props} onClick={handleClick}>
             {children} 
         </Link>
     );
