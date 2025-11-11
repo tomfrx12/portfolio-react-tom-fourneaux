@@ -1,22 +1,22 @@
 import { Link } from "react-router"
 
-import TOM from "/public/img/tom.png"
-import qrcode_linkedin from "/public/img/qrcode/qrcode_linkedin.jpg"
-import qrcode_github from "/public/img/qrcode/qrcode_github.png"
-import vscode from "/public/img/cv/logo outils/VSCode.png"
-import wordpress from "/public/img/cv/logo outils/WordPress.png"
-import canva from "/public/img/cv/logo outils/canva.png"
-import photoshop from "/public/img/cv/logo outils/photoshop.png"
-import illustrator from "/public/img/cv/logo outils/Illustrator.png"
-import indesign from "/public/img/cv/logo outils/InDesign.png"
-import python from "/public/img/cv/logo outils/python.png"
-import html from "/public/img/cv/logo outils/HTML.png"
-import css from "/public/img/cv/logo outils/CSS.png"
-import js from "/public/img/cv/logo outils/JS.png"
-import sql from "/public/img/cv/logo outils/SQL.png"
-import php from "/public/img/cv/logo outils/PHP.png"
-import react from "/public/img/cv/logo outils/React.webp"
-import tailwindcss from "/public/img/cv/logo outils/tailwindcss.png"
+import TOM from "/img/tom.png"
+import qrcode_linkedin from "/img/qrcode/qrcode_linkedin.jpg"
+import qrcode_github from "/img/qrcode/qrcode_github.png"
+import vscode from "/img/cv/logo outils/VSCode.png"
+import wordpress from "/img/cv/logo outils/WordPress.png"
+import canva from "/img/cv/logo outils/canva.png"
+import photoshop from "/img/cv/logo outils/photoshop.png"
+import illustrator from "/img/cv/logo outils/Illustrator.png"
+import indesign from "/img/cv/logo outils/InDesign.png"
+import python from "/img/cv/logo outils/python.png"
+import html from "/img/cv/logo outils/HTML.png"
+import css from "/img/cv/logo outils/CSS.png"
+import js from "/img/cv/logo outils/JS.png"
+import sql from "/img/cv/logo outils/SQL.png"
+import php from "/img/cv/logo outils/PHP.png"
+import react from "/img/cv/logo outils/React.webp"
+import tailwindcss from "/img/cv/logo outils/tailwindcss.png"
 
 import ButtonNav from "../components/a_button"
 
@@ -29,7 +29,7 @@ function CV() {
             <div className="lg:grid lg:grid-cols-2">
                 <section className="flex flex-col text-center border-5 border-solid border-[var(--color-cv-primary)]">
                     <div>
-                        <img src="/public/img/tom.png" alt="Photo de Profil CV Tom Fourneaux" className="m-auto max-w-[40%] mt-[20px] rounded-full border-5 border-solid border-[var(--color-cv-primary)]"/>
+                        <img src="/img/tom.png" alt="Photo de Profil CV Tom Fourneaux" className="m-auto max-w-[40%] mt-[20px] rounded-full border-5 border-solid border-[var(--color-cv-primary)]"/>
                         <h1 className="mt-[40px] mb-[10px]">TOM FOURNEAUX</h1>
                         <h2>DEVELOPPEUR WEB</h2>
                         <div className="text-center my-[20px] mx-[0px] p-[10px] bg-[var(--color-cv-primary)] inline-block rounded-[5px] shadow[5px_5px_5px_white]">
@@ -59,13 +59,13 @@ function CV() {
                             <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>LinkedIn</p>
                                 <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/" className="flex justify-center">
-                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[9rem] lg:max-h-[9rem]" src="/public/img/qrcode/qrcode_linkedin.jpg" alt="qrcode LinkedIn"/>
+                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[9rem] lg:max-h-[9rem]" src="/img/qrcode/qrcode_linkedin.jpg" alt="qrcode LinkedIn"/>
                                 </Link>
                             </div>
                             <div className="max-w-[50%] flex flex-col items-center lg:max-w-full">
                                 <p>Github</p>
                                 <Link to="https://github.com/tomfrx12" className="flex justify-center">
-                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[9rem] lg:max-h-[9rem]" src="/public/img/qrcode/qrcode_github.png" alt="qrcode Github"/>
+                                    <img className="max-w-[100px] max-h-[100px] lg:max-w-[9rem] lg:max-h-[9rem]" src="/img/qrcode/qrcode_github.png" alt="qrcode Github"/>
                                 </Link>
                             </div>
                         </div>
@@ -107,29 +107,29 @@ function CV() {
                             <div className="flex justify-around h-34 lg:h-auto lg:mb-[20px]">
                                 <ul className="grid content-between lg:gap-[20px]">
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/VSCode.png" alt="logo visual studio code"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/VSCode.png" alt="logo visual studio code"/>
                                         <span className="mx-5">Visual Studio Code</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/WordPress.png" alt="logo wordpress"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/WordPress.png" alt="logo wordpress"/>
                                         <span className="mx-5">WordPress</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/canva.png" alt="logo canva" id="canva"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/canva.png" alt="logo canva" id="canva"/>
                                         <span className="mx-5">Canva</span>
                                     </li>
                                 </ul>
                                 <ul className=" grid content-between lg:gap-[20px]">
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/photoshop.png" alt="logo photoshop"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/photoshop.png" alt="logo photoshop"/>
                                         <span className="mx-5">Photoshop</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/Illustrator.png" alt="logo illustrator"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/Illustrator.png" alt="logo illustrator"/>
                                         <span className="mx-5">Illustrator</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/InDesign.png" alt="logo indesign"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/InDesign.png" alt="logo indesign"/>
                                         <span className="mx-5">InDesign</span>
                                     </li>
                                 </ul>
@@ -143,37 +143,37 @@ function CV() {
                             <div className="flex justify-around h-34 lg:h-auto lg:mb-[20px]">
                                 <ul className="grid content-between lg:gap-[20px]">
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/python.png" alt="logo python"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/python.png" alt="logo python"/>
                                         <span className="mx-5">Python</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/HTML.png" alt="logo html"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/HTML.png" alt="logo html"/>
                                         <span className="mx-5">HTML</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/CSS.png" alt="logo css"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/CSS.png" alt="logo css"/>
                                         <span className="mx-5">CSS</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/JS.png" alt="logo javascript"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/JS.png" alt="logo javascript"/>
                                         <span className="mx-5">JavaScript</span>
                                     </li>
                                 </ul>
                                 <ul className="grid content-between lg:gap-[20px]">
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/SQL.png" alt="logo my sql"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/SQL.png" alt="logo my sql"/>
                                         <span className="mx-5">MySQL</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/PHP.png" alt="logo php"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/PHP.png" alt="logo php"/>
                                         <span className="mx-5">PHP</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/React.webp" alt="logo react.js"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/React.webp" alt="logo react.js"/>
                                         <span className="mx-5">React.js</span>
                                     </li>
                                     <li className="flex items-center">
-                                        <img className="w-[30px] lg:w-[50px]" src="/public/img/cv/logo outils/tailwindcss.png" alt="logo tailwind css"/>
+                                        <img className="w-[30px] lg:w-[50px]" src="/img/cv/logo outils/tailwindcss.png" alt="logo tailwind css"/>
                                         <span className="mx-5">TailwindCSS</span>
                                     </li>
                                 </ul>

@@ -7,11 +7,11 @@ function Charte_Graphique() {
             <section className="flex flex-col">
                 <Text tag="h2" name="h2" align="left" className="ml-2 mt-20">Logotypes et ses déclinaisons :</Text>
                 <Text tag="p" size="base" className="my-[5px] ml-[20px] lg:my-[5px] lg:mx-[40px]">Version verticale :</Text>
-                <img src="/public/img/charte-graphique/logo-versions/logo-vertical.png" className="self-center max-w-[10rem] m-[10px] bg-white p-[10px] rounded-[10px]" alt="Logo Vertical Charte Graphique"/>
+                <img src="/img/charte-graphique/logo-versions/logo-vertical.png" className="self-center max-w-[10rem] m-[10px] bg-white p-[10px] rounded-[10px]" alt="Logo Vertical Charte Graphique"/>
                 <Text tag="p" size="base" className="my-[5px] ml-[20px] lg:my-[5px] lg:mx-[40px]">Versions horizontales :</Text>
                 <div className="flex items-center justify-around flex-col lg:flex-row">
-                    <img className="max-w-[145px] m-[5px] p-[2px] bg-white rounded-[5px] lg:max-w-[20rem]" src="/public/img/charte-graphique/logo-versions/logo-horizontal.png" alt="Logo Horizontal Charte Graphique"/>
-                    <img className="max-w-[145px] m-[5px] p-[2px] bg-white rounded-[5px] lg:max-w-[20rem]" src="/public/img/charte-graphique/logo-versions/logo-horizontal-inverse.png" alt="Logo Horizontal inversé"/>
+                    <img className="max-w-[145px] m-[5px] p-[2px] bg-white rounded-[5px] lg:max-w-[20rem]" src="/img/charte-graphique/logo-versions/logo-horizontal.png" alt="Logo Horizontal Charte Graphique"/>
+                    <img className="max-w-[145px] m-[5px] p-[2px] bg-white rounded-[5px] lg:max-w-[20rem]" src="/img/charte-graphique/logo-versions/logo-horizontal-inverse.png" alt="Logo Horizontal inversé"/>
                 </div>
             </section>
             <section>
@@ -28,34 +28,34 @@ function Charte_Graphique() {
                     <Text tag="h3" name="h3" align="left" className="ml-4 lg:ml-16 mt-2">Versions verticales :</Text>
                     <div className="flex flex-col gap-[10px] lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:justify-items-center lg:m-[20px]">
                         <div className="flex justify-around bg-white mb-[0px] mt-[10px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] shadow-[10px_10px_5px_black]">
-                            <img className="max-w-[100px] lg:max-w-[200px]" src="/public/img/charte-graphique/interdits/bg-black.jpg" alt="Fond noir, partie du logo non voyante" />
+                            <img className="max-w-[100px] lg:max-w-[200px]" src="/img/charte-graphique/interdits/bg-black.jpg" alt="Fond noir, partie du logo non voyante" />
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">Fond Noir</p>
                         </div>
                         <div className="flex justify-around bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] shadow-[10px_10px_5px_black]">
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">Fond Rouge</p>
-                            <img className="max-w-[100px] lg:max-w-[200px]" src="/public/img/charte-graphique/interdits/bg-red.jpg" alt="Fond rouge, partie du logo non voyante"/>
+                            <img className="max-w-[100px] lg:max-w-[200px]" src="/img/charte-graphique/interdits/bg-red.jpg" alt="Fond rouge, partie du logo non voyante"/>
                         </div>
                         <div className="flex justify-around bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] shadow-[10px_10px_5px_black]">    
-                            <img className="max-w-[100px] lg:max-w-[200px]" src="/public/img/charte-graphique/interdits/upside-down.jpg" alt="A l'envers"/>
+                            <img className="max-w-[100px] lg:max-w-[200px]" src="/img/charte-graphique/interdits/upside-down.jpg" alt="A l'envers"/>
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">A {"l'envers"}</p>
                         </div>
                         <div className="flex justify-around bg-white mb-[0px] m-[20px] p-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 lg:gap-[20px] lg:max-w-[400px] lg:w-[400px] shadow-[10px_10px_5px_black]">
                             <p className="self-center text-xs text-black text-center m-[0] lg:text-2xl">Supprimer une partie du logo</p>
-                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[200px] lg:max-h-[200px]" src="/public/img/charte-graphique/interdits/supp-logo.jpg" alt="Supprimer une partie du logo"/>
+                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[200px] lg:max-h-[200px]" src="/img/charte-graphique/interdits/supp-logo.jpg" alt="Supprimer une partie du logo"/>
                         </div>
                     </div>
                     <Text tag="h3" name="h3" align="left" className="ml-4 lg:ml-16 mt-2">Versions horizontales :</Text>
                     <div className="flex flex-col gap-[10px] lg:justify-center lg:flex-row">
                         <div className="flex flex-col items-center bg-white mt-[5px] mb-[0px] m-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 shadow-[10px_10px_5px_black]">
-                            <img className="p-[10px] lg:max-w-[20rem]" src="/public/img/charte-graphique/interdits/supp-letters.jpg" alt="Supprimer des lettres"/>
+                            <img className="p-[10px] lg:max-w-[20rem]" src="/img/charte-graphique/interdits/supp-letters.jpg" alt="Supprimer des lettres"/>
                             <p className="text-black m-[10px]">Supprimer des lettres</p>
                         </div>
                         <div className="flex flex-col items-center bg-white mb-[0px] m-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 shadow-[10px_10px_5px_black]">
-                            <img className="p-[10px] lg:max-w-[20rem]" src="/public/img/charte-graphique/interdits/non-uniform.jpg" alt="Couleurs non uniformes"/>
+                            <img className="p-[10px] lg:max-w-[20rem]" src="/img/charte-graphique/interdits/non-uniform.jpg" alt="Couleurs non uniformes"/>
                             <p className="text-black m-[10px]">Couleurs non uniformes</p>
                         </div>
                         <div className="flex flex-col items-center bg-white mb-[0px] m-[20px] rounded-[20px] transition:transform duration:300 hover:-translate-y-2 shadow-[10px_10px_5px_black]">    
-                            <img className="p-[10px] lg:max-w-[20rem]" src="/public/img/charte-graphique/interdits/merge.jpg" alt="Fusionner lettres et logo"/>
+                            <img className="p-[10px] lg:max-w-[20rem]" src="/img/charte-graphique/interdits/merge.jpg" alt="Fusionner lettres et logo"/>
                             <p className="text-black m-[10px]">Fusionner les lettres et le logo</p>
                         </div>
                     </div>
