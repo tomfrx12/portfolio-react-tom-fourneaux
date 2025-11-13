@@ -1,5 +1,4 @@
 import { tv } from 'tailwind-variants';
-import PropTypes from "prop-types";
  
 const text = tv({
   variants: {
@@ -40,16 +39,4 @@ export const Text = ({ tag: Tag, name, size, align, background, color, font, chi
       {children}
     </Tag>
   );
-};
-
-Text.propTypes = {
-  tag: PropTypes.elementType.isRequired,
-  name: PropTypes.string,
-  size: PropTypes.string,
-  align: PropTypes.string,
-  background: PropTypes.string,
-  color: PropTypes.string,
-  font: PropTypes.string,
-  children: PropTypes.node,
-  className: PropTypes.node,
 };
