@@ -12,13 +12,14 @@
 }
 
 @keyframes flicker {
-    0%, 15%, 30%, 45%, 60%, 75% { opacity: 0; }
-    7%, 22%, 37%, 52%, 67%, 82% { opacity: 0.45; }
-    100% { opacity: 0.45; }
+    0%, 15%, 30%, 45%, 60%, 75% { opacity: 0.1; }
+    7%, 22%, 37%, 52%, 67%, 82% { opacity: 0.2; }
+    100% { opacity: 0.4; }
 }
 
 .light-flicker {
-    animation: flicker 1.5s linear forwards;
+    opacity: 0;
+    animation: flicker .8s .2s forwards;
     mix-blend-mode: luminosity;
 }
 
