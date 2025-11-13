@@ -1,8 +1,16 @@
-.color-lamp-1 { fill: #b2b2d8; }
-.color-lamp-2 { fill: #fff9cc; }
-.color-lamp-3 { fill: #af91db; }
+.color-lamp-0 {
+    fill: #696969;
+}
+.color-lamp-1 { 
+    fill: #b2b2d8;
+}
+.color-lamp-2 { 
+    fill: #fff9cc; 
+}
+.color-lamp-3 { 
+    fill: #af91db; 
+}
 
-/* Animation clignotement plus douce */
 @keyframes flicker {
     0%, 15%, 30%, 45%, 60%, 75% { opacity: 0; }
     7%, 22%, 37%, 52%, 67%, 82% { opacity: 0.45; }
