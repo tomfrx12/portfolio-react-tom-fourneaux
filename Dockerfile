@@ -1,28 +1,21 @@
-#contruction du de l'image et du build
-FROM node:22-alpine as build
+#image node
+FROM node:22-alpine as builder
+
 WORKDIR /app
-#copy des fichiers de dépendances
 COPY package*.json ./
-#node_modules
-RUN npm i
-#copy code source
+RUN npm install
 COPY . .
 RUN npm run build
 
-#reprends nginx coté serveur
-FROM nginx:alpine
-#copy le build 'dist' là où nginx gere les sites web
-COPY --from=build /app/dist /usr/share/nginx/html
-#config nginx pour afficher la page
-RUN echo 'server { \
-    listen 80; \
-    root /usr/share/nginx/html; \
-    index index.html; \
-    location / { \
-        try_files $uri $uri/ /index.html; \
-    } \
-}' > /etc/nginx/conf.d/default.conf
+#image node propre, moins lourde
+FROM node:22-alpine
 
-#conteneur est sur le port 80
+WORKDIR /app
+RUN npm install -g serve
+COPY --from=builder /app/dist ./dist
+
+#sur le port 80
 EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+
+#lancement
+CMD ["serve", "-s", "dist", "-l", "80"]
