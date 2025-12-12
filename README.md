@@ -1,64 +1,91 @@
-# React + Vite + Tailwind CSS Starter
+# Tom Fourneaux - Portfolio
 
-This is a modern front-end project setup using **React**, **Vite**, and **Tailwind CSS**. It's designed to help you quickly start developing performant and stylish web applications.
+Bienvenue sur mon portfolio personnel ! Ce projet présente mes compétences, mes projets professionnels et mon parcours de développeur. Il est conçu avec React + Vite et TailwindCSS  entièrement conteneurisée et déployée sur un VPS avec Traefik.
 
-## 🔧 Tech Stack
+## Aperçu
 
-- ⚛️ **React** – A JavaScript library for building user interfaces
-- ⚡ **Vite** – Next-generation frontend tooling for fast development and hot module replacement
-- 🎨 **Tailwind CSS** – A utility-first CSS framework for rapid UI development
+![Capture d'écran du Portfolio](/public/autres/screenshot/screenshot-portfolio.png) [tom-fourneaux.fr](https://tom-fourneaux.fr)
 
-## 🚀 Getting Started
+## Stack Technique
 
-### Prerequisites
+### Développement Frontend
+* **React** (v18+) - Bibliothèque UI basée sur les composants.
+* **Vite** - Outil de build nouvelle génération (extrêmement rapide).
+* **Tailwind CSS** - Framework CSS utilitaire pour un design moderne et responsive.
 
-Make sure you have the following installed:
+### DevOps & Infrastructure
+Ce projet est hébergé sur un **VPS Linux dédié** géré via Docker.
 
-- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+* **Docker** - Conteneurisation complète de l'application.
+* **Nginx** - Serveur web léger utilisé pour servir le build statique.
+* **Traefik** - Reverse Proxy gérant :
+    * Le HTTPS automatique (certificats Let's Encrypt).
+    * Le routage basé sur les noms de domaine.
+    * La sécurité des entêtes.
+* **Debian VPS** - Administration serveur Linux.
 
-### Installation
+## Architecture du Projet
 
-1. **Clone the repository:**
+Le projet utilise un **Multi-Stage Docker Build** pour minimiser la taille de l'image finale :
 
+1.  **Étape de Build :** Utilise `node:22-alpine` pour installer les dépendances et compiler le code React (`npm run build`).
+2.  **Étape de Production :** Utilise `nginx:alpine` pour servir uniquement les fichiers statiques générés dans le dossier `dist`.
+
+Cela garantit un conteneur de production extrêmement léger et sécurisé, sans embarquer les lourds `node_modules`.
+
+## Installation (Local)
+
+Pour lancer ce projet localement sur votre machine pour le développement :
+
+1.  **Cloner le dépôt**
+    ```bash
+    git clone https://github.com/VOTRE-PSEUDO/portfolio.git
+    cd portfolio
+    ```
+
+2.  **Installer les dépendances**
+    ```bash
+    npm install
+    ```
+
+3.  **Lancer le serveur de développement**
+    ```bash
+    npm run dev
+    ```
+    Ouvrez `http://localhost:5173` pour le voir dans votre navigateur.
+
+
+## Déploiement en Production (VPS)
+
+L'application tourne derrière un reverse proxy Traefik.
+
+### Prérequis
+
+- Docker et Docker Compose installés sur le VPS
+- Traefik configuré et en cours d'exécution
+- Nom de domaine configuré (DNS pointant vers le VPS)
+
+### 1. Cloner le projet sur le VPS
 ```bash
-git clone https://github.com/tomfrx12/portfolio-react-tom-fourneaux.git your-repo-name
-cd your-repo-name
+git clone https://github.com/VOTRE-PSEUDO/portfolio.git
+cd portfolio
 ```
 
-2. **Install dependencies:**
+### 2. Vérifier l'existence du réseau Docker partagé avec Traefik
 ```bash
-npm install
+docker network create web
 ```
 
-3. **Start the development server:**
+### 3. Builder & lancer les conteneurs
 ```bash
-npm run dev
+docker compose up -d --build
 ```
 
-4. **Open http://localhost:5173 in your browser to see the app.**
 
-5. **📁 Project Structure**
-```bash
-├── public/             # Static files
-├── src/
-│   ├── assets/         # Images, fonts, etc.
-│   ├── components/     # Reusable components
-│   ├── App.jsx         # Main app component
-│   ├── main.jsx        # App entry point
-│   └── index.css       # Tailwind CSS imports
-├── index.html          # App html file
-├── tailwind.config.js  # Tailwind configuration
-├── vite.config.js      # Vite configuration
-```
-
-## Deployment
-
-The site is deployed on my domain name: **tom-fourneaux.fr**
-
-## Author
+## Auteur
 
 **Tom Fourneaux**
 
-## License
-
-Produced within the **school** and personal framework in February 2025 and is updated regularly.
+- 🌐 Site : [https://tom-fourneaux.fr](https://tom-fourneaux.fr)
+- 💼 LinkedIn : [Tom Fourneaux](https://www.linkedin.com/in/tom-fourneaux-4a8b31384/)
+- 🐙 GitHub : [@tomfrx12](https://github.com/tomfrx12)
