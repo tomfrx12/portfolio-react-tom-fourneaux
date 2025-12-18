@@ -15,9 +15,8 @@ export default function Lamp({ itsDark, setItsDark }) {
     };
 
     return (
-        <div className="flex flex-col items-center relative">
+        <div className="justify-items-center relative">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52.67 155.95" className="z-1 w-32 h-auto">
-                {/* Lampe */}
                 <g id="lamp">
                     <path className={itsDark ? "color-lamp-2" : "color-lamp-0"} d="M38.07,143.07c0,7.11-5.26,12.88-11.75,12.88s-11.74-5.77-11.74-12.88,5.26-12.86,11.74-12.86,11.75,5.74,11.75,12.86Z"/>
                     <rect className="color-lamp-3" x="25.26" width="2.14" height="91.08" />
@@ -27,11 +26,15 @@ export default function Lamp({ itsDark, setItsDark }) {
                 </g>
             </svg>
 
-            {/* Lumière */}
             {itsDark && (
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248.79 258.44" className="z-0 absolute w-[370px] h-[365px] top-[340px]">
+                <svg 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    viewBox="0 0 100 100" 
+                    preserveAspectRatio="none" 
+                    className="absolute top-[348px] w-[500px] h-[500px]"
+                >
                     <g className="light-flicker">
-                        <path d="M81.895,0L0,258.44h248.79L166.895,0h-85Z" fill="#fff4c5"/>
+                        <path d="M37.2,0 L62.8,0 L100,100 L0,100 Z" fill="#fff4c5" opacity="0.6"/>
                     </g>
                 </svg>
             )}

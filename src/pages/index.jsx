@@ -24,7 +24,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
 
     return (
         <div>
-            <section className="flex flex-col h-[95vh] lg:flex-row">
+            <section className="flex flex-col h-[94vh] lg:flex-row">
                 <div className="flex items-center justify-center flex-col lg:w-[40%] bg-(--color-white-background) dark:bg-(--color-white-background-dark)">
                     <button onClick={Clicker}>
                         <img src="/img/A2_Fourneaux_Tom.png" alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full"/>
@@ -36,23 +36,23 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                         <ButtonNav link="clicker">Help</ButtonNav>
                     )}
                 </div>
-                <div className="h-full flex flex-col items-center lg:w-[60%] bg-(--color-red-background) dark:bg-(--color-red-background-dark)">
-                    <div className="lg:flex lg:flex-col lg:items-center hidden">
-                        <Lamp itsDark={itsDark} setItsDark={setItsDark} />
-                        {/* donne les infos du dark mode à la Lamp */}
-                    </div>
-                    <div className="flex flex-col items-center m-auto">
+                <div className="lg:block lg:w-[60%] lg:min-h-full hidden bg-(--color-red-background) dark:bg-(--color-red-background-dark)">
+                    <Lamp itsDark={itsDark} setItsDark={setItsDark} />
+                    {/* donne les infos du dark mode à la Lamp */}
+                    <div className="flex flex-col items-center pt-40">
                         <Text tag='h1' name='h1'>Tom Fourneaux</Text>
                         <Text tag='p' align='center' size="base">Etudiant et passionné de codage, voici mon portfolio</Text>
                         <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
                     </div>
                 </div>
             </section>
+            <div className="relative flex items-center justify-center bg-[url(/img/illustration-index.png)] bg-fixed h-[350px] blur-xs">
+                <Text tag='h2' name='h2' className="absolute blur-none">A PROPOS DE MOI</Text>  
+            </div>
             <section className="flex flex-col items-center mx-5 lg:mx-20">
-                <Text tag='h2' name='h2' className="mt-10 lg:mt-20">A PROPOS DE MOI</Text>
                 <section>
                     <div className="lg:flex lg:flex-col">
-                        <PresentationIndex>Je suis un jeune développeur web de 18 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Chef de Projets Digitaux. Passionné par le monde du développement web et le code depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution.</PresentationIndex>
+                        <PresentationIndex>Je suis un jeune développeur web de 19 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Chef de Projets Digitaux. Passionné par le monde du développement web et le code depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution.</PresentationIndex>
                         <img src="/img/illustration_presentation/illustration_dev.png" alt="illustration developpeur web" className="m-auto max-w-[90%] p-[15px] lg:self-center lg:w-auto lg:max-w-[35%]"/>
                     </div>
                 </section>
