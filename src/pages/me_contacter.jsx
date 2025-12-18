@@ -75,7 +75,7 @@ const Contact = () => {
                         <input className='bg-[var(--color-white)] text-[var(--color-black)] p-2 lg:w-80' type="email" name="user_email" placeholder='Email' required/>
                         <label className='self-center'>Message</label>
                         <textarea className='bg-[var(--color-white)] text-[var(--color-black)] p-2 lg:w-80' name="message" placeholder='Message' required/>
-                        <input className='bg-[var(--color-white)] text-[var(--color-black)] rounded-[10px] mt-5' type="submit" value="Envoyer"/>
+                        <input className='bg-[var(--color-white)] text-[var(--color-black)] rounded-[10px] mt-5 cursor-pointer' type="submit" value="Envoyer"/>
                     </form>
                     {messageSent && ( //L'opérateur AND logique (&&) (conjonction logique) renvoie vrai si et uniquement si ses deux opérandes sont true ou équivalents à true.
                         <Text tag="p" size="base" alig="center" className="text-green-600 mt-4">Votre message a bien été envoyé !</Text>
