@@ -46,8 +46,11 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                     </div>
                 </div>
             </section>
-            <div className="relative flex items-center justify-center bg-[url(/img/illustration-index.png)] bg-fixed h-[350px] blur-xs">
-                <Text tag='h2' name='h2' className="absolute blur-none">A PROPOS DE MOI</Text>  
+            <div className="relative h-[350px] flex items-center justify-center">
+                <div className="absolute inset-0 bg-[url(/img/illustration-index.png)] bg-fixed bg-cover bg-center blur-xs z-0"></div>
+                <Text tag='h2' name='h2' className="relative z-10 text-white font-bold">
+                    A PROPOS DE MOI
+                </Text> 
             </div>
             <section className="flex flex-col items-center mx-5 lg:mx-20">
                 <section>

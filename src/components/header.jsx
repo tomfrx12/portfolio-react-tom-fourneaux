@@ -7,7 +7,7 @@ const Header = ({ itsDark, setItsDark }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     
     return (
-        <header className="bg-black sticky top-0 p-2 flex justify-between items-center z-2">
+        <header className="bg-black sticky top-0 p-2 flex justify-between items-center z-100">
             <HeaderNav className="pl-0" link=""  onClick={() => { setMenuOpen(false); }}>
                 <img src="/img/logo.png" alt="logo horizontal Fourneaux Tom" className="w-40"/>
             </HeaderNav>
