@@ -5,6 +5,8 @@ import linkedin from "/img/img_reseaux/linkedin.png"
 import instagram from "/img/img_reseaux/instagram.png"
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
     return (
         <footer className="bg-black flex justify-center flex-col items-center lg:flex-row lg:justify-around lg:py-[10px]">
             <nav className="flex gap-[40px] my-[20px] lg:m-[0]">
@@ -18,7 +20,7 @@ const Footer = () => {
                     <img className="max-h-[1.5rem] lg:max-h-[2.5rem]" src="/img/img_reseaux/instagram.png" alt="Logo de Instagram"/>
                 </Link>
             </nav>
-            <p className="text-center text-xs text-white lg:text-2xl">Copyright © 2025 tom-fourneaux<br/>
+            <p className="text-center text-xs text-white lg:text-2xl">Copyright © {currentYear} tom-fourneaux<br/>
                 <Link to="/mentions_legales" className="text-white underline" onClick={() => { window.scrollTo(0, 0); }}>Mentions légales</Link>
             </p>
         </footer>
