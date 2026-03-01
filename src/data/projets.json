@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Reproduction maquette page web ",
+        "description": "Je devais reproduire en HTML CSS, une maquette figma au pixel perfect en ajoutant des éléments utilisateur, comme un mode jour nuit en JavaScript.",
+        "image": {
+            "url": "/img/projets/img/maquette.png",
+            "alt": "Capture d'écran de la page web de la reproduction de la maquette"
+        },
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/controle-html-css",
+            "demo": "https://tomfrx12.github.io/controle-html-css/"
+        },
+        "createdAt": "2024-12-20",
+        "finishAt": "2024-12-26",
+        "status": "Fini"
+    },
+    {
+        "id": 2,
+        "title": "Portfolio Tom Fourneaux",
+        "description": "Je devais créer mon portfolio, en HTML CSS JavaScript",
+        "image": {
+            "url": "/public/img/projets/img/portfolio_v1.png",
+            "alt": "Capture d'écran de la page web de mon premier portfolio"
+        },
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/tom-fourneaux-portfolio",
+            "demo": "https://tomfrx12.github.io/tom-fourneaux-portfolio/"
+        },
+        "createdAt": "2025-01-06",
+        "finishAt": "2025-03-10",
+        "status": "Fini"
+    }
+]
