@@ -25,7 +25,7 @@
         "title": "Portfolio Tom Fourneaux",
         "description": "Je devais créer mon portfolio, en HTML CSS JavaScript",
         "image": {
-            "url": "/public/img/projets/img/portfolio_v1.png",
+            "url": "/img/projets/img/portfolio_v1.png",
             "alt": "Capture d'écran de la page web de mon premier portfolio"
         },
         "technologies": [
@@ -39,6 +39,91 @@
         },
         "createdAt": "2025-01-06",
         "finishAt": "2025-03-10",
+        "status": "Fini"
+    },
+    {
+        "id": 3,
+        "title": "Integration React Dashboard",
+        "description": "Ceci est une Intégration fais en React executé avec Vite d'un dashboard que j'ai réalisé pour un rendu à mon école avec l'aide de package npm.",
+        "image": {
+            "url": "/img/projets/img/Integration_React_Dashboard.png",
+            "alt": "Capture d'écran de la page web de l'intégration du dashboard en react"
+        },
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "ReactJS",
+            "TailwindCSS"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/tom-fourneaux-portfolio"
+        },
+        "createdAt": "2025-02-26",
+        "finishAt": "2025-09-11",
+        "status": ["Fini", "Abandonné"]
+    },
+    {
+        "id": 4,
+        "title": "Intégration maquette figma",
+        "description": "Je devais faire une integration en html css pure, d'une maquette figma créer par un professeur de l'école.",
+        "image": {
+            "url": "/img/projets/img/maquette_integration_html_css.png",
+            "alt": "Capture d'écran de la page web de l'intégration de la maquette"
+        },
+        "technologies": [
+            "HTML",
+            "CSS",
+            "TailwindCSS",
+            "JavaScript"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/Maquette-int-gration-html-css",
+            "demo": "https://tomfrx12.github.io/Maquette-int-gration-html-css/"
+        },
+        "createdAt": "2025-09-08",
+        "finishAt": "2025-09-16",
+        "status": "Fini"
+    },
+    {
+        "id": 5,
+        "title": "Intégration maquette figma",
+        "description": "Je devais faire une integration en HTML, CSS: avec l'architecture ITCSS et la convention Utility first, avec le droit d'utiliser ReactJS, d'une maquette figma créer par un professeur de l'école.",
+        "image": {
+            "url": "/img/projets/img/lodge_relocation.png",
+            "alt": "Capture d'écran de la page web de l'intégration de la maquette"
+        },
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "ReactJS",
+            "TailwindCSS"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/Maquette_Integration_CSSavance"
+        },
+        "createdAt": "2025-09-29",
+        "finishAt": "2025-10-04",
+        "status": "Fini"
+    },
+    {
+        "id": 6,
+        "title": "To Do List",
+        "description": "Lors d'une évalution de compétence à l'école, je devais créer une todolist avec différents paramètre en jeu pour la gérer",
+        "image": {
+            "url": "/public/img/projets/img/todolist.png",
+            "alt": "Capture d'écran de la page web de la todolist"
+        },
+        "technologies": [
+            "HTML",
+            "TailwindCSS",
+            "JavaScript"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/controle-to-do-list",
+            "demo": "https://tomfrx12.github.io/controle-to-do-list/"
+        },
+        "createdAt": "2025-11-21",
+        "finishAt": "2025-11-22",
         "status": "Fini"
     }
 ]

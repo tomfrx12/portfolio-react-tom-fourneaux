@@ -21,7 +21,12 @@ export default function CardProjet({id_project, img_illustr, alt_illustr, title_
                         {text}
                     </Text>
                 </div>
-                <SeeMore link={show} onClick={() => window.scrollTo(0, 0)}/>
+                {show && (
+                    <SeeMore
+                        link={show}
+                        onClick={() => window.scrollTo(0, 0)}
+                    />
+                )}
                 <Link to={github} onClick={() => window.scrollTo(0, 0)} className="max-w-10 max-h-10 text-black rounded-[20px] p-[5px] my-[5px] text-center self-center transition-transform duration-300 ease-in-out shadow-[0px_0px_50px_black] hover:scale-105 lg:flex lg:justify-center lg:hover:scale-115">
                     <img className="h-[25px] max-w-full" src='/img/img_reseaux/github.png' alt='logo github pour le lien du projet github'/>
                 </Link>

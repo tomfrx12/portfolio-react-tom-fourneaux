@@ -30,7 +30,7 @@ function Projets() {
                         title_text={projet.title}
                         text={projet.description}
                         github={projet.links.github}
-                        show={projet.links.demo}
+                        {...( projet.links?.demo ? { show: projet.links.demo } : {} )}
                         createAt={projet.createdAt}
                         finishAt={projet.finishAt}
                     />
