@@ -6,8 +6,8 @@ export default function CardProjet({id_project, img_illustr, alt_illustr, title_
     return (
         <div id={id_project} className="border border-black bg-(--color-grey) rounded-[10px] m-5 flex flex-col lg: p-5 lg:items-center lg:justify-around lg:mb-10 lg:mt-10 shadow-[10px_10px_10px_black]">
             <div className='py-4 px-2 flex justify-between w-full'>
-                <Text tag="p" font="semibold">Créé en: {createAt}</Text>
-                <Text tag="p" font="semibold">Fini en: {finishAt}</Text>
+                <Text tag="p" font="semibold">Créé le: {createAt}</Text>
+                <Text tag="p" font="semibold">Fini le: {finishAt}</Text>
             </div>
             <div className="max-h-[400px] overflow-y-auto w-full">
                 <img className="block w-full h-auto" src={img_illustr} alt={alt_illustr} />

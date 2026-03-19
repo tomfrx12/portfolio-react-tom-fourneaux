@@ -110,7 +110,7 @@
         "title": "To Do List",
         "description": "Lors d'une évalution de compétence à l'école, je devais créer une todolist avec différents paramètre en jeu pour la gérer",
         "image": {
-            "url": "/public/img/projets/img/todolist.png",
+            "url": "/img/projets/img/todolist.png",
             "alt": "Capture d'écran de la page web de la todolist"
         },
         "technologies": [
@@ -125,5 +125,119 @@
         "createdAt": "2025-11-21",
         "finishAt": "2025-11-22",
         "status": "Fini"
+    },
+    {
+        "id": 7,
+        "title": "Pokeidle",
+        "description": "Ceci est un projet personnel que j'ai imaginé. Le but est de générer un « animal » provenant de l'univers des Pokémon. Une fois généré, le but est de devoir le retrouver à l'aide des connaissances que la personne a sur les Pokémon, à l'aide d'informations sur ceux-ci. Il est hébergé sur un vps avec mon portfolio en reverse-proxy.",
+        "image": {
+            "url": "/img/projets/img/pokeidle.png",
+            "alt": "Capture d'écran de la page web de Pokeidle"
+        },
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "ReactJS",
+            "TailwindCSS",
+            "Docker",
+            "VPS"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/Pokedle",
+            "demo": "https://pokeidle.tom-fourneaux.fr/"
+        },
+        "createdAt": "2025-11-29",
+        "finishAt": " . . .",
+        "status": "En cours"
+    },
+    {
+        "id": 8,
+        "title": "Mimimosa Landing Page",
+        "description": "Lors d'une semaine dites 'projet' à mon école, je devais créer une landing page pour un café/fleuriste",
+        "image": {
+            "url": "/img/projets/img/mimimosa.png",
+            "alt": "Capture d'écran de la Landing Page Mimimosa"
+        },
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "TailwindCSS"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/mimimosa_landing_page",
+            "demo": "https://tomfrx12.github.io/mimimosa_landing_page/"
+        },
+        "createdAt": "2026-01-16",
+        "finishAt": "2026-01-16",
+        "status": "Fini"
+    },
+    {
+        "id": 9,
+        "title": "Tutos",
+        "description": "Dans le cadre de mon cursus à la Normandie Web School, j'ai réalisé un tutoriel complet sur React.js et développé ce site dédié pour en faciliter l'accès et la mise en pratique.",
+        "image": {
+            "url": "/img/projets/img/tuto.png",
+            "alt": "Capture d'écran de la page de Tuto"
+        },
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "TailwindCSS",
+            "ReactJS"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/Tutos"
+        },
+        "createdAt": "2026-01-17",
+        "finishAt": ". . .",
+        "status": "En cours"
+    },
+    {
+        "id": 10,
+        "title": "Refonte Portfolio Tom Fourneaux",
+        "description": "Réalisé dans le cadre de ma formation à la Normandie Web School, ce projet constitue une refonte complète sous React.js de mon précédent portfolio en HTML/CSS, désormais entièrement dockerisé et déployé sur un serveur VPS personnel.",
+        "image": {
+            "url": "/img/projets/img/portfolio_v2.png",
+            "alt": "Capture d'écran de mon portfolio fait avec reactjs"
+        },
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "TailwindCSS",
+            "ReactJS",
+            "VPS",
+            "Docker"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/portfolio-react-tom-fourneaux",
+            "demo": "https://tom-fourneaux.fr/"
+        },
+        "createdAt": "2025-02-26",
+        "finishAt": ". . .",
+        "status": "En cours"
+    },
+    {
+        "id": 11,
+        "title": "Gestion de Stock",
+        "description": "Développée dans le cadre de mon stage chez Skynet Business Services, cette application de gestion de stock permet d'optimiser le suivi de l'inventaire et la manipulation des références produits/entreprise",
+        "image": {
+            "url": "/img/projets/img/gestion_stock.png",
+            "alt": "Capture d'écran du site web de gestion de stock"
+        },
+        "technologies": [
+            "HTML",
+            "JavaScript",
+            "NextJS",
+            "NodeJS",
+            "TailwindCSS",
+            "MySQL",
+            "CRUD"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/gestion-stock"
+        },
+        "createdAt": "2026-02-25",
+        "finishAt": ". . .",
+        "status": "En cours"
     }
 ]
