@@ -19,7 +19,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Index itsDark={itsDark} setItsDark={setItsDark} />} />
                         <Route path="/competences" element={<Competences />} />
-                        <Route path="/projets" element={<Projets />} />
+                        <Route path="/projets" element={<Projets itsDark={itsDark} setItsDark={setItsDark} />} />
                         <Route path="/me_contacter" element={<Contact />} />
                         <Route path="/mentions_legales" element={<Mentions_Legales />} />
                         <Route path="*" element={<Error />} />
