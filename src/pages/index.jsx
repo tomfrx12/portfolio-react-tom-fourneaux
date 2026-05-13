@@ -7,6 +7,7 @@ import Lamp from "../components/lamp_light";
 import SeeMore from "../components/see_more";
 import { fadeUp, fadeDown, fadeRight, fadeLeft, opacityOn  } from "../components/anime_motion";
 import projets from '../data/projets.json';
+import Title from "../components/title";
 
 function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie dans l'App, afin que la Lamp puisse modifier le dark mode
 
@@ -76,25 +77,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                 </div>
             </section>
 
-            <motion.div
-                className="relative h-[350px] flex items-center justify-center overflow-hidden"
-                variants={fadeUp}
-                initial="hidden" whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <div className="absolute inset-0 bg-[url(/img/illustration-index.png)] bg-fixed bg-cover bg-center blur-xs z-0"></div>
-                <motion.div
-                    className="absolute inset-0 z-1"
-                    animate={{
-                        background: [
-                            `${itsDark ? "linear-gradient(400deg, rgba(175,30,21,0.72) -100%, rgba(44,17,82,0.72) 100%)" : "linear-gradient(200deg, rgba(175,30,21,0.72) 0%, rgba(44,17,82,0.72) 100%)"}`
-                        ]
-                    }}
-                ></motion.div>
-                <motion.div className="relative z-10 text-center" initial={{ opacity: 0, letterSpacing: "0.5em" }} whileInView={{ opacity: 1, letterSpacing: "0.2em" }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true }}>
-                    <Text tag="h2" name="h2" className="text-white font-black text-3xl lg:text-5xl uppercase">a propos de moi</Text>
-                </motion.div>
-            </motion.div>
+            <Title text="a propos de moi" />            
 
             <section className="flex flex-col justify-center items-center h-[94vh] mx-5 lg:mx-20 py-10">
                 <div className="lg:flex lg:flex-row lg:gap-12 lg:items-center w-full">    
@@ -111,25 +94,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                 </motion.div>
             </section>
 
-            <motion.div
-                className="relative h-[350px] flex items-center justify-center overflow-hidden"
-                variants={fadeUp}
-                initial="hidden" whileInView="visible"
-                viewport={{ once: true }}
-            >
-                <div className="absolute inset-0 bg-[url(/img/illustration-index.png)] bg-fixed bg-cover bg-center blur-xs z-0"></div>
-                <motion.div
-                    className="absolute inset-0 z-1"
-                    animate={{
-                        background: [
-                            `${itsDark ? "linear-gradient(400deg, rgba(175,30,21,0.72) -100%, rgba(44,17,82,0.72) 100%)" : "linear-gradient(200deg, rgba(175,30,21,0.72) 0%, rgba(44,17,82,0.72) 100%)"}`
-                        ]
-                    }}
-                ></motion.div>
-                <motion.div className="relative z-10 text-center" initial={{ opacity: 0, letterSpacing: "0.5em" }} whileInView={{ opacity: 1, letterSpacing: "0.2em" }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true }}>
-                    <Text tag="h2" name="h2" className="text-white font-black text-3xl lg:text-5xl uppercase">Projets</Text>
-                </motion.div>
-            </motion.div>
+            <Title text="projet" />
 
             <section className="flex flex-col justify-center items-center h-[94vh]">
                 <div className="my-10 flex flex-col gap-8 w-full max-w-240 px-5">
