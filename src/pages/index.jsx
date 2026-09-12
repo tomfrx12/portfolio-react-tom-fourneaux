@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-import ButtonNav from "../components/a_button";
+import ButtonNav from "../components/ButtonNav";
 import { Text } from "../components/texte";
 import Lamp from "../components/lamp_light";
 import SeeMore from "../components/see_more";
@@ -89,7 +89,6 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                     </motion.div>
                 </div>
                 <motion.div className="flex gap-5" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                    <ButtonNav link="cv">Mon CV</ButtonNav>
                     <ButtonNav link="competences">Compétences</ButtonNav>
                 </motion.div>
             </section>
