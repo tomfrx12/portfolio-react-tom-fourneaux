@@ -2,9 +2,9 @@ import { Link } from 'react-router';
 import { Text } from './texte';
 import SeeMore from './see_more';
 
-export default function CardProjet({id_project, img_illustr, alt_illustr, title_text, text, github, show, createAt, finishAt, status}) {
+export default function CardProjet({anchor, img_illustr, alt_illustr, title_text, text, github, show, createAt, finishAt, status}) {
     return (
-        <div id={id_project} className="border border-black bg-(--color-grey) rounded-[10px] m-5 flex flex-col lg: p-5 lg:items-center lg:justify-around lg:mb-10 lg:mt-10 shadow-[10px_10px_10px_black]">
+        <div id={anchor} className="border border-black bg-(--color-grey) rounded-[10px] m-5 flex flex-col lg: p-5 lg:items-center lg:justify-around lg:mb-10 lg:mt-10 shadow-[10px_10px_10px_black]">
             <div className='py-4 px-2 flex justify-between w-full'>
                 <Text tag="p" font="semibold">Créé le: {createAt}</Text>
                 <Text tag="p" font="semibold">Fini le: {finishAt}</Text>

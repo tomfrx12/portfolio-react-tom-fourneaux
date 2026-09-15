@@ -1,6 +1,7 @@
 [
     {
         "id": 1,
+        "anchor": "reproduction_maquette_page_web",
         "title": "Reproduction maquette page web ",
         "description": "Je devais reproduire en HTML CSS, une maquette figma au pixel perfect en ajoutant des éléments utilisateur, comme un mode jour nuit en JavaScript.",
         "image": {
@@ -22,6 +23,7 @@
     },
     {
         "id": 2,
+        "anchor": "portfolio_tom_fourneaux",
         "title": "Portfolio Tom Fourneaux",
         "description": "Je devais créer mon portfolio, en HTML CSS JavaScript",
         "image": {
@@ -43,6 +45,7 @@
     },
     {
         "id": 3,
+        "anchor": "integration_react_dashboard",
         "title": "Integration React Dashboard",
         "description": "Ceci est une Intégration fais en React executé avec Vite d'un dashboard que j'ai réalisé pour un rendu à mon école avec l'aide de package npm.",
         "image": {
@@ -64,6 +67,7 @@
     },
     {
         "id": 4,
+        "anchor": "intégration_maquette_figma_html_css",
         "title": "Intégration maquette figma",
         "description": "Je devais faire une integration en html css pure, d'une maquette figma créer par un professeur de l'école.",
         "image": {
@@ -86,6 +90,7 @@
     },
     {
         "id": 5,
+        "anchor": "intégration_maquette_figma_itcss",
         "title": "Intégration maquette figma",
         "description": "Je devais faire une integration en HTML, CSS: avec l'architecture ITCSS et la convention Utility first, avec le droit d'utiliser ReactJS, d'une maquette figma créer par un professeur de l'école.",
         "image": {
@@ -107,6 +112,7 @@
     },
     {
         "id": 6,
+        "anchor": "to_do_list",
         "title": "To Do List",
         "description": "Lors d'une évalution de compétence à l'école, je devais créer une todolist avec différents paramètre en jeu pour la gérer",
         "image": {
@@ -128,6 +134,7 @@
     },
     {
         "id": 7,
+        "anchor": "pokeidle",
         "title": "Pokeidle",
         "description": "Ceci est un projet personnel que j'ai imaginé. Le but est de générer un « animal » provenant de l'univers des Pokémon. Une fois généré, le but est de devoir le retrouver à l'aide des connaissances que la personne a sur les Pokémon, à l'aide d'informations sur ceux-ci. Il est hébergé sur un vps avec mon portfolio en reverse-proxy.",
         "image": {
@@ -152,6 +159,7 @@
     },
     {
         "id": 8,
+        "anchor": "mimimosa_landing_page",
         "title": "Mimimosa Landing Page",
         "description": "Lors d'une semaine dites 'projet' à mon école, je devais créer une landing page pour un café/fleuriste",
         "image": {
@@ -173,6 +181,7 @@
     },
     {
         "id": 9,
+        "anchor": "tutos",
         "title": "Tutos",
         "description": "Dans le cadre de mon cursus à la Normandie Web School, j'ai réalisé un tutoriel complet sur React.js et développé ce site dédié pour en faciliter l'accès et la mise en pratique.",
         "image": {
@@ -194,6 +203,7 @@
     },
     {
         "id": 10,
+        "anchor": "refonte_portfolio_tom_fourneaux",
         "title": "Refonte Portfolio Tom Fourneaux",
         "description": "Réalisé dans le cadre de ma formation à la Normandie Web School, ce projet constitue une refonte complète sous React.js de mon précédent portfolio en HTML/CSS, désormais entièrement dockerisé et déployé sur un serveur VPS personnel.",
         "image": {
@@ -218,6 +228,7 @@
     },
     {
         "id": 11,
+        "anchor": "gestion_de_stock",
         "title": "Gestion de Stock",
         "description": "Développée dans le cadre de mon stage chez Skynet Business Services, cette application de gestion de stock permet d'optimiser le suivi de l'inventaire et la manipulation des références produits/entreprise",
         "image": {

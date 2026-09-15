@@ -68,7 +68,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                             <Text tag='h1' name='h1' color="white" font="bold">Tom Fourneaux</Text>
                         </motion.div>
                         <motion.div variants={opacityOn} initial="hidden" animate="visible" transition={{ delay: 1.0, duration: 0.5 }}>
-                            <Text tag='p' align='center' size="base">Etudiant et passionné de codage, voici mon portfolio</Text>
+                            <Text tag='p' name='p' color='white' align='center' size="base">Etudiant et passionné de codage, voici mon portfolio</Text>
                         </motion.div>
                         <motion.div className="flex" variants={opacityOn} initial="hidden" animate="visible" transition={{ delay: 1.5, duration: 0.5 }}>
                             <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
@@ -97,8 +97,11 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
 
             <section className="flex flex-col justify-center items-center h-[94vh]">
                 <div className="my-10 flex flex-col gap-8 w-full max-w-240 px-5">
-                    {[...projets].reverse().slice(0, 2).map((projet) => (
-                        <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" transition={{ duration: 1.0, ease: "easeOut" }} viewport={{ once: true }}>
+                    {[...projets].reverse().slice(0, 2).map((projet) => {
+                        const anchor = projet.anchor;
+
+                        return (
+                        <motion.div key={projet.id} variants={fadeLeft} initial="hidden" whileInView="visible" transition={{ duration: 1.0, ease: "easeOut" }} viewport={{ once: true }}>
                             <motion.div 
                                 className="flex items-center gap-5 p-5 bg-white dark:bg-(--color-bg-grey-dark) border-[3px] border-black dark:border-white rounded-sm cursor-pointer select-none"
                                 initial={{ rotate: -1, boxShadow: "5px 5px 0px var(--color-primary)" }}
@@ -109,11 +112,12 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                                 <div>
                                     <Text tag="h3" name="h3" size="lg">{projet.title}</Text>
                                     <Text tag="p" size="base">{projet.description}</Text>
-                                    <SeeMore link="projets"/>
+                                    <SeeMore link={`/projets#${anchor}`}/>
                                 </div>
                             </motion.div>
                         </motion.div>
-                    ))}
+                        );
+                    })}
                 </div>
                 <motion.div className="flex" variants={fadeDown} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                     <ButtonNav link="projets">Mes projets</ButtonNav>
