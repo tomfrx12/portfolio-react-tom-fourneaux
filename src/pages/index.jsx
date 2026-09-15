@@ -14,6 +14,8 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
     const [ButtonClicker, setButtonClicker] = useState(false);
     const [NbClick, setNbClick] = useState(0);
     const [LinkClicker, setLinkClicker] = useState(false);
+
+    const glowColor = itsDark ? "var(--color-red-background)" : "var(--color-red-background-dark)";
     
     function Clicker() {
         if ( ButtonClicker === false ) {
@@ -35,7 +37,19 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                             className="cursor-pointer"
                             whileTap={{ y: 7 }}
                         >
-                            <img src="/img/A2_Fourneaux_Tom.png" alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full"/>
+                            <motion.div
+                                className="rounded-full"
+                                animate={{
+                                    boxShadow: [
+                                        `0 0 0px 0px  ${glowColor}`,
+                                        `0 0 28px 10px ${glowColor}`,
+                                        `0 0 0px 0px  ${glowColor}`
+                                    ]
+                                }}
+                                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+                            >
+                                <img src="/img/A2_Fourneaux_Tom.png" alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full"/>
+                            </motion.div>
                         </motion.button>
                     </motion.div>
                     {ButtonClicker && (
