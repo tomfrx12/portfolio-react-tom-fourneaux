@@ -1,91 +1,104 @@
 # Tom Fourneaux - Portfolio
 
-Bienvenue sur mon portfolio personnel ! Ce projet présente mes compétences, mes projets professionnels et mon parcours de développeur. Il est conçu avec React + Vite et TailwindCSS  entièrement conteneurisée et déployée sur un VPS avec Traefik.
+Portfolio personnel de Tom Fourneaux, développeur web et étudiant en Bachelor Chef de Projets Digitaux à la Normandie Web School de Rouen.
+
+Le site présente mon parcours, mes compétences et mes projets, avec une interface responsive, un mode sombre et une page de contact fonctionnant avec EmailJS.
 
 ## Aperçu
 
-![Capture d'écran du Portfolio](/public/autres/screenshot/screenshot-portfolio.png) [tom-fourneaux.fr](https://tom-fourneaux.fr)
+Site en ligne : [tom-fourneaux.fr](https://tom-fourneaux.fr)
 
-## Stack Technique
+![Capture d'écran du portfolio](/public/autres/screenshot/screenshot-portfolio.png)
 
-### Développement Frontend
-* **React** (v18+) - Bibliothèque UI basée sur les composants.
-* **Vite** - Outil de build nouvelle génération (extrêmement rapide).
-* **Tailwind CSS** - Framework CSS utilitaire pour un design moderne et responsive.
+## Fonctionnalités
 
-### DevOps & Infrastructure
-Ce projet est hébergé sur un **VPS Linux dédié** géré via Docker.
+- Présentation du parcours et des compétences
+- Galerie de projets avec liens vers les dépôts GitHub et les démonstrations
+- Mode clair et mode sombre
+- Animations d'interface avec Framer Motion
+- Formulaire de contact avec EmailJS
 
-* **Docker** - Conteneurisation complète de l'application.
-* **Nginx** - Serveur web léger utilisé pour servir le build statique.
-* **Traefik** - Reverse Proxy gérant :
-    * Le HTTPS automatique (certificats Let's Encrypt).
-    * Le routage basé sur les noms de domaine.
-    * La sécurité des entêtes.
-* **Debian VPS** - Administration serveur Linux.
+## Technologies
 
-## Architecture du Projet
+- React 19
+- Vite 7
+- Tailwind CSS 4
+- React Router 7
+- Framer Motion
+- EmailJS
+- Docker et Node.js 22 Alpine pour la production
 
-Le projet utilise un **Multi-Stage Docker Build** pour minimiser la taille de l'image finale :
+## Pages principales
 
-1.  **Étape de Build :** Utilise `node:22-alpine` pour installer les dépendances et compiler le code React (`npm run build`).
-2.  **Étape de Production :** Utilise `nginx:alpine` pour servir uniquement les fichiers statiques générés dans le dossier `dist`.
+| Page | URL |
+| --- | --- |
+| Accueil | `/` |
+| Compétences | `/competences` |
+| Projets | `/projets` |
+| Contact | `/me_contacter` |
+| Mentions légales | `/mentions_legales` |
 
-Cela garantit un conteneur de production extrêmement léger et sécurisé, sans embarquer les lourds `node_modules`.
-
-## Installation (Local)
-
-Pour lancer ce projet localement sur votre machine pour le développement :
-
-1.  **Cloner le dépôt**
-    ```bash
-    git clone https://github.com/VOTRE-PSEUDO/portfolio.git
-    cd portfolio
-    ```
-
-2.  **Installer les dépendances**
-    ```bash
-    npm install
-    ```
-
-3.  **Lancer le serveur de développement**
-    ```bash
-    npm run dev
-    ```
-    Ouvrez `http://localhost:5173` pour le voir dans votre navigateur.
-
-
-## Déploiement en Production (VPS)
-
-L'application tourne derrière un reverse proxy Traefik.
+## Installation locale
 
 ### Prérequis
 
-- Docker et Docker Compose installés sur le VPS
-- Traefik configuré et en cours d'exécution
-- Nom de domaine configuré (DNS pointant vers le VPS)
+- Node.js 22 ou une version compatible
+- npm
 
-### 1. Cloner le projet sur le VPS
+### Démarrage
+
 ```bash
-git clone https://github.com/VOTRE-PSEUDO/portfolio.git
-cd portfolio
+git clone https://github.com/tomfrx12/portfolio-react-tom-fourneaux.git
+cd portfolio-react-tom-fourneaux
+npm install
+npm run dev
 ```
 
-### 2. Vérifier l'existence du réseau Docker partagé avec Traefik
-```bash
-docker network create web
+Le serveur de développement est disponible à l'adresse [http://localhost:5173](http://localhost:5173).
+
+### Variables d'environnement
+
+Le formulaire de contact utilise EmailJS. Pour l'activer, créez un fichier `.env` à la racine du projet :
+
+```env
+VITE_SERVICE_ID=votre_service_id
+VITE_TEMPLATE_ID=votre_template_id
+VITE_PUBLIC_KEY=votre_cle_publique
 ```
 
-### 3. Builder & lancer les conteneurs
+Les variables `VITE_*` sont intégrées au bundle côté client. N'y placez donc jamais de clé secrète.
+
+## Scripts npm
+
+| Commande | Description |
+| --- | --- |
+| `npm run dev` | Lance le serveur de développement |
+| `npm run build` | Génère le build de production dans `dist` |
+| `npm run preview` | Sert localement le build de production |
+| `npm run lint` | Vérifie le code avec ESLint |
+
+## Docker
+
+Le `Dockerfile` utilise une construction en deux étapes :
+
+1. Une image `node:22-alpine` installe les dépendances et construit l'application.
+2. Une image `node:22-alpine` minimale installe `serve` et expose le dossier `dist` sur le port 80.
+
+Construire et lancer l'image localement :
+
 ```bash
-docker compose up -d --build
+docker build -t portfolio-tom-fourneaux .
+docker run --rm -p 8080:80 portfolio-tom-fourneaux
 ```
 
+Le site est ensuite accessible à l'adresse [http://localhost:8080](http://localhost:8080).
+
+En production, le conteneur peut être placé derrière un reverse proxy comme Traefik avec un nom de domaine et HTTPS.
 
 ## Auteur
 
 **Tom Fourneaux**
 
-- 🌐 Site : [https://tom-fourneaux.fr](https://tom-fourneaux.fr)
-- 💼 LinkedIn : [Tom Fourneaux](https://www.linkedin.com/in/tom-fourneaux-4a8b31384/)
-- 🐙 GitHub : [@tomfrx12](https://github.com/tomfrx12)
+- Site : [tom-fourneaux.fr](https://tom-fourneaux.fr)
+- LinkedIn : [Tom Fourneaux](https://www.linkedin.com/in/tom-fourneaux-4a8b31384/)
+- GitHub : [@tomfrx12](https://github.com/tomfrx12)
