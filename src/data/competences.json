@@ -1,0 +1,42 @@
+[
+    {
+        "label": "Développement",
+        "prompt": "dev",
+        "termColor": "var(--color-primary)",
+        "skills": [
+            { "img": "/img/outils/html.png", "alt": "HTML Logo", "name": "HTML" },
+            { "img": "/img/outils/css.png", "alt": "CSS Logo", "name": "CSS" },
+            { "img": "/img/outils/javascript.png", "alt": "JavaScript Logo", "name": "JavaScript" },
+            { "img": "/img/outils/php.png", "alt": "PHP Logo", "name": "PHP" },
+            { "img": "/img/outils/python.png", "alt": "Python Logo", "name": "Python" },
+            { "img": "/img/outils/mysql.png", "alt": "SQL Logo", "name": "MySQL" },
+            { "img": "/img/outils/typescript.png", "alt": "TypeScript Logo", "name": "TypeScript" },
+            { "img": "/img/outils/prisma.png", "alt": "Prisma Logo", "name": "Prisma" },
+            { "img": "/img/outils/postgresql.webp", "alt": "Postgre Logo", "name": "PostgreSQL" }
+        ]
+    },
+    {
+        "label": "Frameworks",
+        "prompt": "frameworks",
+        "termColor": "var(--color-cv-primary)",
+        "skills": [
+            { "img": "/img/outils/tailwindcss.png", "alt": "TailwindCSS Logo", "name": "TailwindCSS" },
+            { "img": "/img/outils/reactjs.webp", "alt": "React Logo", "name": "React.js" },
+            { "img": "/img/outils/nodejs.png", "alt": "Node Logo", "name": "Node.js" },
+            { "img": "/img/outils/nextjs.png", "alt": "Next Logo", "name": "Next.js" }
+        ]
+    },
+    {
+        "label": "Outils",
+        "prompt": "outils",
+        "termColor": "#fb923c",
+        "skills": [
+            { "img": "/img/outils/vscode.png", "alt": "VS Code Logo", "name": "Visual Studio Code" },
+            { "img": "/img/outils/github.png", "alt": "Github Logo", "name": "GitHub" },
+            { "img": "/img/outils/debian.png", "alt": "Debian Logo", "name": "Debian" },
+            { "img": "/img/outils/docker.webp", "alt": "Docker Logo", "name": "Docker" },
+            { "img": "/img/outils/ovh.webp", "alt": "Ovh Logo", "name": "Ovh" }
+        ]
+    }
+    
+]

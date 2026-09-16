@@ -1,112 +1,56 @@
-import { CardSkill } from "../components/card_skills";
-import { Text } from "../components/texte";
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import categories from "../data/competences.json";
+import Terminal from "../components/Terminal";
 
-function Competences() {
+export default function Competences() {
+    const containerRef = useRef(null);
+    const [activeWindow, setActiveWindow] = useState(null);
+
+    const terminalPositions = [
+        { x: 20,  y: 20  },
+        { x: 460, y: 60  },
+        { x: 220, y: 380 },
+    ];
+
     return (
-    <>
-        <Text tag="h1" name="h1" color="white" background="black" className="m-[20px] py-[10px] px-[20px]">Mes compétences</Text>
+        <div className="py-20">
+            {/* Desktop */}
+            <motion.div
+                className="hidden lg:block mx-5 lg:mx-8 rounded-2xl overflow-hidden border border-white/10"
+                style={{ background: "linear-gradient(135deg, #07070f 0%, #0f0a1a 50%, #07070f 100%)" }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
+                <div className="flex items-center justify-between px-5 py-2 border-b border-white/5">
+                    <span className="text-[11px] font-mono text-white/25">portfolio@desktop ~ déplacez les fenêtres</span>
+                </div>
 
-        <div className="m-auto flex flex-row flex-wrap justify-around lg:max-w-[1516px]">
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/python.png"
-                alt_illustr="Python Logo"
-                text_illustr="Python"
-                description_illustr="Langage polyvalent, idéal pour le développement web, les scripts et l'IA."
-            />
+                <div ref={containerRef} className="relative w-full h-[850px]">
+                    {categories.map((category, i) => (
+                        <Terminal
+                            key={category.label}
+                            category={category}
+                            containerRef={containerRef}
+                            initialX={terminalPositions[i].x}
+                            initialY={terminalPositions[i].y}
+                            onFocus={() => setActiveWindow(category.label)}
+                            isFront={activeWindow === category.label}
+                            draggable
+                        />
+                    ))}
+                </div>
+            </motion.div>
 
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/HTML.png"
-                alt_illustr="HTML Logo"
-                text_illustr="HTML"
-                description_illustr="Langage de balisage utilisé pour structurer les pages web."
-            />
+            {/* Mobile */}
+            <div className="lg:hidden mx-5 flex flex-col gap-4">
+                {categories.map(category => (
+                    <Terminal key={category.label} category={category} />
+                ))}
+            </div>
 
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/CSS.png"
-                alt_illustr="CSS Logo"
-                text_illustr="CSS"
-                description_illustr="Langage de style qui permet de mettre en forme les pages web."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/JS.png"
-                alt_illustr="JavaScript Logo"
-                text_illustr="JavaScript"
-                description_illustr="Langage de programmation côté client pour rendre les pages interactives."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/SQL.png"
-                alt_illustr="SQL Logo"
-                text_illustr="SQL"
-                description_illustr="Langage utilisé pour interroger et gérer des bases de données relationnelles."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/PHP.png"
-                alt_illustr="PHP Logo"
-                text_illustr="PHP"
-                description_illustr="Langage côté serveur pour créer des sites web dynamiques."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/React.webp"
-                alt_illustr="React Logo"
-                text_illustr="React"
-                description_illustr="Bibliothèque JavaScript pour créer des interfaces utilisateur réactives."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/tailwindcss.png"
-                alt_illustr="TailwindCSS Logo"
-                text_illustr="TailwindCSS"
-                description_illustr="Framework CSS utilitaire pour créer des interfaces modernes rapidement."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/VSCode.png"
-                alt_illustr="Visual Studio Code Logo"
-                text_illustr="Visual Studio Code"
-                description_illustr="Éditeur de code léger et puissant avec de nombreuses extensions."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/WordPress.png"
-                alt_illustr="Wordpress Logo"
-                text_illustr="Wordpress"
-                description_illustr="CMS populaire pour créer et gérer des sites web facilement."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/canva.png"
-                alt_illustr="Canva Logo"
-                text_illustr="Canva"
-                description_illustr="Outil de design graphique simple pour créer des visuels rapidement."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/InDesign.png"
-                alt_illustr="InDesign Logo"
-                text_illustr="InDesign"
-                description_illustr="Logiciel de mise en page pour la création de documents imprimés."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/Illustrator.png"
-                alt_illustr="Illustrator Logo"
-                text_illustr="Illustrator"
-                description_illustr="Outil professionnel pour la création de graphiques vectoriels."
-            />
-
-            <CardSkill
-                img_illustr="/img/cv/logo-outils/photoshop.png"
-                alt_illustr="Photoshop Logo"
-                text_illustr="Photoshop"
-                description_illustr="Logiciel de retouche photo et de création graphique avancée."
-            />
         </div>
-    </>
     );
 }
-
-export default Competences;
