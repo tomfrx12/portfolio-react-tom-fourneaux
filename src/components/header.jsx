@@ -3,7 +3,7 @@ import { useState } from "react";
 import ButtonDarkMode from "./buttonDarkMode";
 import HeaderNav from "./header_nav";
 
-const Header = ({ itsDark, setItsDark }) => {
+export default function Header({ itsDark, setItsDark }) {
     const [menuOpen, setMenuOpen] = useState(false);
     
     return (
@@ -31,5 +31,3 @@ const Header = ({ itsDark, setItsDark }) => {
         </header>
     );
 };
-
-export default Header;

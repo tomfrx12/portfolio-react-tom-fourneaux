@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const HeaderNav = ({children, link, onClick, ...props}) => {
+export default function HeaderNav({children, link, onClick, ...props}) {
     
     const handleClick = (event) => {
         window.scrollTo(0, 0);
@@ -13,5 +13,3 @@ const HeaderNav = ({children, link, onClick, ...props}) => {
         </Link>
     );
 };
-
-export default HeaderNav;

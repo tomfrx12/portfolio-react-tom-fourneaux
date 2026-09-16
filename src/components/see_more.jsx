@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-const SeeMore = ({link}) => {
+export default function SeeMore({link}) {
   return (
       <Link to={link} className="ml-2 group inline-flex items-center gap-2 bg-transparent border-none outline-none transition-transform duration-300 hover:scale-105 w-auto max-w-fit">
         <span className="relative py-1 text-base font-bold text-black transition-colors duration-500 dark:text-white group-hover:italic">
@@ -10,5 +10,3 @@ const SeeMore = ({link}) => {
       </Link>
   );
 }
-
-export default SeeMore;

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export function DarkMode() {
+export default function DarkMode() {
   const [itsDark, setItsDark] = useState(() => { //initialise l'état du dark mode, et regarde si le thème est "dark"
     return localStorage.getItem("theme") === "dark"; //si true, active le dark mode
   });
