@@ -5,7 +5,7 @@ import DarkMode from "./darkmode";
 import Footer from "./footer";
 import Header from "./header";
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
     const [itsDark, setItsDark] = DarkMode();
     return (
         <div className="flex flex-col min-h-screen bg-(--color-bg-grey) dark:bg-(--color-bg-grey-dark)">
@@ -26,9 +26,3 @@ const Layout = ({ children }) => {
         </div>
     );
 };
-
-Layout.propTypes = {
-    children: PropTypes.node.isRequired,
-};
-
-export default Layout;

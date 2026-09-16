@@ -8,6 +8,7 @@ import SeeMore from "../components/see_more";
 import { fadeUp, fadeDown, fadeRight, fadeLeft, opacityOn  } from "../components/anime_motion";
 import projets from '../data/projets.json';
 import Title from "../components/title";
+import { Link } from "react-router";
 
 function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie dans l'App, afin que la Lamp puisse modifier le dark mode
 
@@ -109,26 +110,28 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
 
             <Title text="projet" />
 
-            <section className="flex flex-col justify-center items-center h-[94vh]">
+            <section className="flex flex-col justify-center items-center">
                 <div className="my-10 flex flex-col gap-8 w-full max-w-240 px-5">
                     {[...projets].reverse().slice(0, 2).map((projet) => {
                         const anchor = projet.anchor;
 
                         return (
                         <motion.div key={projet.id} variants={fadeLeft} initial="hidden" whileInView="visible" transition={{ duration: 1.0, ease: "easeOut" }} viewport={{ once: true }}>
-                            <motion.div 
-                                className="flex items-center gap-5 p-5 bg-white dark:bg-(--color-bg-grey-dark) border-[3px] border-black dark:border-white rounded-sm cursor-pointer select-none"
-                                initial={{ rotate: -1, boxShadow: "5px 5px 0px var(--color-primary)" }}
-                                whileHover={{ rotate: 0, x: -5, y: -5, boxShadow: "10px 10px 0px var(--color-primary)" }}
-                                whileTap={{ x: 3, y: 3, boxShadow: "3px 3px 0px var(--color-primary)" }}
-                            >
-                                <img src={projet.image.url} alt={projet.image.alt} className="max-h-60" />
-                                <div>
-                                    <Text tag="h3" name="h3" size="lg">{projet.title}</Text>
-                                    <Text tag="p" size="base">{projet.description}</Text>
-                                    <SeeMore link={`/projets#${anchor}`}/>
-                                </div>
-                            </motion.div>
+                            <Link to={`/projets#${anchor}`}>
+                                <motion.div 
+                                    className="flex items-center gap-5 p-5 bg-white dark:bg-(--color-bg-grey-dark) border-[3px] border-black dark:border-white rounded-sm cursor-pointer select-none"
+                                    initial={{ rotate: -1, boxShadow: "5px 5px 0px var(--color-primary)" }}
+                                    whileHover={{ rotate: 0, x: -5, y: -5, boxShadow: "10px 10px 0px var(--color-primary)" }}
+                                    whileTap={{ x: 3, y: 3, boxShadow: "3px 3px 0px var(--color-primary)" }}
+                                >
+                                    <img src={projet.image.url} alt={projet.image.alt} className="max-h-60" />
+                                    <div>
+                                        <Text tag="h3" name="h3" size="lg">{projet.title}</Text>
+                                        <Text tag="p" size="base">{projet.description}</Text>
+                                        <SeeMore link={`/projets#${anchor}`}/>
+                                    </div>
+                                </motion.div>
+                            </Link>
                         </motion.div>
                         );
                     })}
