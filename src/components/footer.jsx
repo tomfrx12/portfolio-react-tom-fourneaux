@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 export default function footer() {
     return (
-        <footer className="flex items-center justify-between bg-black px-10 py-5 text-base text-white">
-            <div className="flex gap-5 text-white/80">
+        <footer className="flex flex-col gap-4 bg-black px-5 py-5 text-base text-white sm:flex-row sm:items-center sm:justify-between sm:px-10">
+            <div className="flex flex-wrap gap-x-5 gap-y-2 text-white/80">
                 <Link to="https://github.com/" className="hover:text-white">Github</Link>
                 <Link to="https://linkedin.com/" className="hover:text-white">LinkedIn</Link>
                 <Link to="https://instagram.com/" className="hover:text-white">Instagram</Link>

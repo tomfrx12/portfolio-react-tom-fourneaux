@@ -78,7 +78,7 @@ export default function Contact() {
             <div>
                 <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)]">
                     <motion.aside
-                        className="min-h-max flex flex-col gap-[30px] bg-[#0a0a0a] px-9 py-11"
+                        className="min-h-max flex flex-col gap-[30px] bg-[#0a0a0a] px-5 py-8 sm:px-9 sm:py-11"
                         variants={fadeLeft}
                         initial="hidden"
                         whileInView="visible"
@@ -99,13 +99,13 @@ export default function Contact() {
 
                         <motion.div variants={fadeUp} className="h-px bg-white/15"></motion.div>
 
-                        <motion.div variants={fadeUp} className="flex gap-[22px]">
+                        <motion.div variants={fadeUp} className="flex flex-wrap gap-4 sm:gap-[22px]">
                             {[
                                 { label: "Profil Github", src: "/img/qrcode/qrcode_github.png", href:"https://github.com/tomfrx12"},
                                 { label: "Profil LinkedIn", src: "/img/qrcode/qrcode_linkedin.jpg", href: "https://www.linkedin.com/in/tom-fourneaux-078644332/"}
                             ].map((qr) => (
                                 <Link key={qr.label} to={qr.href} className="flex flex-col items-center gap-2">
-                                    <img src={qr.src} alt={qr.label} className="h-[130px] w-[130px] bg-white p-2" />
+                                    <img src={qr.src} alt={qr.label} className="h-24 w-24 bg-white p-2 sm:h-[130px] sm:w-[130px]" />
                                     <span className="text-base text-white underline">{qr.label}</span>
                                 </Link>
                             ))}
@@ -113,7 +113,7 @@ export default function Contact() {
                     </motion.aside>
 
                     <motion.section
-                        className="px-12 py-11"
+                        className="px-5 py-8 sm:px-9 sm:py-11 lg:px-12"
                         variants={fadeRight}
                         initial="hidden"
                         whileInView="visible"

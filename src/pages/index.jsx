@@ -30,8 +30,8 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
 
     return (
         <div>
-            <section className="flex flex-col h-screen lg:flex-row">
-                <div className="flex items-center justify-center flex-col lg:w-[40%] bg-(--color-white-background) dark:bg-(--color-white-background-dark)">
+            <section className="flex min-h-[calc(100svh-4rem)] flex-col lg:h-screen lg:flex-row">
+                <div className="flex flex-1 flex-col items-center justify-center bg-(--color-white-background) dark:bg-(--color-white-background-dark) lg:w-[40%] lg:flex-none">
                     <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.5, duration: 0.5 }}>
                         <motion.button 
                             onClick={Clicker}
@@ -49,7 +49,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                                 }}
                                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
                             >
-                                <img src="/img/A2_Fourneaux_Tom.png" alt="photo de profil Tom FOURNEAUX" className="my-5 m-auto rounded-full"/>
+                                <img src="/img/A2_Fourneaux_Tom.png" alt="photo de profil Tom FOURNEAUX" className="my-5 w-48 max-w-[75vw] rounded-full sm:w-56 lg:w-auto"/>
                             </motion.div>
                         </motion.button>
                     </motion.div>
@@ -75,10 +75,12 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                         </motion.div>
                     )}
                 </div>
-                <div className="lg:block lg:w-[60%] lg:min-h-full hidden bg-(--color-red-background) dark:bg-(--color-red-background-dark)">
-                    <Lamp itsDark={itsDark} setItsDark={setItsDark} />
+                <div className="flex min-h-[50vh] flex-1 flex-col items-center bg-(--color-red-background) dark:bg-(--color-red-background-dark) lg:block lg:w-[60%]">
+                    <div className="hidden lg:block">
+                        <Lamp itsDark={itsDark} setItsDark={setItsDark} />
+                    </div>
                     {/* donne les infos du dark mode à la Lamp */}
-                    <div className="relative z-10 flex flex-col items-center pt-40">
+                    <div className="relative z-10 flex flex-col items-center px-5 py-16 text-center lg:pt-40">
                         <motion.div variants={opacityOn} initial="hidden" animate="visible" transition={{ delay: 0.5, duration: 0.5 }}>
                             <Text tag='h1' name='h1' color="white" font="bold">Tom Fourneaux</Text>
                         </motion.div>
@@ -94,13 +96,13 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
 
             <Title text="a propos de moi" />            
 
-            <section className="flex flex-col justify-center items-center h-[94vh] mx-5 lg:mx-20 py-10">
-                <div className="lg:flex lg:flex-row lg:gap-12 lg:items-center w-full">    
+            <section className="flex flex-col items-center justify-center px-5 py-16 lg:mx-20 lg:h-[94vh] lg:px-0 lg:py-10">
+                <div className="w-full lg:flex lg:flex-row lg:items-center lg:gap-12">
                     <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                         <Text tag="p" size="base" className="border-l-5 border-l-[#ff6347] m-[0px 0px 20px 20px] px-[15px] mt-10">Je suis un jeune développeur web de 20 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Chef de Projets Digitaux. Passionné par le monde du développement web et le code depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution.</Text>
                     </motion.div>
                     <motion.div variants={fadeRight} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                        <img src="/img/illustration_presentation/illustration_dev.png" alt="illustration developpeur web" className="m-auto max-w-[90%] p-[15px] lg:self-center lg:w-auto"/>
+                        <img src="/img/illustration_presentation/illustration_dev.png" alt="illustration developpeur web" className="m-auto max-w-full p-[15px] lg:w-auto lg:self-center"/>
                     </motion.div>
                 </div>
                 <motion.div className="flex gap-5" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}>
@@ -119,12 +121,12 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                         <motion.div key={projet.id} variants={fadeLeft} initial="hidden" whileInView="visible" transition={{ duration: 1.0, ease: "easeOut" }} viewport={{ once: true }}>
                             <Link to={`/projets#${anchor}`}>
                                 <motion.div 
-                                    className="flex items-center gap-5 p-5 bg-white dark:bg-(--color-bg-grey-dark) border-[3px] border-black dark:border-white rounded-sm cursor-pointer select-none"
+                                    className="flex flex-col items-start gap-4 rounded-sm border-[3px] border-black bg-white p-4 dark:border-white dark:bg-(--color-bg-grey-dark) sm:flex-row sm:items-center sm:gap-5 sm:p-5"
                                     initial={{ rotate: -1, boxShadow: "5px 5px 0px var(--color-primary)" }}
                                     whileHover={{ rotate: 0, x: -5, y: -5, boxShadow: "10px 10px 0px var(--color-primary)" }}
                                     whileTap={{ x: 3, y: 3, boxShadow: "3px 3px 0px var(--color-primary)" }}
                                 >
-                                    <img src={projet.image.url} alt={projet.image.alt} className="max-h-60" />
+                                    <img src={projet.image.url} alt={projet.image.alt} className="max-h-60 w-full object-contain sm:w-auto" />
                                     <div>
                                         <Text tag="h3" name="h3" size="lg">{projet.title}</Text>
                                         <Text tag="p" size="base">{projet.description}</Text>

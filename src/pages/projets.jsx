@@ -20,7 +20,7 @@ function Projets({ itsDark, setItsDark }) {
     return (
         <>
             <Title text="projet" />
-            <section className="grid grid-cols-2">
+            <section className="grid grid-cols-1 gap-2 md:grid-cols-2">
                 {[...projets].reverse().map((projet, i) => (
                     <motion.div key={projet.id} className='flex' variants={i % 2 === 0 ? fadeLeft : fadeRight} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{duration: 2}}>
                         <CardProjet
