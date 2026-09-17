@@ -30,7 +30,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
 
     return (
         <div>
-            <section className="flex flex-col h-[94vh] lg:flex-row">
+            <section className="flex flex-col h-screen lg:flex-row">
                 <div className="flex items-center justify-center flex-col lg:w-[40%] bg-(--color-white-background) dark:bg-(--color-white-background-dark)">
                     <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.5, duration: 0.5 }}>
                         <motion.button 
