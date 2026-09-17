@@ -1,6 +1,8 @@
 import emailjs from '@emailjs/browser';
+import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router";
+import { fadeLeft, fadeRight, fadeUp } from "../components/anime_motion";
 import { Text } from "../components/texte";
 import Title from "../components/title";
 
@@ -75,57 +77,72 @@ export default function Contact() {
             <Title text="contact" />
             <div>
                 <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)]">
-                    <aside className="min-h-max flex flex-col gap-[30px] bg-[#0a0a0a] px-9 py-11">
-                        <div>
+                    <motion.aside
+                        className="min-h-max flex flex-col gap-[30px] bg-[#0a0a0a] px-9 py-11"
+                        variants={fadeLeft}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        <motion.div variants={fadeUp}>
                             <p className="mb-1 text-base text-white/55">Email</p>
-                            <Link to="mail:tfourneaux@normandiewebschool.fr" className="text-[19px] hover:underline">tfourneaux@normandiewebschool.fr</Link>
-                        </div>
-                        <div>
+                            <Link to="mail:tfourneaux@normandiewebschool.fr" className="text-[19px] text-white hover:underline">tfourneaux@normandiewebschool.fr</Link>
+                        </motion.div>
+                        <motion.div variants={fadeUp}>
                             <p className="mb-1 text-base text-white/55">Téléphone</p>
-                            <Link to="tel:+33680501452" className="text-[22px] font-bold hover:underline"> +33 6 80 50 14 52</Link>
-                        </div>
-                        <div>
+                            <Link to="tel:+33680501452" className="text-[22px] font-bold text-white hover:underline"> +33 6 80 50 14 52</Link>
+                        </motion.div>
+                        <motion.div variants={fadeUp}>
                             <p className="mb-1 text-base text-white/55">Ville</p>
-                            <p className="text-[19px]">Rouen, Normandie</p>
-                        </div>
+                            <p className="text-[19px] text-white">Rouen, Normandie</p>
+                        </motion.div>
 
-                        <div className="h-px bg-white/15"></div>
+                        <motion.div variants={fadeUp} className="h-px bg-white/15"></motion.div>
 
-                        <div className="flex gap-[22px]">
+                        <motion.div variants={fadeUp} className="flex gap-[22px]">
                             {[
                                 { label: "Profil Github", src: "/img/qrcode/qrcode_github.png", href:"https://github.com/tomfrx12"},
                                 { label: "Profil LinkedIn", src: "/img/qrcode/qrcode_linkedin.jpg", href: "https://www.linkedin.com/in/tom-fourneaux-078644332/"}
                             ].map((qr) => (
                                 <Link key={qr.label} to={qr.href} className="flex flex-col items-center gap-2">
                                     <img src={qr.src} alt={qr.label} className="h-[130px] w-[130px] bg-white p-2" />
-                                    <span className="text-base underline">{qr.label}</span>
+                                    <span className="text-base text-white underline">{qr.label}</span>
                                 </Link>
                             ))}
-                        </div>
-                    </aside>
+                        </motion.div>
+                    </motion.aside>
 
-                    <section className="px-12 py-11">
-                        <h2 className="mb-5 text-[28px] font-bold">Formulaire de contact</h2>
+                    <motion.section
+                        className="px-12 py-11"
+                        variants={fadeRight}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                    >
+                        <motion.h2 variants={fadeUp} className="mb-5 text-[28px] font-bold">Formulaire de contact</motion.h2>
                         <form className="flex flex-col gap-5" ref={form} onSubmit={sendEmail}>
-                            <label className="flex flex-col gap-1.5">
+                            <motion.label variants={fadeUp} className="flex flex-col gap-1.5">
                                 <span className="text-[17px] text-white/70">Nom</span>
                                 <input name="nom" type="text" placeholder="Votre nom" className="border border-white/30 bg-[#191919] px-3.5 py-3 text-[17px] text-white outline-none placeholder:text-white/55 focus:border-white" required />
-                            </label>
-                            <label className="flex flex-col gap-1.5">
+                            </motion.label>
+                            <motion.label variants={fadeUp} className="flex flex-col gap-1.5">
                                 <span className="text-[17px] text-white/70">Email</span>
                                 <input name="email" type="email" placeholder="votre.email@exemple.fr" className="border border-white/30 bg-[#191919] px-3.5 py-3 text-[17px] text-white outline-none placeholder:text-white/55 focus:border-white" required />
-                            </label>
-                            <label className="flex flex-col gap-1.5">
+                            </motion.label>
+                            <motion.label variants={fadeUp} className="flex flex-col gap-1.5">
                                 <span className="text-[17px] text-white/70">Message</span>
                                 <textarea name="message" rows={8} placeholder="Votre message" className="border border-white/30 bg-[#191919] px-3.5 py-3 text-[17px] text-white outline-none placeholder:text-white/55 focus:border-white resize-none" required />
-                            </label>
+                            </motion.label>
                             
-                            <button
+                            <motion.button
                                 type="submit"
                                 disabled={cooldown > 0}
                                 className={`relative group inline-block text-center no-underline select-none self-start text-white transition-opacity ${
                                     cooldown > 0 ? "cursor-not-allowed opacity-60" : "cursor-pointer"
                                 }`}
+                                variants={fadeUp}
+                                whileHover={cooldown === 0 ? { y: -3 } : undefined}
+                                whileTap={cooldown === 0 ? { scale: 0.97 } : undefined}
                             >
                                 <span className="relative block dark:bg-(--color-primary) bg-(--color-red-background-dark) px-5 py-2.5 text-[#EBEBEB] transition-all duration-500 rounded-xl">
                                     {cooldown > 0 ? `Patienter (${formatTime(cooldown)})` : "Envoyer"}
@@ -149,7 +166,7 @@ export default function Contact() {
                                         />
                                     </svg>
                                 )}
-                            </button>
+                            </motion.button>
                         </form>
                         {messageSent && (
                             <Text tag="p" name="p" size="base" align="center" className="text-green-600 mt-4">Votre message a bien été envoyé !</Text>
@@ -157,7 +174,7 @@ export default function Contact() {
                         {errorSent && (
                             <Text tag="p" name="p" size="base" align="center" className="text-red-600 mt-4">Votre message n'a pas été envoyé !</Text>
                         )}
-                    </section>
+                    </motion.section>
                 </div>
             </div>
         </>
