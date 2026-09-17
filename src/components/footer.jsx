@@ -1,24 +1,18 @@
 import { Link } from "react-router";
 
-export default function Footer() {
-    const currentYear = new Date().getFullYear();
-
+export default function footer() {
     return (
-        <footer className="bg-black flex justify-center flex-col items-center lg:flex-row lg:justify-around lg:py-2.5">
-            <nav className="flex gap-10 my-5 lg:m-0">
-                <Link to="https://github.com/tomfrx12" className="no-underline transition-transform duration-300 ease-in-out transform hover:scale-120">
-                    <img className="max-h-6 lg:max-h-10" src="/img/img_reseaux/github.png" alt="Logo de Github"/>
-                </Link>
-                <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/" className="no-underline transition-transform duration-300 ease-in-out transform hover:scale-120">
-                    <img className="max-h-6 lg:max-h-10" src="/img/img_reseaux/linkedin.png" alt="Logo de LinkedIn"/>
-                </Link>
-                <Link to="https://www.instagram.com/fourneauxtom/" className="no-underline transition-transform duration-300 ease-in-out transform hover:scale-120">
-                    <img className="max-h-6 lg:max-h-10" src="/img/img_reseaux/instagram.png" alt="Logo de Instagram"/>
-                </Link>
-            </nav>
-            <p className="text-center text-xs text-white lg:text-2xl">Copyright © {currentYear} tom-fourneaux<br/>
-                <Link to="/mentions_legales" className="text-white underline" onClick={() => { window.scrollTo(0, 0); }}>Mentions légales</Link>
-            </p>
+        <footer className="flex items-center justify-between bg-black px-10 py-5 text-base text-white">
+            <div className="flex gap-5 text-white/80">
+                <Link to="https://github.com/" className="hover:text-white">Github</Link>
+                <Link to="https://linkedin.com/" className="hover:text-white">LinkedIn</Link>
+                <Link to="https://instagram.com/" className="hover:text-white">Instagram</Link>
+            </div>
+            <div className="text-right leading-snug">
+                Copyright © 2026 tom-fourneaux
+                <br />
+                <Link to="/mentions_legales" className="underline">Mentions légales</Link>
+            </div>
         </footer>
     );
 }
