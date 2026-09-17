@@ -1,10 +1,10 @@
 import emailjs from '@emailjs/browser';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from "react-router";
 import { Text } from "../components/texte";
+import Title from "../components/title";
 
-const Contact = () => {
-    //template de EmailJs
+export default function Contact() {
     const YOUR_SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
     const YOUR_TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
     const YOUR_PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
@@ -12,81 +12,154 @@ const Contact = () => {
     const form = useRef();
     const [messageSent, setMessageSent] = useState(false);
     const [errorSent, setErrorSent] = useState(false);
+    const [cooldown, setCooldown] = useState(0);
+
+    // cooldown dans le localstorage
+    useEffect(() => {
+        const lastSent = localStorage.getItem("email_last_sent");
+        if (lastSent) {
+            const timePassed = Math.floor((Date.now() - parseInt(lastSent, 10)) / 1000);
+            const remaining = 120 - timePassed; // 120 secondes = 2 minutes
+            if (remaining > 0) {
+                setCooldown(remaining);
+            }
+        }
+    }, []);
+
+    // décompte
+    useEffect(() => {
+        if (cooldown <= 0) return;
+
+        const timer = setInterval(() => {
+            setCooldown((prev) => prev - 1);
+        }, 1000);
+
+        return () => clearInterval(timer);
+    }, [cooldown]);
 
     const sendEmail = (e) => {
         e.preventDefault();
+        if (cooldown > 0) return;
 
-    emailjs
-        .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, {
-            publicKey: YOUR_PUBLIC_KEY,
-        })
-        .then(
-            () => {
-                setMessageSent(true);
-                setErrorSent(false);
-                form.current.reset();
-                console.log('SUCCESS!');
-            },
-            (error) => {
-                setMessageSent(false);
-                setErrorSent(true);
-                console.log('FAILED...', error.text);
-            },
-        );
+        emailjs
+            .sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form.current, {
+                publicKey: YOUR_PUBLIC_KEY,
+            })
+            .then(
+                () => {
+                    setMessageSent(true);
+                    setErrorSent(false);
+                    form.current.reset();
+
+                    // Démarrer le cooldown de 120s et enregistrer l'heure
+                    setCooldown(120);
+                    localStorage.setItem("email_last_sent", Date.now().toString());
+                },
+                (error) => {
+                    setMessageSent(false);
+                    setErrorSent(true);
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
+    // temps restant en MM:SS
+    const formatTime = (seconds) => {
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
     };
 
     return (
         <>
-            <Text tag="h1" name="h1" color="white" background="black" className="m-[20px] py-[10px] px-[20px]">Me contacter</Text>
-            <div className="my-[50px]">
-                <Text tag="p" size="lg" align="center" className="flex justify-center transition:transform duration:300 ease-in-out">
-                    <svg className="lg:m-[10px]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 14H4V8l8 5l8-5zm-8-7L4 6h16z"/>
-                    </svg>
-                    <Link className="self-center hover:scale-105" to="mailto:tfourneaux@normandiewebschool.fr">tfourneaux@normandiewebschool.fr</Link>
-                </Text>
-                <Text tag="p" size="lg" alig="center" className="flex justify-center transition:transform duration:300 ease-in-out">
-                    <svg className="lg:m-[10px]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M19.95 21q-3.125 0-6.175-1.362t-5.55-3.863t-3.862-5.55T3 4.05q0-.45.3-.75t.75-.3H8.1q.35 0 .625.238t.325.562l.65 3.5q.05.4-.025.675T9.4 8.45L6.975 10.9q.5.925 1.187 1.787t1.513 1.663q.775.775 1.625 1.438T13.1 17l2.35-2.35q.225-.225.588-.337t.712-.063l3.45.7q.35.1.575.363T21 15.9v4.05q0 .45-.3.75t-.75.3"/>
-                    </svg>
-                    <Link className="self-center hover:scale-105" to="tel:0680501452">+33 6 80 50 14 52</Link>
-                </Text>
-            </div>
-            <div className="mx-10 flex flex-col gap-20 lg:flex-row lg:justify-around">
-                <div className="flex flex-wrap justify-between lg:flex-col lg:gap-10">
-                    <div className="qrcode">
-                        <Text tag="p" size="base" align="center">Profil <Link className="underline" to="https://github.com/tomfrx12">Github</Link></Text>
-                        <Link to="https://github.com/tomfrx12">
-                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src="/img/qrcode/qrcode_github.png" alt="QR Code Github"/>
-                        </Link>
-                    </div>
-                    <div className="qrcode">
-                        <Text tag="p" size="base" align="center">Profil <Link className="underline" to="https://www.linkedin.com/in/tom-fourneaux-078644332/">LinkedIn</Link></Text>
-                        <Link to="https://www.linkedin.com/in/tom-fourneaux-078644332/">
-                            <img className="max-w-[100px] max-h-[100px] lg:max-w-[150px] lg:max-h-[150px]" src="/img/qrcode/qrcode_github.png" alt="QR Code LinkedIn"/>
-                        </Link>
-                    </div>
-                </div>
-                <div className='flex items-center flex-col'>
-                    <form className='bg-[var(--color-bg-grey)] rounded-[10px] flex flex-col p-5 lg:py-20' ref={form} onSubmit={sendEmail}>
-                        <label className='self-center'>Nom</label>
-                        <input className='bg-[var(--color-white)] text-[var(--color-black)] p-2 lg:w-80' type="text" name="user_name" placeholder='Nom' required/>
-                        <label className='self-center'>Email</label>
-                        <input className='bg-[var(--color-white)] text-[var(--color-black)] p-2 lg:w-80' type="email" name="user_email" placeholder='Email' required/>
-                        <label className='self-center'>Message</label>
-                        <textarea className='bg-[var(--color-white)] text-[var(--color-black)] p-2 lg:w-80' name="message" placeholder='Message' required/>
-                        <input className='bg-[var(--color-white)] text-[var(--color-black)] rounded-[10px] mt-5 cursor-pointer' type="submit" value="Envoyer"/>
-                    </form>
-                    {messageSent && ( //L'opérateur AND logique (&&) (conjonction logique) renvoie vrai si et uniquement si ses deux opérandes sont true ou équivalents à true.
-                        <Text tag="p" size="base" alig="center" className="text-green-600 mt-4">Votre message a bien été envoyé !</Text>
-                    )}
-                    {errorSent && (
-                        <Text tag="p" size="base" alig="center" className="text-red-600 mt-4">Votre message {"n'a"} pas été envoyé !</Text>
-                    )}
+            <Title text="contact" />
+            <div>
+                <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)]">
+                    <aside className="min-h-max flex flex-col gap-[30px] bg-[#0a0a0a] px-9 py-11">
+                        <div>
+                            <p className="mb-1 text-base text-white/55">Email</p>
+                            <Link to="mail:tfourneaux@normandiewebschool.fr" className="text-[19px] hover:underline">tfourneaux@normandiewebschool.fr</Link>
+                        </div>
+                        <div>
+                            <p className="mb-1 text-base text-white/55">Téléphone</p>
+                            <Link to="tel:+33680501452" className="text-[22px] font-bold hover:underline"> +33 6 80 50 14 52</Link>
+                        </div>
+                        <div>
+                            <p className="mb-1 text-base text-white/55">Ville</p>
+                            <p className="text-[19px]">Rouen, Normandie</p>
+                        </div>
+
+                        <div className="h-px bg-white/15"></div>
+
+                        <div className="flex gap-[22px]">
+                            {[
+                                { label: "Profil Github", src: "/img/qrcode/qrcode_github.png", href:"https://github.com/tomfrx12"},
+                                { label: "Profil LinkedIn", src: "/img/qrcode/qrcode_linkedin.jpg", href: "https://www.linkedin.com/in/tom-fourneaux-078644332/"}
+                            ].map((qr) => (
+                                <Link key={qr.label} to={qr.href} className="flex flex-col items-center gap-2">
+                                    <img src={qr.src} alt={qr.label} className="h-[130px] w-[130px] bg-white p-2" />
+                                    <span className="text-base underline">{qr.label}</span>
+                                </Link>
+                            ))}
+                        </div>
+                    </aside>
+
+                    <section className="px-12 py-11">
+                        <h2 className="mb-5 text-[28px] font-bold">Formulaire de contact</h2>
+                        <form className="flex flex-col gap-5" ref={form} onSubmit={sendEmail}>
+                            <label className="flex flex-col gap-1.5">
+                                <span className="text-[17px] text-white/70">Nom</span>
+                                <input name="nom" type="text" placeholder="Votre nom" className="border border-white/30 bg-[#191919] px-3.5 py-3 text-[17px] text-white outline-none placeholder:text-white/55 focus:border-white" required />
+                            </label>
+                            <label className="flex flex-col gap-1.5">
+                                <span className="text-[17px] text-white/70">Email</span>
+                                <input name="email" type="email" placeholder="votre.email@exemple.fr" className="border border-white/30 bg-[#191919] px-3.5 py-3 text-[17px] text-white outline-none placeholder:text-white/55 focus:border-white" required />
+                            </label>
+                            <label className="flex flex-col gap-1.5">
+                                <span className="text-[17px] text-white/70">Message</span>
+                                <textarea name="message" rows={8} placeholder="Votre message" className="border border-white/30 bg-[#191919] px-3.5 py-3 text-[17px] text-white outline-none placeholder:text-white/55 focus:border-white resize-none" required />
+                            </label>
+                            
+                            <button
+                                type="submit"
+                                disabled={cooldown > 0}
+                                className={`relative group inline-block text-center no-underline select-none self-start text-white transition-opacity ${
+                                    cooldown > 0 ? "cursor-not-allowed opacity-60" : "cursor-pointer"
+                                }`}
+                            >
+                                <span className="relative block dark:bg-(--color-primary) bg-(--color-red-background-dark) px-5 py-2.5 text-[#EBEBEB] transition-all duration-500 rounded-xl">
+                                    {cooldown > 0 ? `Patienter (${formatTime(cooldown)})` : "Envoyer"}
+                                </span>
+                                {cooldown === 0 && (
+                                    <svg
+                                        className="pointer-events-none rounded-xl absolute h-[calc(100%)] w-[calc(100%)] overflow-visible scale-y-[-1] transition-transform duration-1000 ease-in-out delay-0 group-hover:translate-x-0.5 group-hover:translate-y-0.5 group-hover:delay-800"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <rect
+                                            x="-8"
+                                            y="50"
+                                            width="100%"
+                                            height="100%"
+                                            rx="12"
+                                            fill="none"
+                                            stroke="#EBEBEB"
+                                            strokeWidth="2"
+                                            pathLength="100"
+                                            className="[stroke-dasharray:100] [stroke-dashoffset:100] rounded-xl transition-all duration-1000 ease-in-out group-hover:[stroke-dashoffset:0]"
+                                        />
+                                    </svg>
+                                )}
+                            </button>
+                        </form>
+                        {messageSent && (
+                            <Text tag="p" name="p" size="base" align="center" className="text-green-600 mt-4">Votre message a bien été envoyé !</Text>
+                        )}
+                        {errorSent && (
+                            <Text tag="p" name="p" size="base" align="center" className="text-red-600 mt-4">Votre message n'a pas été envoyé !</Text>
+                        )}
+                    </section>
                 </div>
             </div>
         </>
     );
 }
-
-export default Contact;
