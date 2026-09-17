@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { motion } from "framer-motion";
 
 import ButtonNav from "../components/ButtonNav";
@@ -12,27 +12,27 @@ import { Link } from "react-router";
 
 function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie dans l'App, afin que la Lamp puisse modifier le dark mode
 
-    const [ButtonClicker, setButtonClicker] = useState(false);
-    const [NbClick, setNbClick] = useState(0);
-    const [LinkClicker, setLinkClicker] = useState(false);
+    // const [ButtonClicker, setButtonClicker] = useState(false);
+    // const [NbClick, setNbClick] = useState(0);
+    // const [LinkClicker, setLinkClicker] = useState(false);
 
     const glowColor = itsDark ? "var(--color-red-background)" : "var(--color-red-background-dark)";
     
-    function Clicker() {
-        if ( ButtonClicker === false ) {
-            setButtonClicker(!ButtonClicker);
-        };
-        setNbClick(NbClick + 1)
-        if ( LinkClicker === false && NbClick == 29 ) {
-            setLinkClicker(!LinkClicker);
-        };
-    };
+    // function Clicker() {
+    //     if ( ButtonClicker === false ) {
+    //         setButtonClicker(!ButtonClicker);
+    //     };
+    //     setNbClick(NbClick + 1)
+    //     if ( LinkClicker === false && NbClick == 29 ) {
+    //         setLinkClicker(!LinkClicker);
+    //     };
+    // };
 
     return (
         <div>
             <section className="flex min-h-[calc(100svh-4rem)] flex-col lg:h-screen lg:flex-row">
                 <div className="flex flex-1 flex-col items-center justify-center bg-(--color-white-background) dark:bg-(--color-white-background-dark) lg:w-[40%] lg:flex-none">
-                    <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.5, duration: 0.5 }}>
+                    {/* <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }} transition={{ delay: 0.5, duration: 0.5 }}>
                         <motion.button 
                             onClick={Clicker}
                             className="cursor-pointer"
@@ -73,7 +73,25 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                         <motion.div className="flex" variants={fadeDown}  initial="hidden" whileInView="visible">
                             <ButtonNav link="clicker">Clicker</ButtonNav>
                         </motion.div>
-                    )}
+                    )} */}
+                    <motion.button 
+                        className="cursor-pointer"
+                        whileTap={{ y: 7 }}
+                    >
+                        <motion.div
+                            className="rounded-full"
+                            animate={{
+                                boxShadow: [
+                                    `0 0 0px 0px  ${glowColor}`,
+                                    `0 0 28px 10px ${glowColor}`,
+                                    `0 0 0px 0px  ${glowColor}`
+                                ]
+                            }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+                        >
+                            <img src="/img/A2_Fourneaux_Tom.png" alt="photo de profil Tom FOURNEAUX" className="my-5 w-48 max-w-[75vw] rounded-full sm:w-56 lg:w-auto"/>
+                        </motion.div>
+                    </motion.button>
                 </div>
                 <div className="flex min-h-[50vh] flex-1 flex-col items-center bg-(--color-red-background) dark:bg-(--color-red-background-dark) lg:block lg:w-[60%]">
                     <div className="hidden lg:block">
