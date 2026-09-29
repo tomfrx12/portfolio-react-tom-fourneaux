@@ -117,7 +117,7 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
             <section className="flex flex-col items-center justify-center px-5 py-16 lg:mx-20 lg:h-[94vh] lg:px-0 lg:py-10">
                 <div className="w-full lg:flex lg:flex-row lg:items-center lg:gap-12">
                     <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                        <Text tag="p" size="base" className="border-l-5 border-l-[#ff6347] m-[0px 0px 20px 20px] px-[15px] mt-10">Je suis un jeune développeur web de 20 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Chef de Projets Digitaux. Passionné par le monde du développement web et le code depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution.</Text>
+                        <Text tag="p" size="base" className="border-l-5 border-l-[#ff6347] m-[0px 0px 20px 20px] px-[15px] mt-10">Je suis un jeune développeur web de 20 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Concepteur Développeur d'Applications. Passionné par le monde du développement web et le code depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution.</Text>
                     </motion.div>
                     <motion.div variants={fadeRight} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                         <img src="/img/illustration_presentation/illustration_dev.png" alt="illustration developpeur web" className="m-auto max-w-full p-[15px] lg:w-auto lg:self-center"/>
