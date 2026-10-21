@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion, AnimatePresence, useReducedMotion } from 'framer-motion';
+import { motion, AnimatePresence, useReducedMotion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 
 export default function CardProjet({
     anchor,
@@ -16,6 +16,25 @@ export default function CardProjet({
     const shouldReduceMotion = useReducedMotion();
     const [hovered, setHovered] = useState(false);
 
+    const posX = useMotionValue(50);
+    const posY = useMotionValue(50);
+    const springPosX = useSpring(posX, { stiffness: 60, damping: 25 });
+    const springPosY = useSpring(posY, { stiffness: 60, damping: 25 });
+    const objectPosition = useTransform([springPosX, springPosY], ([x, y]) => `${x}% ${y}%`);
+
+    const handleImageMouseMove = (e) => {
+        if (shouldReduceMotion) return;
+        const rect = e.currentTarget.getBoundingClientRect();
+        posX.set((e.clientX - rect.left) / rect.width  * 100);
+        posY.set((e.clientY - rect.top)  / rect.height * 100);
+    };
+
+    const handleImageMouseLeave = () => {
+        posX.set(50);
+        posY.set(50);
+        setHovered(false);
+    };
+
     const techCount   = technologies ? technologies.length : 0;
     const statusLabel = Array.isArray(status) ? status[0] : status;
     const isActive    = statusLabel === 'En cours';
@@ -28,16 +47,18 @@ export default function CardProjet({
             id={anchor}
             className="flex flex-col gap-3 md:gap-4"
             onMouseEnter={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
+            onMouseLeave={handleImageMouseLeave}
         >
             {/* Image — hors de la carte */}
-            <div className="relative aspect-4/3 xl:aspect-square overflow-hidden rounded-[20px] md:rounded-[30px]">
-                <img
+            <div
+                className="relative aspect-4/3 xl:aspect-square overflow-hidden rounded-[20px] md:rounded-[30px]"
+                onMouseMove={handleImageMouseMove}
+            >
+                <motion.img
                     src={img_illustr}
                     alt={alt_illustr}
-                    className={`absolute inset-0 w-full h-full object-cover
-                        transition-transform duration-500 ease-out
-                        ${!shouldReduceMotion && hovered ? 'scale-[1.07]' : 'scale-100'}`}
+                    style={!shouldReduceMotion ? { objectPosition } : {}}
+                    className={`absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out ${!shouldReduceMotion && hovered ? 'scale-[1.05]' : 'scale-100'}`}
                 />
 
                 {/* Boutons View / Git au survol */}
