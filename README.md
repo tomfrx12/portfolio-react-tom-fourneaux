@@ -16,6 +16,7 @@ Site en ligne : [tom-fourneaux.fr](https://tom-fourneaux.fr)
 - Galerie de projets avec liens vers les dépôts GitHub et les démonstrations
 - Mode clair et mode sombre
 - Animations d'interface avec Framer Motion
+- Scroll fluide avec Lenis
 - Formulaire de contact avec EmailJS
 
 ## Technologies
@@ -25,6 +26,7 @@ Site en ligne : [tom-fourneaux.fr](https://tom-fourneaux.fr)
 - Tailwind CSS 4
 - React Router 7
 - Framer Motion
+- Lenis
 - EmailJS
 - Docker et Node.js 22 Alpine pour la production
 
