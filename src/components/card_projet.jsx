@@ -31,7 +31,7 @@ export default function CardProjet({
             onMouseLeave={() => setHovered(false)}
         >
             {/* Image — hors de la carte */}
-            <div className="relative aspect-[4/3] md:aspect-square overflow-hidden rounded-[20px] md:rounded-[30px]">
+            <div className="relative aspect-[4/3] xl:aspect-square overflow-hidden rounded-[20px] md:rounded-[30px]">
                 <img
                     src={img_illustr}
                     alt={alt_illustr}
