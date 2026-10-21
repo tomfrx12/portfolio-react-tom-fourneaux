@@ -1,16 +1,16 @@
 // import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 import ButtonNav from "../components/ButtonNav";
 import { Text } from "../components/texte";
 import Lamp from "../components/lamp_light";
-import SeeMore from "../components/see_more";
 import { fadeUp, fadeDown, fadeRight, fadeLeft, opacityOn  } from "../components/anime_motion";
-import projets from '../data/projets.json';
 import Title from "../components/title";
-import { Link } from "react-router";
+import CardProjet from "../components/card_projet";
+import projets from "../data/projets.json";
 
-function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie dans l'App, afin que la Lamp puisse modifier le dark mode
+function Index({ itsDark, setItsDark }) {
+    const recentProjets = [...projets].reverse().slice(0, 2);
 
     // const [ButtonClicker, setButtonClicker] = useState(false);
     // const [NbClick, setNbClick] = useState(0);
@@ -27,6 +27,8 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
     //         setLinkClicker(!LinkClicker);
     //     };
     // };
+
+    const shouldReduceMotion = useReducedMotion();
 
     return (
         <div>
@@ -128,38 +130,44 @@ function Index({ itsDark, setItsDark }) { //le bool et la func qui est définie 
                 </motion.div>
             </section>
 
-            <Title text="projet" />
+            
+            <Title text="projets récents" />
 
-            <section className="flex flex-col justify-center items-center">
-                <div className="my-10 flex flex-col gap-8 w-full max-w-240 px-5">
-                    {[...projets].reverse().slice(0, 2).map((projet) => {
-                        const anchor = projet.anchor;
-
-                        return (
-                        <motion.div key={projet.id} variants={fadeLeft} initial="hidden" whileInView="visible" transition={{ duration: 1.0, ease: "easeOut" }} viewport={{ once: true }}>
-                            <Link to={`/projets#${anchor}`}>
-                                <motion.div 
-                                    className="flex flex-col items-start gap-4 rounded-sm border-[3px] border-black bg-white p-4 dark:border-white dark:bg-(--color-bg-grey-dark) sm:flex-row sm:items-center sm:gap-5 sm:p-5"
-                                    initial={{ rotate: -1, boxShadow: "5px 5px 0px var(--color-primary)" }}
-                                    whileHover={{ rotate: 0, x: -5, y: -5, boxShadow: "10px 10px 0px var(--color-primary)" }}
-                                    whileTap={{ x: 3, y: 3, boxShadow: "3px 3px 0px var(--color-primary)" }}
-                                >
-                                    <img src={projet.image.url} alt={projet.image.alt} className="max-h-60 w-full object-contain sm:w-auto" />
-                                    <div>
-                                        <Text tag="h3" name="h3" size="lg">{projet.title}</Text>
-                                        <Text tag="p" size="base">{projet.description}</Text>
-                                        <SeeMore link={`/projets#${anchor}`}/>
-                                    </div>
-                                </motion.div>
-                            </Link>
-                        </motion.div>
-                        );
-                    })}
-                </div>
-                <motion.div className="flex" variants={fadeDown} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                    <ButtonNav link="projets">Mes projets</ButtonNav>
-                </motion.div>
-            </section>
+            <div className="bg-zinc-950">
+                <section className="px-4 md:px-8 lg:px-12 py-16 max-w-7xl mx-auto w-full">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                        {recentProjets.map((projet) => (
+                            <motion.div
+                                key={projet.id}
+                                initial={shouldReduceMotion ? false : { opacity: 0, y: 200, transformPerspective: 1200 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: '-80px' }}
+                                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+                            >
+                                <CardProjet
+                                    anchor={projet.anchor}
+                                    img_illustr={projet.image.url}
+                                    alt_illustr={projet.image.alt}
+                                    title_text={projet.title}
+                                    text={projet.description}
+                                    github={projet.links.github}
+                                    {...(projet.links?.demo ? { show: projet.links.demo } : {})}
+                                    createAt={projet.createdAt}
+                                    finishAt={projet.finishAt}
+                                    status={projet.status}
+                                    technologies={projet.technologies}
+                                />
+                            </motion.div>
+                        ))}
+                    </div>
+                    <motion.div
+                        className="flex justify-center mt-12"
+                        variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }}
+                    >
+                        <ButtonNav link="projets">Voir tous les projets</ButtonNav>
+                    </motion.div>
+                </section>
+            </div>
         </div>
     );
 }
