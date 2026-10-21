@@ -1,13 +1,14 @@
 import { Link, useLocation } from "react-router";
 import { useState } from "react";
 import ButtonDarkMode from "./buttonDarkMode";
+import lenis from '../lib/lenis.js';
 
 export default function Header({ itsDark, setItsDark, active = "" }) {
     const { pathname } = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
 
     const handleClick = (event) => {
-        window.scrollTo(0, 0);
+        lenis.scrollTo(0, { immediate: true });
         setMenuOpen(false);
     };
 

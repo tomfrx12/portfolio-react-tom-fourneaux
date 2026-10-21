@@ -1,8 +1,9 @@
 import { Link } from "react-router";
+import lenis from '../lib/lenis.js';
 
 export default function ButtonNav({children, link, className = ""}) {
     return (
-        <Link to={`/${link}`} className={`relative flex-col m-8 group inline-block cursor-pointer align-middle text-center no-underline select-none${className}`} onClick={() => window.scrollTo(0, 0)}>
+        <Link to={`/${link}`} className={`relative flex-col m-8 group inline-block cursor-pointer align-middle text-center no-underline select-none${className}`} onClick={() => lenis.scrollTo(0, { immediate: true })}>
             <span className="relative block dark:bg-(--color-primary) bg-(--color-red-background-dark) px-5 py-2.5 text-[#EBEBEB] transition-all duration-500 rounded-xl">
                 {children}
             </span>

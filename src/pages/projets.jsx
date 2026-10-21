@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import lenis from '../lib/lenis.js';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useLocation } from 'react-router';
 
@@ -39,7 +40,7 @@ function Projets() {
     useEffect(() => {
         const anchor = location.hash.slice(1);
         const target = document.getElementById(anchor);
-        target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (target) lenis.scrollTo(target, { offset: -80 });
     }, [location.hash]);
 
     const projectList = [...projets].reverse();
