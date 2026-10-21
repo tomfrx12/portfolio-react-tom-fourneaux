@@ -189,9 +189,12 @@
         },
         "technologies": [
             "HTML",
-            "JavaScript",
+            "TypeScript",
             "TailwindCSS",
-            "ReactJS"
+            "NextJs",
+            "Prisma",
+            "PostgreSQL",
+            "Docker"
         ],
         "links": {
             "github": "https://github.com/tomfrx12/Tutos"
@@ -236,7 +239,7 @@
         },
         "technologies": [
             "HTML",
-            "JavaScript",
+            "TypeScript",
             "NextJS",
             "NodeJS",
             "TailwindCSS",
