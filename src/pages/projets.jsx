@@ -48,7 +48,7 @@ function Projets() {
 
     return (
         <>
-            <Title text="projet" />
+            <Title tag="h1" name="h1" text="projet" />
 
             <div className="">
                 <section className="px-4 md:px-8 lg:px-12 py-16 max-w-7xl mx-auto w-full">

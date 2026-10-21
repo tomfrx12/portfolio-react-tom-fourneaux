@@ -17,7 +17,7 @@ export default function Mentions_Legales() {
             variants={opacityOn}
             className="min-h-screen text-white"
         >
-            <Title text="Mentions Légales"/>
+            <Title tag="h1" name="h1" text="Mentions Légales"/>
 
             {/* 1 */}
             <motion.section

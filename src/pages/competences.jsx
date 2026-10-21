@@ -16,7 +16,7 @@ export default function Competences() {
 
     return (
         <>
-            <Title text="Compétences"/>
+            <Title tag="h1" name="h1" text="Compétences"/>
             <div className="py-20">
                 {/* Desktop */}
                 <motion.div

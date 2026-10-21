@@ -74,7 +74,7 @@ export default function Contact() {
 
     return (
         <>
-            <Title text="contact" />
+            <Title tag="h1" name="h1" text="contact" />
             <div>
                 <div className="grid grid-cols-1 lg:grid-cols-[380px_minmax(0,1fr)]">
                     <motion.aside
