@@ -126,6 +126,20 @@ export default function CardProjet({
                     {text}
                 </p>
 
+                {/* Badges technologies */}
+                {technologies?.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                        {technologies.map((tech) => (
+                            <span
+                                key={tech}
+                                className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-white/10 text-white/70"
+                            >
+                                {tech}
+                            </span>
+                        ))}
+                    </div>
+                )}
+
                 {/* Métriques */}
                 <div className="flex gap-8 pt-3 border-t border-white/10 mb-3">
                     <div>
