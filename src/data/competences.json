@@ -23,7 +23,8 @@
             { "img": "/img/outils/tailwindcss.png", "alt": "TailwindCSS Logo", "name": "TailwindCSS" },
             { "img": "/img/outils/reactjs.webp", "alt": "React Logo", "name": "React.js" },
             { "img": "/img/outils/nodejs.png", "alt": "Node Logo", "name": "Node.js" },
-            { "img": "/img/outils/nextjs.png", "alt": "Next Logo", "name": "Next.js" }
+            { "img": "/img/outils/nextjs.png", "alt": "Next Logo", "name": "Next.js" },
+            { "img": "/img/outils/express.png", "alt": "Exoress Logo", "name": "Express.js" }
         ]
     },
     {
@@ -35,6 +36,7 @@
             { "img": "/img/outils/github.png", "alt": "Github Logo", "name": "GitHub" },
             { "img": "/img/outils/debian.png", "alt": "Debian Logo", "name": "Debian" },
             { "img": "/img/outils/docker.webp", "alt": "Docker Logo", "name": "Docker" },
+            { "img": "/img/outils/traefik.webp", "alt": "Traefik Logo", "name": "Traefik" },
             { "img": "/img/outils/ovh.webp", "alt": "Ovh Logo", "name": "Ovh" }
         ]
     }
