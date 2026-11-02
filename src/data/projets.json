@@ -147,7 +147,8 @@
             "ReactJS",
             "TailwindCSS",
             "Docker",
-            "VPS"
+            "VPS",
+            "Traefik"
         ],
         "links": {
             "github": "https://github.com/tomfrx12/Pokedle"
@@ -194,7 +195,9 @@
             "NextJs",
             "Prisma",
             "PostgreSQL",
-            "Docker"
+            "Docker",
+            "VPS",
+            "Traefik"
         ],
         "links": {
             "github": "https://github.com/tomfrx12/Tutos"
@@ -218,7 +221,8 @@
             "TailwindCSS",
             "ReactJS",
             "VPS",
-            "Docker"
+            "Docker",
+            "Traefik"
         ],
         "links": {
             "github": "https://github.com/tomfrx12/portfolio-react-tom-fourneaux",
