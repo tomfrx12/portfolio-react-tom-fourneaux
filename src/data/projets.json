@@ -256,5 +256,66 @@
         "createdAt": "2026-02-25",
         "finishAt": "2026-04-23",
         "status": "Fini"
+    },
+        {
+        "id": 12,
+        "anchor": "Heros-SOS",
+        "title": "Heros-SOS: Un héros, un appel",
+        "description": "Réalisé dans le cadre de ma formation à la Normandie Web School, Hero SOS est une application web full-stack permettant aux citoyens de signaler des incidents, aux super-héros de gérer leurs interventions et à un administrateur de piloter la plateforme - développée en React 19 / TypeScript pour le front-end, avec une API back-end Express séparée, le tout dockerisé et déployé sur un serveur VPS personnel. Avec coopération de Nino Rameau",
+        "image": {
+            "url": "/img/projets/heros-sos.png",
+            "alt": "Capture d'écran du site web Heros-SOS"
+        },
+        "technologies": [
+            "HTML",
+            "TypeScript",
+            "ReactJS",
+            "TailwindCSS",
+            "Leaflet",
+            "Lenis",
+            "TinyMCE",
+            "Docker",
+            "VPS",
+            "Traefik"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/Hero-SOS",
+            "demo": "https://heros-sos.tom-fourneaux.fr/"
+        },
+        "createdAt": "2026-10-26",
+        "finishAt": "2026-11-01",
+        "status": "Fini"
+    },
+        {
+        "id": 13,
+        "anchor": "Heros-SOS-API",
+        "title": "Heros-SOS-API",
+        "description": "Réalisé dans le cadre de ma formation à la Normandie Web School, Hero SOS API est le back-end REST du projet Hero SOS — développé en Node.js / Express 5 / TypeScript, avec PostgreSQL comme base de données et Prisma comme ORM, intégrant l'authentification JWT, la validation Zod, l'envoi de mails via Nodemailer et l'API TMDB pour la vidéothèque, le tout dockerisé avec Traefik et déployé sur un serveur VPS personnel. Avec coopération de Nino Rameau.",
+        "image": {
+            "url": "/img/projets/heros-sos-api.png",
+            "alt": "Capture d'écran de l'api de Heros-SOS"
+        },
+        "technologies": [
+            "NodeJS",
+            "Express",
+            "TypeScript",
+            "Prisma",
+            "PostgreSQL",
+            "JWT",
+            "bcrypt",
+            "Zod",
+            "Nodemailer",
+            "Brevo",
+            "Docker",
+            "VPS",
+            "Traefik"
+        ],
+        "links": {
+            "github": "https://github.com/tomfrx12/Hero-SOS-API",
+            "demo": "https://heros-sos.tom-fourneaux.fr/"
+        },
+        "createdAt": "2026-10-26",
+        "finishAt": "2026-11-01",
+        "status": "Fini"
     }
 ]
