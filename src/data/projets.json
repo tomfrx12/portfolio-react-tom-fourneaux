@@ -2,7 +2,7 @@
     {
         "id": 1,
         "anchor": "reproduction_maquette_page_web",
-        "title": "Reproduction maquette page web ",
+        "title": "Reproduction maquette page web",
         "description": "Je devais reproduire en HTML CSS, une maquette figma au pixel perfect en ajoutant des éléments utilisateur, comme un mode jour nuit en JavaScript.",
         "image": {
             "url": "/img/projets/maquette.png",
@@ -19,7 +19,8 @@
         },
         "createdAt": "2024-12-20",
         "finishAt": "2024-12-26",
-        "status": "Fini"
+        "status": ["Fini"]
+
     },
     {
         "id": 2,
@@ -41,13 +42,13 @@
         },
         "createdAt": "2025-01-06",
         "finishAt": "2025-03-10",
-        "status": "Fini"
+        "status": ["Fini", "ReWork"]
     },
     {
         "id": 3,
         "anchor": "integration_react_dashboard",
         "title": "Integration React Dashboard",
-        "description": "Ceci est une Intégration fais en React executé avec Vite d'un dashboard que j'ai réalisé pour un rendu à mon école avec l'aide de package npm.",
+        "description": "Ceci est une intégration faite en React, exécutée avec Vite, d'un dashboard que j'ai réalisé pour un rendu à mon école avec l'aide de packages npm.",
         "image": {
             "url": "/img/projets/Integration_React_Dashboard.png",
             "alt": "Capture d'écran de la page web de l'intégration du dashboard en react"
@@ -59,7 +60,7 @@
             "TailwindCSS"
         ],
         "links": {
-            "github": "https://github.com/tomfrx12/tom-fourneaux-portfolio"
+            "github": "https://github.com/tomfrx12/Integration_React_Dashboard"
         },
         "createdAt": "2025-02-26",
         "finishAt": "2025-09-11",
@@ -69,7 +70,7 @@
         "id": 4,
         "anchor": "intégration_maquette_figma_html_css",
         "title": "Intégration maquette figma",
-        "description": "Je devais faire une integration en html css pure, d'une maquette figma créer par un professeur de l'école.",
+        "description": "Je devais faire une intégration en HTML/CSS pure d'une maquette Figma créée par un professeur de l'école.",
         "image": {
             "url": "/img/projets/maquette_integration_html_css.png",
             "alt": "Capture d'écran de la page web de l'intégration de la maquette"
@@ -86,13 +87,13 @@
         },
         "createdAt": "2025-09-08",
         "finishAt": "2025-09-16",
-        "status": "Fini"
+        "status": ["Fini"]
     },
     {
         "id": 5,
         "anchor": "intégration_maquette_figma_itcss",
         "title": "Intégration maquette figma",
-        "description": "Je devais faire une integration en HTML, CSS: avec l'architecture ITCSS et la convention Utility first, avec le droit d'utiliser ReactJS, d'une maquette figma créer par un professeur de l'école.",
+        "description": "Je devais faire une intégration en HTML/CSS : avec l'architecture ITCSS et la convention Utility First, avec le droit d'utiliser ReactJS, d'une maquette Figma créée par un professeur de l'école.",
         "image": {
             "url": "/img/projets/lodge_relocation.png",
             "alt": "Capture d'écran de la page web de l'intégration de la maquette"
@@ -108,13 +109,13 @@
         },
         "createdAt": "2025-09-29",
         "finishAt": "2025-10-04",
-        "status": "Fini"
+        "status": ["Fini"]
     },
     {
         "id": 6,
         "anchor": "to_do_list",
         "title": "To Do List",
-        "description": "Lors d'une évalution de compétence à l'école, je devais créer une todolist avec différents paramètre en jeu pour la gérer",
+        "description": "Lors d'une évaluation de compétences à l'école, je devais créer une to-do list avec différents paramètres en jeu pour la gérer.",
         "image": {
             "url": "/img/projets/todolist.png",
             "alt": "Capture d'écran de la page web de la todolist"
@@ -130,7 +131,7 @@
         },
         "createdAt": "2025-11-21",
         "finishAt": "2025-11-22",
-        "status": "Fini"
+        "status": ["Fini"]
     },
     {
         "id": 7,
@@ -154,14 +155,14 @@
             "github": "https://github.com/tomfrx12/Pokedle"
         },
         "createdAt": "2025-11-29",
-        "finishAt": " . . .",
-        "status": "En cours"
+        "finishAt": "2025-11-29",
+        "status": ["Fini", "Abandonné"]
     },
     {
         "id": 8,
         "anchor": "mimimosa_landing_page",
         "title": "Mimimosa Landing Page",
-        "description": "Lors d'une semaine dites 'projet' à mon école, je devais créer une landing page pour un café/fleuriste",
+        "description": "Lors d'une semaine dite « Projet » à mon école, je devais créer une landing page pour un café/fleuriste.",
         "image": {
             "url": "/img/projets/mimimosa.png",
             "alt": "Capture d'écran de la Landing Page Mimimosa"
@@ -177,7 +178,7 @@
         },
         "createdAt": "2026-01-16",
         "finishAt": "2026-01-16",
-        "status": "Fini"
+        "status": ["Fini"]
     },
     {
         "id": 9,
@@ -204,7 +205,7 @@
         },
         "createdAt": "2026-01-17",
         "finishAt": "2026-06-15",
-        "status": "Fini"
+        "status": ["Fini"]
     },
     {
         "id": 10,
@@ -230,7 +231,7 @@
         },
         "createdAt": "2025-02-26",
         "finishAt": ". . .",
-        "status": "En cours"
+        "status": ["Amélioration Constante"]
     },
     {
         "id": 11,
@@ -255,7 +256,7 @@
         },
         "createdAt": "2026-02-25",
         "finishAt": "2026-04-23",
-        "status": "Fini"
+        "status": ["Fini"]
     },
         {
         "id": 12,
@@ -284,7 +285,7 @@
         },
         "createdAt": "2026-10-26",
         "finishAt": "2026-11-01",
-        "status": "Fini"
+        "status": ["Fini"]
     },
         {
         "id": 13,
@@ -316,6 +317,6 @@
         },
         "createdAt": "2026-10-26",
         "finishAt": "2026-11-01",
-        "status": "Fini"
+        "status": ["Fini"]
     }
 ]
