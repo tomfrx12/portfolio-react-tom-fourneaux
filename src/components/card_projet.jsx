@@ -52,7 +52,7 @@ export default function CardProjet({
         }
         const duration = Math.max(1.5, scrollDist / 10);
         animate(textY, -scrollDist, { duration, ease: 'linear', delay: 0.4 });
-    }, [hovered, shouldReduceMotion, textY, animate]);
+    }, [hovered, shouldReduceMotion, textY]);
 
     const techCount   = technologies ? technologies.length : 0;
     const statusLabels = Array.isArray(status) ? status : (status ? [status] : []);

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { fadeUp } from "./anime_motion";
 import { Text } from "./texte";
 
-export default function Title({ itsDark, setItsDark, text }) {
+export default function Title({ itsDark, text }) {
     return (
         <motion.div
             className="relative h-[350px] flex items-center justify-center overflow-hidden"
