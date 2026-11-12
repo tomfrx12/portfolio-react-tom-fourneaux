@@ -9,8 +9,17 @@ import Title from "../components/title";
 import CardProjet from "../components/card_projet";
 import projets from "../data/projets.json";
 
+function getAge(dob) {
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    const m = today.getMonth() - dob.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) age--;
+    return age;
+}
+
 function Index({ itsDark, setItsDark }) {
     const recentProjets = [...projets].reverse().slice(0, 2);
+    const age = getAge(new Date(2006, 6, 12));
 
     // const [ButtonClicker, setButtonClicker] = useState(false);
     // const [NbClick, setNbClick] = useState(0);
@@ -105,10 +114,10 @@ function Index({ itsDark, setItsDark }) {
                             <Text tag='h1' name='h1' color="white" font="bold">Tom Fourneaux</Text>
                         </motion.div>
                         <motion.div variants={opacityOn} initial="hidden" animate="visible" transition={{ delay: 1.0, duration: 0.5 }}>
-                            <Text tag='p' name='p' color='white' align='center' size="base">Etudiant et passionné de codage, voici mon portfolio</Text>
+                            <Text tag='p' name='p' color='white' align='center' size="base">Étudiant et passionné de codage, voici mon portfolio</Text>
                         </motion.div>
                         <motion.div className="flex" variants={opacityOn} initial="hidden" animate="visible" transition={{ delay: 1.5, duration: 0.5 }}>
-                            <ButtonNav link="me_contacter">Contactez moi</ButtonNav>
+                            <ButtonNav link="me_contacter">Contactez-moi</ButtonNav>
                         </motion.div>
                     </div>
                 </div>
@@ -119,7 +128,7 @@ function Index({ itsDark, setItsDark }) {
             <section className="flex flex-col items-center justify-center px-5 py-16 lg:mx-20 lg:h-[94vh] lg:px-0 lg:py-10">
                 <div className="w-full lg:flex lg:flex-row lg:items-center lg:gap-12">
                     <motion.div variants={fadeLeft} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-                        <Text tag="p" size="base" className="border-l-5 border-l-[#ff6347] m-[0px 0px 20px 20px] px-[15px] mt-10">Je suis un jeune développeur web de 20 ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Concepteur Développeur d'Applications. Passionné par le monde du développement web et le code depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution.</Text>
+                        <Text tag="p" size="base" className="border-l-5 border-l-[#ff6347] m-[0px 0px 20px 20px] px-[15px] mt-10">Je suis un jeune développeur web de {age} ans, actuellement étudiant à la Normandie Web School (NWS) de Rouen, où je suis inscrit en Bachelor Concepteur Développeur d'Applications. Passionné par le monde du développement web et le code depuis mon plus jeune âge, j’ai naturellement orienté mes études et ma carrière vers ce domaine en constante évolution.</Text>
                     </motion.div>
                     <motion.div variants={fadeRight} initial="hidden" whileInView="visible" viewport={{ once: true }}>
                         <img src="/img/illustration_presentation/illustration_dev.png" alt="illustration developpeur web" className="m-auto max-w-full p-[15px] lg:w-auto lg:self-center"/>

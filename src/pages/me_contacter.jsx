@@ -57,10 +57,9 @@ export default function Contact() {
                     setCooldown(120);
                     localStorage.setItem("email_last_sent", Date.now().toString());
                 },
-                (error) => {
+                () => {
                     setMessageSent(false);
                     setErrorSent(true);
-                    console.log('FAILED...', error.text);
                 },
             );
     };
@@ -86,11 +85,11 @@ export default function Contact() {
                     >
                         <motion.div variants={fadeUp}>
                             <p className="mb-1 text-base text-white/55">Email</p>
-                            <Link to="mail:tfourneaux@normandiewebschool.fr" className="text-[19px] text-white hover:underline">tfourneaux@normandiewebschool.fr</Link>
+                            <a href="mailto:tfourneaux@normandiewebschool.fr" className="text-[19px] text-white hover:underline">tfourneaux@normandiewebschool.fr</a>
                         </motion.div>
                         <motion.div variants={fadeUp}>
                             <p className="mb-1 text-base text-white/55">Téléphone</p>
-                            <Link to="tel:+33680501452" className="text-[22px] font-bold text-white hover:underline"> +33 6 80 50 14 52</Link>
+                            <a href="tel:+33680501452" className="text-[22px] font-bold text-white hover:underline"> +33 6 80 50 14 52</a>
                         </motion.div>
                         <motion.div variants={fadeUp}>
                             <p className="mb-1 text-base text-white/55">Ville</p>
@@ -102,12 +101,12 @@ export default function Contact() {
                         <motion.div variants={fadeUp} className="flex flex-wrap gap-4 sm:gap-[22px]">
                             {[
                                 { label: "Profil Github", src: "/img/qrcode/qrcode_github.png", href:"https://github.com/tomfrx12"},
-                                { label: "Profil LinkedIn", src: "/img/qrcode/qrcode_linkedin.jpg", href: "https://www.linkedin.com/in/tom-fourneaux-078644332/"}
+                                { label: "Profil LinkedIn", src: "/img/qrcode/qrcode_linkedin.jpg", href: "https://www.linkedin.com/in/tom-fourneaux-4a8b31384/"}
                             ].map((qr) => (
-                                <Link key={qr.label} to={qr.href} className="flex flex-col items-center gap-2">
+                                <a key={qr.label} href={qr.href} className="flex flex-col items-center gap-2">
                                     <img src={qr.src} alt={qr.label} className="h-24 w-24 bg-white p-2 sm:h-[130px] sm:w-[130px]" />
                                     <span className="text-base text-white underline">{qr.label}</span>
-                                </Link>
+                                </a>
                             ))}
                         </motion.div>
                     </motion.aside>
