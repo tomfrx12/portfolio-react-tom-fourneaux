@@ -7,8 +7,8 @@ export default function Header({ itsDark, setItsDark, active = "" }) {
     const { pathname } = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const handleClick = (event) => {
-        lenis.scrollTo(0, { immediate: true });
+    const handleClick = () => {
+        lenis?.scrollTo(0, { immediate: true });
         setMenuOpen(false);
     };
 
@@ -48,7 +48,11 @@ export default function Header({ itsDark, setItsDark, active = "" }) {
                         {label}
                     </Link>
                 ))}
-                <button className="self-start py-3 sm:self-auto sm:py-0" onClick={() => setItsDark(!itsDark)}>
+                <button
+                    aria-label={itsDark ? "Passer en mode clair" : "Passer en mode sombre"}
+                    className="self-start py-3 sm:self-auto sm:py-0"
+                    onClick={() => setItsDark(!itsDark)}
+                >
                     <ButtonDarkMode itsDark={itsDark} />
                 </button>
             </nav>

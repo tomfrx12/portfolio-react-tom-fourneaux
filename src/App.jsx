@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router";
+import { MotionConfig } from "framer-motion";
 
 import Layout from "./components/layout";
 
@@ -12,6 +13,7 @@ import Error from "./pages/error";
 
 function App() {
     return (
+        <MotionConfig reducedMotion="user">
         <Router>
             <Layout>
                 {({ itsDark, setItsDark }) => ( //fonction qui reçoit l'état du dark mode (bool) et la fonction pour la changer (func). Afin que toutes les pages puissent avoir accès au dark mode ( c'est le "render prop")
@@ -26,6 +28,7 @@ function App() {
                 )}
             </Layout>
         </Router>
+        </MotionConfig>
     );
 }
 
