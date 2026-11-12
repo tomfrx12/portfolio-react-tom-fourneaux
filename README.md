@@ -1,6 +1,6 @@
 # Tom Fourneaux - Portfolio
 
-Portfolio personnel de Tom Fourneaux, développeur web et étudiant en Bachelor Chef de Projets Digitaux à la Normandie Web School de Rouen.
+Portfolio personnel de Tom Fourneaux, développeur web et étudiant en Bachelor Concepteur Développeur d'Applications à la Normandie Web School de Rouen.
 
 Le site présente mon parcours, mes compétences et mes projets, avec une interface responsive, un mode sombre et une page de contact fonctionnant avec EmailJS.
 
