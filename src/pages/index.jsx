@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import ButtonNav from "../components/ButtonNav";
 import { Text } from "../components/texte";
 import Lamp from "../components/lamp_light";
-import { fadeUp, fadeDown, fadeRight, fadeLeft, opacityOn  } from "../components/anime_motion";
+import { fadeUp, fadeRight, fadeLeft, opacityOn  } from "../components/anime_motion";
 import Title from "../components/title";
 import CardProjet from "../components/card_projet";
 import projets from "../data/projets.json";

@@ -1,7 +1,6 @@
 import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from 'react';
-import { Link } from "react-router";
 import { fadeLeft, fadeRight, fadeUp } from "../components/anime_motion";
 import { Text } from "../components/texte";
 import Title from "../components/title";

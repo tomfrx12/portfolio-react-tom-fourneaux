@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 import DarkMode from "./darkmode";
 
 import Footer from "./footer";
